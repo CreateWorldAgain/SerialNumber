@@ -1,0 +1,38 @@
+﻿@using CitizenSerialInfo.Models.ViewModels;
+@{
+    Layout = null;
+}
+
+@model  ConfirmEmailViewModel;
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Email confirmation</title>
+</head>
+<body>
+    <div id="main-wrapper" style="background-color: #ededed; font-family: Verdana; margin: 0px; font-size: 14px; color: #7e8383;">
+        <div style="margin: auto; padding-top:20px; margin-top: 20px; width: 650px; min-height: 100%;height: auto !important; height: 100%;">
+            <table style="width: 650px;"></table>
+            <div style="height: 100%; margin-top: 20px;">
+                <div style="padding: 35px; margin: auto;background-color: white;border: 1px solid lightgrey; ">
+                    <div style="font-size: 22px;color: #283848;margin-bottom: 30px;">Confirm your email address</div>
+                    <div style=" margin: auto;background-color: white; ">Hello, @Model.FirstName @Model.LastName</div>
+
+                    Confirm your email address now to let us know it really belongs to you.
+                    <div style=" margin: auto;background-color: white; ">Please, press button below to confirm: </div>
+                    <div style="text-align: center;">
+                        <span style="display:inline-block; width: 180px; font-size:13px; text-decoration: none; padding-left: 10px; padding-right: 10px; padding-top: 7px; padding-bottom: 7px; background-color: #4ba9f3; border: 2px solid #4ba9f3; color: white; font-weight: bold; border-radius: 20px; outline: none !important;">
+                            <a style="text-decoration:none; color:white" href='@Model.ConfirmLink'>Confirm</a>
+                        </span>
+                    </div>
+                </div>
+                <div style="font-size: 12px; margin-top: 40px; text-align: center;margin-bottom:40px;">
+                    <span>Copyright ©2018  All rights reserved.</span><br>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

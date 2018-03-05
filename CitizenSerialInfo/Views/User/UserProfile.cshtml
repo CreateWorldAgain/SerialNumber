@@ -1,0 +1,46 @@
+﻿@model CitizenSerialInfo.Models.ViewModels.UserViewModel
+
+@(Html.DevExtreme().Popup()
+                        .ID("popup-profile")
+                        .ElementAttr("class", "popup")
+                        .Width(350)
+                        .Height("auto")                        
+                        .ShowTitle(true)
+                        .Title("Edit your profile")
+                        .Visible(false)
+                        .DragEnabled(true)
+                        .ResizeEnabled(true)
+                        .Shading(true)
+                        .CloseOnOutsideClick(true)
+                        .ContentTemplate(@<text>
+                        @using (Html.BeginForm("UserSave", "User", FormMethod.Post, new { id = "formProfile" }))
+                                    {
+                            @(Html.DevExtreme().Form()
+                                                    .ColCount(1)
+                                                    .ValidationGroup("userProfileValidationGroup")
+                                                    .Items(items =>
+                                                    {
+                                                        items.AddSimple().DataField("FirstName").IsRequired(true).Label(l => l.Text("First Name"));
+                                                        items.AddSimple().DataField("LastName").IsRequired(true).Label(l => l.Text("Last Name"));
+                                                        items.AddSimple().DataField("Email").IsRequired(true).Label(l => l.Text("Email"));
+                                                        items.AddSimple().DataField("UserName").IsRequired(true).Label(l => l.Text("Login"));
+                                                        items.AddSimple().DataField("Password").IsRequired(false).Editor(e => e.TextBox().Mode(TextBoxMode.Password)).Label(l => l.Text("Password"));
+                                                        items.AddSimple().DataField("ConfirmPassword").IsRequired(false).Editor(e => e.TextBox().Mode(TextBoxMode.Password)).Label(l => l.Text("Confirm password"));
+                                                    })
+                                                    .FormData(Model)
+                            )
+                            <div id="saveButton" class="button-div" style="text-align:right; margin-top:30px">
+                                @(Html.DevExtreme().Button()
+                                                .Text("SAVE")
+                                                .Width("100%")
+                                                .ValidationGroup("userProfileValidationGroup")
+                                                .UseSubmitBehavior(true)
+                                                .ElementAttr("class", "bt-bg-primary")
+                                )
+                            </div>
+
+                            <input type="hidden" id="userId" name="Id" value="@Model.Id">                            
+                                    }
+                        
+                        </text>)
+)

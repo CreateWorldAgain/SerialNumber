@@ -1,0 +1,93 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+<input id="url" value='@ViewBag.WebSocketURL' type="hidden" />
+
+
+<div style="background-color:white;height:220px;padding:50px;">
+    <div id="upload-prepare" style="height:100%;border:1px dashed #3B3F51; padding-top:25px; text-align:center; padding-left:10px; padding-right:10px;" onclick="javascript:$('[name=files]').click();">
+        <h4 id="h4" style="color:navy">Click here and choose a file...</h4>
+        <div id="progress" style="height:5px; display:inline-block; background-color:navy; width:0%"></div>
+        <div id="percent"></div>
+    </div>
+    <form action="/administration/upload?guid=@ViewBag.Guid" enctype="multipart/form-data" id="form-upload-file" method="post">
+        <input type="file" name="files" style="display:none">
+    </form>
+
+    <div id="updalod-result"  style="display:none; text-align:center; padding:50px; border:1px dashed #3B3F51;">
+        <h1>  Done!  </h1>
+        
+    </div>
+</div>
+
+<script>
+    var websocket;
+
+    $(function () {
+        $('[name=files]').on('change', function (event) {
+            $("#h4").text("Progress...");
+
+            var files = event.target.files;
+
+            var data = new FormData();
+            $.each(files, function (key, value) {
+                data.append(key, value);
+            });
+
+            $.ajax({
+                url: '/administration/upload?guid=@ViewBag.Guid',
+                type: 'POST',
+                data: data,
+                cache: false,
+                dataType: 'json',
+                processData: false, // Don't process the files
+                contentType: false // Set content type to false as jQuery will tell the server its a query string request                                
+            })
+                .done(function (json) {
+                    debugger
+                    if (json.error != '')
+                        toastr["error"](json.error);
+                    else {
+                        $("#updalod-result").show();
+                        $("#upload-prepare").hide();
+                    }
+                });
+        });
+        
+        initBroadcast($("#url").val());
+    });
+
+    
+    function initBroadcast(uri) {
+        console.log('Connecting to: ' + uri);
+
+        websocket = new WebSocket(uri);
+
+        websocket.onopen = function () {
+            console.log('Connected.');
+        };
+
+        websocket.onerror = function () {
+            console.log('WebSocket error.');
+        };
+
+        websocket.onclose = function () {
+
+            console.log('WebSocket closed.');
+
+            var timer = window.setInterval(function () {
+                window.clearInterval(timer);
+                initBroadcast(uri);
+            }, 5000);
+
+        };
+
+        websocket.onmessage = function (event) {
+            console.log(event.data);
+            $("#progress").css("width", event.data + "%");
+            $("#percent").html(event.data + "&nbsp;%");
+        };
+    };
+
+</script>

@@ -1,0 +1,131 @@
+﻿@{
+    Layout = "_Layout";
+}
+@using  CitizenSerialInfo.Models.ViewModels
+<script>
+
+    function calculateCellRolesValue(data) {
+
+        if (data.Roles == undefined)
+            return '';
+
+        var a = new Array();
+        data.Roles.forEach(function (e) {
+            if (e.IsPermitted)
+                a.push(e.RoleName)
+        });
+        return a.join(',');
+    }
+
+    function rolesEditorPrepared(e) {
+
+        if (e.parentType === 'dataRow' && e.dataField === 'Roles') {
+
+            $(".dx-state-readonly").removeClass("dx-state-readonly");
+
+            var rolesDataSource = e.row.data.Roles;
+            var userRoles = e;
+
+            e.editorElement.dxDropDownBox({
+                value: e.value,
+                placeholder: "",
+                dataSource: rolesDataSource,
+                valueExpr: "Roles",
+                onOpened: function () {
+                    setTimeout(function () {
+                        $(".dx-state-readonly").removeClass("dx-state-readonly");
+                    }, 200);
+                },
+                contentTemplate: function (e) {
+                    var value = e.component.option("value");
+
+                    $dataGrid = $("<div id='data-grid-roles-container'>").dxDataGrid({
+                        dataSource: e.component.option("dataSource"),
+                        showColumnLines: false,
+                        columns: [
+                            { dataField: "Id", caption: "id", width: 0 },
+                            { dataField: "RoleName", caption: "Role" },
+                            {
+                                dataField: "IsPermitted", caption: "Enable",
+                                dataType: "boolean", calculateCellValue: function (rowData) {
+                                    return rowData.IsPermitted == true;
+                                }
+                            }
+                        ],
+                        onCellClick: function (e) {
+
+                            var tmp = new Array();
+                            var rolesData = new Array();
+
+                            $("#data-grid-roles-container .dx-datagrid-checkbox-size.dx-checkbox-checked").each(function () {
+                                var roleId = $(this).parents('tr').find('td:eq(0)').text();
+                                var roleName = $(this).parents('tr').find('td:eq(1)').text();
+
+                                var isPermitted = $(this).parents('tr').find('td:eq(2) input').val();
+
+                                tmp.push(roleName);
+
+                                var o = new Object();
+                                o.IsPermitted = isPermitted;
+                                o.Id = roleId;
+                                o.RoleName = roleName;
+                                rolesData.push(o);
+
+                            });
+
+                            // set displayText for Roles
+                            $(".dx-datagrid-rowsview .dx-dropdowneditor-input-wrapper .dx-texteditor-input").val(tmp);
+
+                            //change rolesObject
+                            userRoles.setValue(rolesData);
+                        },
+                        hoverStateEnabled: true,
+                        scrolling: { mode: "infinite" },
+                        height: 265
+                    });
+
+
+                    return $dataGrid;
+                }
+            });
+            e.cancel = true;
+        }
+
+    }
+</script>
+   
+@(Html.DevExtreme().DataGrid<ApplicationRole>()
+
+    .ID("gridContainer")
+    .OnCellPrepared("table_cellPrepared")
+    .AllowColumnResizing(true)
+    .Paging(paging => paging.Enabled(false))
+    .OnEditorPreparing("rolesEditorPrepared")
+    .Editing(editing =>
+    {
+        editing.Mode(GridEditMode.Row);
+        editing.AllowUpdating(true);
+
+    })
+    .Columns(columns =>
+    {
+
+        columns.AddFor(m => m.MoreInfoCount).Width(300).Caption("Max look up per day");
+        columns.AddFor(m => m.Name).AllowEditing(false).Width(500);
+
+    })
+
+
+    .DataSource(s => s.WebApi()
+    .Controller("moreinfoapi")
+    .RouteName("MoreInfoApiController")
+        .LoadAction("Get")
+        .UpdateAction("Put")
+        .Key("Id"))
+
+)
+
+
+
+
+

@@ -1,0 +1,49 @@
+@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Http.Features
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.Extensions.Options
+@using Microsoft.AspNetCore.Mvc.Localization;
+@using System.Collections;
+
+@inject IViewLocalizer Localizer
+@inject IOptions<RequestLocalizationOptions> LocOptions
+@{
+    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+ var cultureItems = LocOptions.Value.SupportedUICultures
+     .Select(c => new SelectListItem { Value = c.Name, Text = c.TwoLetterISOLanguageName })
+     .ToList();
+ 
+ List<string> langsValues = new List<string>();
+ List<string> langsText = new List<string>();
+}
+
+
+@foreach (var item in cultureItems)
+{
+    langsValues.Add(item.Value);
+    langsText.Add(item.Text);
+}
+
+<script>
+    function changeLang(data) {
+        $("#culture").val(data.value);
+        $("#selectLangForm").submit();
+    }
+</script>
+
+
+<!--Change Lang-->
+<form id="selectLangForm" asp-controller="Home" asp-action="SetLanguage" asp-route-returnUrl="@Context.Request.Path" method="post" role="form">
+    <div id="selectLangContainer" style="display:inline-block;float:right;position:relative;top:-30px;"></div>
+</form>
+
+<script>
+    $(function () {
+        $("#selectLangContainer").dxSelectBox({
+            width: 65,
+            value: '@requestCulture.RequestCulture.Culture.TwoLetterISOLanguageName',
+            placeholder:'',
+            items: @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(langsValues))
+        });
+    });
+</script>

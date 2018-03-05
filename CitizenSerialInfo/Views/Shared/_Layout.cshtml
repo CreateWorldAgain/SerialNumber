@@ -1,0 +1,264 @@
+﻿@using CitizenSerialInfo.Models
+
+@{
+    var isOwner = User.IsInRole("owner");
+    var wsHost = "127.0.0.1:80";
+    var wsUrl = $"ws://{wsHost}/ws";
+}
+
+@inject AppDbContext _db
+
+<!DOCTYPE html>
+@{ 
+        var user = _db.Users.FirstOrDefault(s => s.NormalizedUserName == User.Identity.Name.ToUpper());
+        var userName =$"{user.FirstName} {user.LastName}";
+}
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Citizen serial info</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+    <link href="~/assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN THEME GLOBAL STYLES -->
+    <link href="~/assets/global/css/components.min.css" rel="stylesheet" id="style_components" type="text/css" />
+    <link href="~/assets/global/css/plugins.min.css" rel="stylesheet" type="text/css" />
+    <!-- END THEME GLOBAL STYLES -->
+    <!-- BEGIN THEME LAYOUT STYLES -->
+    
+    <link href="~/assets/layouts/layout/css/custom.css" rel="stylesheet" />
+    <link href="~/assets/layouts/layout/css/themes/darkblue.css" rel="stylesheet" />
+    <link href="~/assets/layouts/layout/css/layout.css" rel="stylesheet" />
+    @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />*@
+    <link rel="stylesheet" href="~/css/site.css" type="text/css" media="screen" />    
+
+    <link href="~/css/devextreme/dx.common.css" rel="stylesheet" />
+    <link href="~/css/devextreme/dx.light.css" rel="stylesheet" />
+
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    @*<script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>*@
+    <script src="~/assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+
+    <script src="~/js/devextreme/cldr.js"></script>
+    <script src="~/js/devextreme/cldr/event.js"></script>
+    <script src="~/js/devextreme/cldr/supplemental.js"></script>
+    <script src="~/js/devextreme/cldr/unresolved.js"></script>
+
+    <script src="~/js/devextreme/globalize.js"></script>
+    <script src="~/js/devextreme/globalize/message.js"></script>
+    <script src="~/js/devextreme/globalize/number.js"></script>
+    <script src="~/js/devextreme/globalize/currency.js"></script>
+    <script src="~/js/devextreme/globalize/date.js"></script>
+
+    @* JSZip for client side export *@
+    @*<script src="~/js/devextreme/jszip.js"></script>*@
+
+    <script src="~/js/devextreme/dx.all.js"></script>    
+
+    @*https://js.devexpress.com/Documentation/Guide/Widgets/Common/UI_Widgets/Localization/*@
+    <script src="~/js/devextreme/localization/dx.messages.en.js"></script>
+
+    <script src="~/js/devextreme/vectormap-data/world.js"></script>
+    <script src="~/lib/devextreme-aspnet-data/js/dx.aspnet.data.js"></script>
+    <script src="~/js/devextreme/aspnet/dx.aspnet.mvc.js"></script>
+
+    <link href="~/lib/toastr/toastr.css" rel="stylesheet" />
+    <script src="~/lib/toastr/toastr.min.js"></script>
+    <script src="~/js/site.js"></script>
+
+    <script src="~/js/ElementQueries.js"></script>
+    <script src="~/js/ResizeSensor.js"></script>
+
+</head>
+
+<body class="page-container-bg-solid page-header-fixed page-sidebar-closed-hide-logo page-sidebar-fixed">
+    
+        <input type="hidden" id="ws-url" value="@wsUrl" />
+        <!-- BEGIN HEADER -->
+        <div class="page-header navbar navbar-fixed-top">
+            <!-- BEGIN HEADER INNER -->
+            <div class="page-header-inner ">
+                <!-- BEGIN LOGO -->
+                <div class="page-logo">
+                    <a href="#">
+                        <img src="../assets/layouts/layout4/img/logo-light.png" alt="logo" class="logo-default" />
+                    </a>
+                    <div class="menu-toggler sidebar-toggler">
+                        <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
+                    </div>
+                </div>
+                <!-- END LOGO -->
+                <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+                <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse"> </a>
+                <!-- END RESPONSIVE MENU TOGGLER -->
+                <!-- BEGIN PAGE TOP -->
+                <div class="page-top">
+                    <!-- BEGIN TOP NAVIGATION MENU -->
+                    <div class="top-menu">
+                        <ul class="nav navbar-nav pull-right">
+                            <!-- BEGIN USER LOGIN DROPDOWN -->
+                            <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                            <li class="dropdown dropdown-user dropdown-dark">
+                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                 <span class="username username-hide-on-mobile"> @userName </span>
+                                    <!-- DOC: Do not remove below empty space(&nbsp;) as its purposely used -->
+                                    <img alt="" class="img-circle" src="../assets/layouts/layout4/img/avatar.png" />
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-default">
+                                    <li>
+                                        <a href="javascript:UserProfile()   ">
+                                            <i class="icon-user"></i>Profile
+                                        </a>
+                                    </li>                                    
+                                    <li class="divider"> </li>
+                                    <li>
+                                        <a href="/account/logout">
+                                            <i class="icon-key"></i> LogOut
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- END USER LOGIN DROPDOWN -->
+                        </ul>
+                    </div>
+                    <!-- END TOP NAVIGATION MENU -->
+                </div>
+                <!-- END PAGE TOP -->
+            </div>
+            <!-- END HEADER INNER -->
+        </div>
+        <!-- END HEADER -->
+        <!-- BEGIN HEADER & CONTENT DIVIDER -->
+        <div class="clearfix"> </div>
+        <!-- END HEADER & CONTENT DIVIDER -->
+        <!-- BEGIN CONTAINER -->
+        <div class="page-container">
+            <!-- BEGIN SIDEBAR -->
+            <div class="page-sidebar-wrapper">
+                <!-- BEGIN SIDEBAR -->
+                <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+                <!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+                <div class="page-sidebar navbar-collapse collapse">
+                    <!-- BEGIN SIDEBAR MENU -->
+                    <!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
+                    <!-- DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode -->
+                    <!-- DOC: Apply "page-sidebar-menu-closed" class right after "page-sidebar-menu" to collapse("page-sidebar-closed" class must be applied to the body element) the sidebar sub menu mode -->
+                    <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+                    <!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
+                    <!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+                    @await Html.PartialAsync("_SidebarMenu")
+                    <!-- END SIDEBAR MENU -->
+                </div>
+                <!-- END SIDEBAR -->
+            </div>
+            <!-- END SIDEBAR -->
+            <!-- BEGIN CONTENT -->
+            <div class="page-content-wrapper" style="min-height: 100vh;">
+                <!-- BEGIN CONTENT BODY -->
+                <div class="page-content" >
+                    <!-- BEGIN PAGE BASE CONTENT -->
+                    <div class="portlet bg-portlet light portlet-fit full-height-content full-height-content-scrollable" style="min-height: 100vh;">
+                      <div class="portlet-title custom-title">
+                            <div class="caption">
+                                <i class=" icon-layers font-green"></i>
+                                <span class="caption-subject font-main-color bold uppercase">@ViewBag.PortletTitle</span>
+                            </div>
+                            <div class="actions">
+                                <a class="btn btn-circle btn-icon-only btn-default fullscreen" href="javascript:;" data-original-title="" title=""> </a>
+                            </div>
+                        </div>
+                        <div class="portlet-body">
+                            <div class="full-height-content-body" style="min-height: 100vh;">
+                                @RenderBody()
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END PAGE BASE CONTENT -->
+                </div>
+                <!-- END CONTENT BODY -->
+            </div>
+            <!-- END CONTENT -->
+        </div>
+        <!-- END CONTAINER -->
+        <!-- BEGIN FOOTER -->
+        <div class="page-footer">
+            <div class="page-footer-inner">
+                2018 &copy; <a target="_blank" href="#">Citizen serial info</a>
+            </div>
+            <div class="scroll-to-top">
+                <i class="icon-arrow-up"></i>
+            </div>
+        </div>
+        <!-- END FOOTER -->
+
+        <div id="user-profile"></div>
+
+    <!--[if lt IE 9]>
+    <script src="~/assets/global/plugins/respond.min.js"></script>
+    <script src="~/assets/global/plugins/excanvas.min.js"></script>
+    <script src="~/assets/global/plugins/ie8.fix.min.js"></script>
+    <![endif]-->
+    <!-- BEGIN CORE PLUGINS -->
+    @*<script src="~/assets/global/plugins/jquery.min.js" type="text/javascript"></script>*@
+    @*<script src="~/assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>*@
+    <script src="~/assets/global/plugins/js.cookie.min.js" type="text/javascript"></script>
+    <script src="~/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+    <script src="~/assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+    <script src="~/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
+    <!-- END CORE PLUGINS -->
+    <!-- BEGIN THEME GLOBAL SCRIPTS -->
+    <script src="~/assets/global/scripts/app.min.js" type="text/javascript"></script>
+    <!-- END THEME GLOBAL SCRIPTS -->
+    <!-- BEGIN THEME LAYOUT SCRIPTS -->
+    <script src="~/assets/layouts/layout4/scripts/layout.js" type="text/javascript"></script>
+    <script src="~/assets/layouts/layout4/scripts/demo.js" type="text/javascript"></script>
+    <script src="~/assets/layouts/global/scripts/quick-sidebar.min.js" type="text/javascript"></script>
+    <script src="~/assets/layouts/global/scripts/quick-nav.min.js" type="text/javascript"></script>
+    <!-- END THEME LAYOUT SCRIPTS -->
+    <script>
+        $.when(
+            $.getJSON("/lib/cldr-data/main/en/ca-gregorian.json"),
+            $.getJSON("/lib/cldr-data/main/en/numbers.json"),
+            $.getJSON("/lib/cldr-data/main/en/currencies.json"),
+            $.getJSON("/lib/cldr-data/supplemental/likelySubtags.json"),
+            $.getJSON("/lib/cldr-data/supplemental/timeData.json"),
+            $.getJSON("/lib/cldr-data/supplemental/weekData.json"),
+            $.getJSON("/lib/cldr-data/supplemental/currencyData.json"),
+            $.getJSON("/lib/cldr-data/supplemental/numberingSystems.json")
+        ).then(function () {
+            //The following code converts the got results into an array
+            return [].slice.apply(arguments, [0]).map(function (result) {
+                return result[0];
+            });
+        }).then(
+            Globalize.load //loads data held in each array item to Globalize
+            ).then(function () {
+                //initialize your application here
+                DevExpress.localization.locale("en-US");
+            })
+
+
+        Globalize.locale("en-US");
+
+        $(document).ready(function () {
+            $('#clickmewow').click(function () {
+                $('#radio1003').attr('checked', 'checked');
+            });
+        })
+    </script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+
+</html>

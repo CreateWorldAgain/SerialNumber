@@ -1,0 +1,143 @@
+﻿@{
+    Layout = "_LayoutLogin";
+}
+
+<div id="card-with-string">
+    <div class="card login bg1" style="width: 350px;margin: 100px auto;margin-bottom: 20px;height: auto;display: block;">
+
+        <h4 class="card-header page-header navbar white-text">Registration</h4>
+        
+        <div class="card-body bordered-blue" >
+            <form asp-controller="Account" asp-action="Login" method="post" id="form-register-container">
+                <div id="form"></div>
+                
+                <div class="dx-field" style="margin-top:20px">
+                    <div class="dx-field-label">
+                        <a asp-action="Login">Login</a>                        
+                    </div>
+                    <div class="dx-field-value">
+                        <div id="register-container" class="button-div">
+                            <div id="btRegister" style="background-color:#53a8de;"></div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <div style="display:none" id="reg-success">
+                <p style="font-size:16px;">
+                    Please check and confirm your Email!
+                </p>
+                <a asp-action="Login" asp-controller="Account" style="text-align:center;display:block;margin-top:10px;">Login </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="card bg1" style="width:350px; max-width:100%; height:auto; margin:0 auto; display:block;">
+        <div class="card-body" style="padding-top:15px; padding-bottom:15px;">
+            <div id="loginFooterContainer" style="margin-top:20px;font-size:14px;">
+                2018 &copy; <a target="_blank" href="#">Citizen serial info</a>
+                @await Html.PartialAsync("_SelectLanguagePartial")
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <script>
+
+        $(function () {
+            var formWidget = $("#form").dxForm({
+
+                readOnly: false,
+                showColonAfterLabel: false,
+                showValidationSummary: false,
+                validationGroup: "customerData",
+                requiredMark: '',
+                items: [{
+                    dataField: "Login",
+                    validationRules: [{
+                        type: "required",
+                        message: "Obligatory field"
+                    }]
+                }, {
+                    dataField: "Email",
+                    validationRules: [{
+                        type: "required",
+                        message: "Obligatory field"
+                    }]
+                }, {
+                    dataField: "Password",
+                    editorOptions: {
+                        mode: "password"
+                    },
+                    validationRules: [{
+                        type: "required",
+                        message: "Obligatory field"
+                    }]
+                }, {
+                        dataField: "ConfirmPassword",
+                        editorOptions: {
+                            mode: "password"
+                        },
+                    validationRules: [{
+                        type: "required",
+                        message: "Obligatory field"
+                    }]
+                }, {
+                    dataField: "FirstName",
+                    validationRules: [{
+                        type: "required",
+                        message: "Obligatory field"
+                    }]
+                }, {
+                    dataField: "LastName",
+                    validationRules: [{
+                        type: "required",
+                        message: "Obligatory field"
+                    }]
+                },]
+            }).dxForm("instance");
+
+            $("#form-register-container").on("submit", function (e) {
+
+                var data = $(this).serialize();
+
+                $("#register-container").prepend("<span class=\"button-lock\"></span>");
+
+                var btnText = $("#register-container .dx-button-text").text();
+                $("#register-container .dx-button-text").html("&nbsp;");
+
+                $.ajax({
+                    url: "/account/register",
+                    type: "post",
+                    data: data
+                })
+                    .fail(function (e) { 
+                        toastr["error"](e.statusText+". HTTP-"+e.status, { "timeOut": "5000" });
+                    })
+                    .done(function (json) {                        
+                        if (json.error == "") {                            
+                            $("#form-register-container").hide(200);
+                            $("#reg-success").show(100);
+                        } else {
+                            toastr["error"](json.error, { "timeOut": "5000" });
+                            $("[name=username]").focus().select();
+                        }
+                    })
+                    .always(function () {                        
+                        $("#register-container").children()[0].remove();
+                        $("#register-container .dx-button-text").text(btnText);
+                    });
+
+                e.preventDefault();
+            });
+
+            $("#btRegister").dxButton({
+                text: "Register",
+                type: "default",
+                width: '100%',
+                useSubmitBehavior: true,
+                validationGroup: "customerData"
+            });
+        });
+    </script>
+}

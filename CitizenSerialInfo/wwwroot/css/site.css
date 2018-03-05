@@ -1,0 +1,156 @@
+﻿#card-with-string .card:before {
+    content: "";
+    display: inline-block;
+    float: right;
+    height: 1.618em;
+    top: 0;
+    width: 100%;
+    background: url("/images/string-top.png") top center no-repeat;
+    margin-top: -15px;
+    z-index: 9999;
+    zoom: 1;
+}
+
+#card-with-string .card:after {
+    display: inline-block;
+    float: right;
+    content: "";
+    height: 3.631em;
+    top: 100%;
+    background: url("/images/string.png") top center no-repeat;
+    width: 100%;
+    margin-top: -1.118em;
+    zoom: 1;
+}
+
+#card-with-string .card:last-child:after {
+    display: none;
+}
+
+#card-with-string .card:first-child:before {
+    display: none;
+}
+
+.bg1 {
+    background-color: white !important;
+}
+
+.bg2 {
+    background-color: #53a8de !important;
+}
+
+.button-lock {
+    z-index: 9999;
+    background: url('/images/upload_inv.gif') center no-repeat;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.button-div {
+    position: relative;
+    border: 0;
+    display: inline-block;
+    position: relative;
+    line-height: normal;
+    zoom: 1;
+    width: 100%;
+}
+
+.card-block.bordered-blue {
+    border-left: 1px solid #4285F4;
+    border-bottom: 1px solid #4285F4;
+    border-right: 1px solid #4285F4;
+}
+
+.card.login {
+    margin: 100px auto;
+    margin-bottom: 20px;
+    display: block;
+    max-width: 350px
+}
+
+    .card.login .card-header, .card.activation .card-header {
+        color: #e3f1fa !important;
+    }
+
+.card.activation {
+    margin: 100px auto;
+    margin-bottom: 20px;
+    display: block;
+    max-width: 450px
+}
+
+.no-padding {
+    padding: 0px !important
+}
+
+#btLogin, #btActivate, #btRegister {
+    background-color: #3B3F51 !important;
+    border-color: #e3f1fa !important;
+}
+
+#activation-container {
+    margin-bottom: 10px;
+}
+
+#btActivate {
+    padding-bottom: 2px;
+    padding-top: 2px;
+}
+
+.font-main-color {
+    color: #3B3F51;
+}
+
+.bg-portlet {
+    border: 1px solid #3B3F51 !important;
+}
+
+    .bg-portlet .portlet-title .caption span {
+        color: white !important;
+    }
+
+
+
+    .bg-portlet .portlet-title.custom-title {
+        background-color: #3B3F51;
+    }
+
+.portlet-title.custom-title {
+    padding-bottom: 5px !important;
+    padding-top: 10px !important;
+}
+
+#weightElement2, #weightElement1 {
+    text-align: right;
+    /*font-weight:500;
+    font-size: 8rem;*/
+}
+
+#weight1-container, #weight2-container {
+    text-align: right;
+}
+
+    #weight1-container button, #weight2-container button {
+        width: 100%;
+    }
+
+    #weight1-container h1, #weight2-container h1 {
+        font-weight: bold;
+    }
+
+.custom-title li.active {
+    border-bottom-color: white !important;
+}
+
+.disabledbutton {
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+#receipt {
+    display: none;
+}
+
+

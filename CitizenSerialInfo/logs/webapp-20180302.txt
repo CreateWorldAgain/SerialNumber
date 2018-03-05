@@ -1,0 +1,1313 @@
+2018-03-02T16:23:32.5787140+02:00  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-02T16:23:33.3708658+02:00  [INF] Executed DbCommand ("38"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'__EFMigrationsHistory');" (0723d8ff)
+2018-03-02T16:23:33.4653533+02:00  [INF] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2018-03-02T16:23:58.6195280+02:00 0HLC094UDFQLG:00000001 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/administration/users   (ca22a1cb)
+2018-03-02T16:23:58.6936055+02:00 0HLC094UDFQLG:00000001 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-02T16:23:58.9775461+02:00 0HLC094UDFQLG:00000001 [INF] Executed DbCommand ("50"ms) [Parameters=["@__get_Item_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[Email], [e].[EmailConfirmed], [e].[FirstName], [e].[IsApproved], [e].[LastName], [e].[MoreInfoCount], [e].[MoreInfoCountUsed], [e].[MoreInfoDate], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[SecurityStamp], [e].[UserName]
+FROM [Users] AS [e]
+WHERE [e].[Id] = @__get_Item_0" (0723d8ff)
+2018-03-02T16:23:59.1120115+02:00 0HLC094UDFQLG:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [UserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T16:23:59.1817949+02:00 0HLC094UDFQLG:00000001 [INF] Executed DbCommand ("5"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [UserRoles] AS [userRole]
+INNER JOIN [Roles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-03-02T16:23:59.2301183+02:00 0HLC094UDFQLG:00000001 [INF] Executed DbCommand ("3"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[MoreInfoCount], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2018-03-02T16:23:59.2972245+02:00 0HLC094UDFQLG:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__role_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [RoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0" (0723d8ff)
+2018-03-02T16:23:59.3072635+02:00 0HLC094UDFQLG:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-02T16:23:59.6686561+02:00 0HLC094UDFQLG:00000001 [INF] Executing action method "CitizenSerialInfo.Controllers.AdministrationController.Users (CitizenSerialInfo)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-03-02T16:24:03.3583273+02:00 0HLC094UDFQLG:00000001 [INF] Executing ViewResult, running view at path "/Views/Administration/Users.cshtml". (9707eebe)
+2018-03-02T16:24:04.6202811+02:00 0HLC094UDFQLG:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__ToUpper_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [s].[Id], [s].[Email], [s].[EmailConfirmed], [s].[FirstName], [s].[IsApproved], [s].[LastName], [s].[MoreInfoCount], [s].[MoreInfoCountUsed], [s].[MoreInfoDate], [s].[NormalizedEmail], [s].[NormalizedUserName], [s].[PasswordHash], [s].[SecurityStamp], [s].[UserName]
+FROM [Users] AS [s]
+WHERE [s].[NormalizedUserName] = @__ToUpper_0" (0723d8ff)
+2018-03-02T16:24:05.0239581+02:00 0HLC094UDFQLG:00000001 [INF] Executed action "CitizenSerialInfo.Controllers.AdministrationController.Users (CitizenSerialInfo)" in 5356.8213ms (afa2e885)
+2018-03-02T16:24:05.0635182+02:00 0HLC094UDFQLG:00000001 [INF] Request finished in 6454.3159ms 200 text/html; charset=utf-8 (791a596a)
+2018-03-02T16:24:05.1975367+02:00 0HLC094UDFQLI:00000001 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css   (ca22a1cb)
+2018-03-02T16:24:05.2262271+02:00 0HLC094UDFQLH:00000001 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/assets/global/plugins/bootstrap/css/bootstrap.min.css   (ca22a1cb)
+2018-03-02T16:24:05.2496490+02:00 0HLC094UDFQLF:00000001 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/assets/global/plugins/simple-line-icons/simple-line-icons.min.css   (ca22a1cb)
+2018-03-02T16:24:05.2590599+02:00 0HLC094UDFQLK:00000001 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/assets/global/css/plugins.min.css   (ca22a1cb)
+2018-03-02T16:24:05.3082316+02:00 0HLC094UDFQLF:00000001 [INF] Sending file. Request path: '"/assets/global/plugins/simple-line-icons/simple-line-icons.min.css"'. Physical path: '"C:\Users\elena\Desktop\Новая папка\Citizen23\CitizenSerialInfo\wwwroot\assets\global\plugins\simple-line-icons\simple-line-icons.min.css"' (27b0a520)
+2018-03-02T16:24:05.3855043+02:00 0HLC094UDFQLH:00000001 [INF] Sending file. Request path: '"/assets/global/plugins/bootstrap/css/bootstrap.min.css"'. Physical path: '"C:\Users\elena\Desktop\Новая папка\Citizen23\CitizenSerialInfo\wwwroot\assets\global\plugins\bootstrap\css\bootstrap.min.css"' (27b0a520)
+2018-03-02T16:24:05.3938806+02:00 0HLC094UDFQLG:00000002 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/assets/global/plugins/font-awesome/css/font-awesome.min.css   (ca22a1cb)
+2018-03-02T16:24:05.5351026+02:00 0HLC094UDFQLI:00000001 [INF] Sending file. Request path: '"/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css"'. Physical path: '"C:\Users\elena\Desktop\Новая папка\Citizen23\CitizenSerialInfo\wwwroot\assets\global\plugins\bootstrap-switch\css\bootstrap-switch.min.css"' (27b0a520)
+2018-03-02T16:24:05.5859818+02:00 0HLC094UDFQLJ:00000001 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/assets/global/css/components.min.css   (ca22a1cb)
+2018-03-02T16:24:05.6124812+02:00 0HLC094UDFQLF:00000001 [INF] Request finished in 346.0987ms 200 text/css (791a596a)
+2018-03-02T16:24:05.6695790+02:00 0HLC094UDFQLK:00000001 [INF] Sending file. Request path: '"/assets/global/css/plugins.min.css"'. Physical path: '"C:\Users\elena\Desktop\Новая папка\Citizen23\CitizenSerialInfo\wwwroot\assets\global\css\plugins.min.css"' (27b0a520)
+2018-03-02T16:24:05.6722986+02:00 0HLC094UDFQLG:00000002 [INF] Sending file. Request path: '"/assets/global/plugins/font-awesome/css/font-awesome.min.css"'. Physical path: '"C:\Users\elena\Desktop\Новая папка\Citizen23\CitizenSerialInfo\wwwroot\assets\global\plugins\font-awesome\css\font-awesome.min.css"' (27b0a520)
+2018-03-02T16:24:05.6884330+02:00 0HLC094UDFQLI:00000001 [INF] Request finished in 457.7079ms 200 text/css (791a596a)
+2018-03-02T16:24:05.7339319+02:00 0HLC094UDFQLK:00000001 [INF] Request finished in 579.3446ms 200 text/css (791a596a)
+2018-03-02T16:24:05.8060530+02:00 0HLC094UDFQLJ:00000001 [INF] Sending file. Request path: '"/assets/global/css/components.min.css"'. Physical path: '"C:\Users\elena\Desktop\Новая папка\Citizen23\CitizenSerialInfo\wwwroot\assets\global\css\components.min.css"' (27b0a520)
+2018-03-02T16:24:05.8217646+02:00 0HLC094UDFQLG:00000002 [INF] Request finished in 346.5915ms 200 text/css (791a596a)
+2018-03-02T16:24:05.8763766+02:00 0HLC094UDFQLI:00000002 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/assets/layouts/layout/css/themes/darkblue.css   (ca22a1cb)
+2018-03-02T16:24:05.9171058+02:00 0HLC094UDFQLF:00000002 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/assets/layouts/layout/css/custom.css   (ca22a1cb)
+2018-03-02T16:24:06.0141273+02:00 0HLC094UDFQLH:00000001 [INF] Request finished in 703.6637ms 200 text/css (791a596a)
+2018-03-02T16:24:06.0206531+02:00 0HLC094UDFQLI:00000002 [INF] Sending file. Request path: '"/assets/layouts/layout/css/themes/darkblue.css"'. Physical path: '"C:\Users\elena\Desktop\Новая папка\Citizen23\CitizenSerialInfo\wwwroot\assets\layouts\layout\css\themes\darkblue.css"' (27b0a520)
+2018-03-02T16:24:06.1031854+02:00 0HLC094UDFQLG:00000003 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/assets/layouts/layout/css/layout.css   (ca22a1cb)
+2018-03-02T16:24:06.1490286+02:00 0HLC094UDFQLK:00000002 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/css/site.css   (ca22a1cb)
+2018-03-02T16:24:06.1752882+02:00 0HLC094UDFQLF:00000002 [INF] Sending file. Request path: '"/assets/layouts/layout/css/custom.css"'. Physical path: '"C:\Users\elena\Desktop\Новая папка\Citizen23\CitizenSerialInfo\wwwroot\assets\layouts\layout\css\custom.css"' (27b0a520)
+2018-03-02T16:24:06.1783901+02:00 0HLC094UDFQLH:00000002 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/css/devextreme/dx.common.css   (ca22a1cb)
+2018-03-02T16:24:06.2504371+02:00 0HLC094UDFQLK:00000002 [INF] Sending file. Request path: '"/css/site.css"'. Physical path: '"C:\Users\elena\Desktop\Новая папка\Citizen23\CitizenSerialInfo\wwwroot\css\site.css"' (27b0a520)
+2018-03-02T16:24:06.2802039+02:00 0HLC094UDFQLH:00000002 [INF] Sending file. Request path: '"/css/devextreme/dx.common.css"'. Physical path: '"C:\Users\elena\Desktop\Новая папка\Citizen23\CitizenSerialInfo\wwwroot\css\devextreme\dx.common.css"' (27b0a520)
+2018-03-02T16:24:06.2929339+02:00 0HLC094UDFQLI:00000002 [INF] Request finished in 377.5022ms 200 text/css (791a596a)
+2018-03-02T16:24:06.4170977+02:00 0HLC094UDFQLI:00000003 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/css/devextreme/dx.light.css   (ca22a1cb)
+2018-03-02T16:24:06.4717012+02:00 0HLC094UDFQLF:00000002 [INF] Request finished in 546.9222ms 200 text/css (791a596a)
+2018-03-02T16:24:06.5081770+02:00 0HLC094UDFQLK:00000002 [INF] Request finished in 382.4221ms 200 text/css (791a596a)
+2018-03-02T16:24:06.5115182+02:00 0HLC094UDFQLI:00000003 [INF] Sending file. Request path: '"/css/devextreme/dx.light.css"'. Physical path: '"C:\Users\elena\Desktop\Новая папка\Citizen23\CitizenSerialInfo\wwwroot\css\devextreme\dx.light.css"' (27b0a520)
+2018-03-02T16:24:06.5384263+02:00 0HLC094UDFQLG:00000003 [INF] Sending file. Request path: '"/assets/layouts/layout/css/layout.css"'. Physical path: '"C:\Users\elena\Desktop\Новая папка\Citizen23\CitizenSerialInfo\wwwroot\assets\layouts\layout\css\layout.css"' (27b0a520)
+2018-03-02T16:24:06.5825911+02:00 0HLC094UDFQLK:00000003 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/jquery/dist/jquery.js   (ca22a1cb)
+2018-03-02T16:24:06.6595011+02:00 0HLC094UDFQLH:00000002 [INF] Request finished in 488.1638ms 200 text/css (791a596a)
+2018-03-02T16:24:06.7373400+02:00 0HLC094UDFQLK:00000003 [INF] The file "/lib/jquery/dist/jquery.js" was not modified (f1f8d725)
+2018-03-02T16:24:06.7395080+02:00 0HLC094UDFQLF:00000003 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/toastr/toastr.css   (ca22a1cb)
+2018-03-02T16:24:06.8325358+02:00 0HLC094UDFQLG:00000003 [INF] Request finished in 633.4054ms 200 text/css (791a596a)
+2018-03-02T16:24:06.8407334+02:00 0HLC094UDFQLF:00000003 [INF] Sending file. Request path: '"/lib/toastr/toastr.css"'. Physical path: '"C:\Users\elena\Desktop\Новая папка\Citizen23\CitizenSerialInfo\wwwroot\lib\toastr\toastr.css"' (27b0a520)
+2018-03-02T16:24:06.8885725+02:00 0HLC094UDFQLK:00000003 [INF] Request finished in 295.4918ms 304 application/javascript (791a596a)
+2018-03-02T16:24:06.9509934+02:00 0HLC094UDFQLK:00000004 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/js/devextreme/cldr/supplemental.js   (ca22a1cb)
+2018-03-02T16:24:07.0560430+02:00 0HLC094UDFQLF:00000003 [INF] Request finished in 255.7815ms 200 text/css (791a596a)
+2018-03-02T16:24:07.0581836+02:00 0HLC094UDFQLH:00000003 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/js/devextreme/cldr/event.js   (ca22a1cb)
+2018-03-02T16:24:07.0987980+02:00 0HLC094UDFQLK:00000004 [INF] The file "/js/devextreme/cldr/supplemental.js" was not modified (f1f8d725)
+2018-03-02T16:24:07.1946815+02:00 0HLC094UDFQLH:00000003 [INF] The file "/js/devextreme/cldr/event.js" was not modified (f1f8d725)
+2018-03-02T16:24:07.2679274+02:00 0HLC094UDFQLF:00000004 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/js/devextreme/cldr/unresolved.js   (ca22a1cb)
+2018-03-02T16:24:07.2948172+02:00 0HLC094UDFQLK:00000004 [INF] Request finished in 206.7357ms 304 application/javascript (791a596a)
+2018-03-02T16:24:07.3484594+02:00 0HLC094UDFQLH:00000003 [INF] Request finished in 482.1329ms 304 application/javascript (791a596a)
+2018-03-02T16:24:07.3738675+02:00 0HLC094UDFQLG:00000004 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/js/devextreme/cldr.js   (ca22a1cb)
+2018-03-02T16:24:07.4688080+02:00 0HLC094UDFQLG:00000004 [INF] The file "/js/devextreme/cldr.js" was not modified (f1f8d725)
+2018-03-02T16:24:07.5032609+02:00 0HLC094UDFQLH:00000004 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/js/devextreme/globalize/message.js   (ca22a1cb)
+2018-03-02T16:24:07.5482269+02:00 0HLC094UDFQLG:00000004 [INF] Request finished in 599.6718ms 304 application/javascript (791a596a)
+2018-03-02T16:24:07.5900236+02:00 0HLC094UDFQLG:00000005 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/js/devextreme/globalize/number.js   (ca22a1cb)
+2018-03-02T16:24:07.6226751+02:00 0HLC094UDFQLK:00000005 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/js/devextreme/globalize.js   (ca22a1cb)
+2018-03-02T16:24:07.6426687+02:00 0HLC094UDFQLH:00000004 [INF] The file "/js/devextreme/globalize/message.js" was not modified (f1f8d725)
+2018-03-02T16:24:07.6584724+02:00 0HLC094UDFQLG:00000005 [INF] The file "/js/devextreme/globalize/number.js" was not modified (f1f8d725)
+2018-03-02T16:24:07.7016755+02:00 0HLC094UDFQLI:00000003 [INF] Request finished in 1287.2051ms 200 text/css (791a596a)
+2018-03-02T16:24:07.7316868+02:00 0HLC094UDFQLF:00000004 [INF] The file "/js/devextreme/cldr/unresolved.js" was not modified (f1f8d725)
+2018-03-02T16:24:07.7521557+02:00 0HLC094UDFQLF:00000004 [INF] Request finished in 664.3008ms 304 application/javascript (791a596a)
+2018-03-02T16:24:07.8338764+02:00 0HLC094UDFQLI:00000004 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/js/devextreme/globalize/currency.js   (ca22a1cb)
+2018-03-02T16:24:07.8491148+02:00 0HLC094UDFQLH:00000004 [INF] Request finished in 224.6818ms 304 application/javascript (791a596a)
+2018-03-02T16:24:07.8846583+02:00 0HLC094UDFQLK:00000005 [INF] The file "/js/devextreme/globalize.js" was not modified (f1f8d725)
+2018-03-02T16:24:07.9439918+02:00 0HLC094UDFQLG:00000005 [INF] Request finished in 104.0153ms 304 application/javascript (791a596a)
+2018-03-02T16:24:07.9679654+02:00 0HLC094UDFQLI:00000004 [INF] The file "/js/devextreme/globalize/currency.js" was not modified (f1f8d725)
+2018-03-02T16:24:08.0341879+02:00 0HLC094UDFQLF:00000005 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/js/devextreme/localization/dx.messages.en.js   (ca22a1cb)
+2018-03-02T16:24:08.0924283+02:00 0HLC094UDFQLI:00000004 [INF] Request finished in 263.5084ms 304 application/javascript (791a596a)
+2018-03-02T16:24:08.1042564+02:00 0HLC094UDFQLH:00000005 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/js/devextreme/globalize/date.js   (ca22a1cb)
+2018-03-02T16:24:08.1230515+02:00 0HLC094UDFQLK:00000005 [INF] Request finished in 561.4007ms 304 application/javascript (791a596a)
+2018-03-02T16:24:08.2405806+02:00 0HLC094UDFQLF:00000005 [INF] The file "/js/devextreme/localization/dx.messages.en.js" was not modified (f1f8d725)
+2018-03-02T16:24:08.2552007+02:00 0HLC094UDFQLI:00000005 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/devextreme-aspnet-data/js/dx.aspnet.data.js   (ca22a1cb)
+2018-03-02T16:24:08.2751410+02:00 0HLC094UDFQLH:00000005 [INF] The file "/js/devextreme/globalize/date.js" was not modified (f1f8d725)
+2018-03-02T16:24:08.3006096+02:00 0HLC094UDFQLI:00000005 [INF] The file "/lib/devextreme-aspnet-data/js/dx.aspnet.data.js" was not modified (f1f8d725)
+2018-03-02T16:24:08.3573333+02:00 0HLC094UDFQLK:00000006 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/js/devextreme/vectormap-data/world.js   (ca22a1cb)
+2018-03-02T16:24:08.3640644+02:00 0HLC094UDFQLG:00000006 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/js/devextreme/dx.all.js   (ca22a1cb)
+2018-03-02T16:24:08.4306875+02:00 0HLC094UDFQLH:00000005 [INF] Request finished in 416.9484ms 304 application/javascript (791a596a)
+2018-03-02T16:24:08.4457671+02:00 0HLC094UDFQLF:00000005 [INF] Request finished in 292.8699ms 304 application/javascript (791a596a)
+2018-03-02T16:24:08.4559825+02:00 0HLC094UDFQLI:00000005 [INF] Request finished in 154.3065ms 304 application/javascript (791a596a)
+2018-03-02T16:24:08.5125657+02:00 0HLC094UDFQLH:00000006 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/toastr/toastr.min.js   (ca22a1cb)
+2018-03-02T16:24:08.5256020+02:00 0HLC094UDFQLK:00000006 [INF] The file "/js/devextreme/vectormap-data/world.js" was not modified (f1f8d725)
+2018-03-02T16:24:08.5547630+02:00 0HLC094UDFQLH:00000006 [INF] The file "/lib/toastr/toastr.min.js" was not modified (f1f8d725)
+2018-03-02T16:24:08.5849774+02:00 0HLC094UDFQLG:00000006 [INF] The file "/js/devextreme/dx.all.js" was not modified (f1f8d725)
+2018-03-02T16:24:08.7075584+02:00 0HLC094UDFQLI:00000006 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/js/site.js   (ca22a1cb)
+2018-03-02T16:24:08.8060403+02:00 0HLC094UDFQLF:00000006 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/js/devextreme/aspnet/dx.aspnet.mvc.js   (ca22a1cb)
+2018-03-02T16:24:08.8225262+02:00 0HLC094UDFQLJ:00000001 [INF] Request finished in 3239.8028ms 200 text/css (791a596a)
+2018-03-02T16:24:08.8385253+02:00 0HLC094UDFQLG:00000006 [INF] Request finished in 520.8273ms 304 application/javascript (791a596a)
+2018-03-02T16:24:08.9170478+02:00 0HLC094UDFQLH:00000006 [INF] Request finished in 67.3497ms 304 application/javascript (791a596a)
+2018-03-02T16:24:08.9331374+02:00 0HLC094UDFQLI:00000006 [INF] The file "/js/site.js" was not modified (f1f8d725)
+2018-03-02T16:24:08.9866243+02:00 0HLC094UDFQLK:00000006 [INF] Request finished in 375.505ms 304 application/javascript (791a596a)
+2018-03-02T16:24:09.0407999+02:00 0HLC094UDFQLF:00000006 [INF] The file "/js/devextreme/aspnet/dx.aspnet.mvc.js" was not modified (f1f8d725)
+2018-03-02T16:24:09.0752503+02:00 0HLC094UDFQLF:00000006 [INF] Request finished in 576.7884ms 304 application/javascript (791a596a)
+2018-03-02T16:24:09.1098739+02:00 0HLC094UDFQLI:00000006 [INF] Request finished in 270.9158ms 304 application/javascript (791a596a)
+2018-03-02T16:24:09.1440802+02:00 0HLC094UDFQLI:00000007 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/assets/layouts/layout4/img/logo-light.png   (ca22a1cb)
+2018-03-02T16:24:09.1571912+02:00 0HLC094UDFQLI:00000007 [INF] The file "/assets/layouts/layout4/img/logo-light.png" was not modified (f1f8d725)
+2018-03-02T16:24:09.1697036+02:00 0HLC094UDFQLI:00000007 [INF] Request finished in 44.0422ms 304 image/png (791a596a)
+2018-03-02T16:24:09.7191824+02:00 0HLC094UDFQLH:00000007 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/cldr-data/supplemental/timeData.json   (ca22a1cb)
+2018-03-02T16:24:09.7885619+02:00 0HLC094UDFQLG:00000007 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/cldr-data/supplemental/likelySubtags.json   (ca22a1cb)
+2018-03-02T16:24:09.8161309+02:00 0HLC094UDFQLJ:00000002 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/cldr-data/main/en/currencies.json   (ca22a1cb)
+2018-03-02T16:24:09.8273992+02:00 0HLC094UDFQLF:00000007 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/cldr-data/main/en/numbers.json   (ca22a1cb)
+2018-03-02T16:24:09.8578734+02:00 0HLC094UDFQLI:00000008 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/cldr-data/main/en/ca-gregorian.json   (ca22a1cb)
+2018-03-02T16:24:09.8821533+02:00 0HLC094UDFQLG:00000007 [INF] Sending file. Request path: '"/lib/cldr-data/supplemental/likelySubtags.json"'. Physical path: '"C:\Users\elena\Desktop\Новая папка\Citizen23\CitizenSerialInfo\wwwroot\lib\cldr-data\supplemental\likelySubtags.json"' (27b0a520)
+2018-03-02T16:24:09.9520861+02:00 0HLC094UDFQLF:00000007 [INF] Sending file. Request path: '"/lib/cldr-data/main/en/numbers.json"'. Physical path: '"C:\Users\elena\Desktop\Новая папка\Citizen23\CitizenSerialInfo\wwwroot\lib\cldr-data\main\en\numbers.json"' (27b0a520)
+2018-03-02T16:24:09.9817220+02:00 0HLC094UDFQLJ:00000002 [INF] Sending file. Request path: '"/lib/cldr-data/main/en/currencies.json"'. Physical path: '"C:\Users\elena\Desktop\Новая папка\Citizen23\CitizenSerialInfo\wwwroot\lib\cldr-data\main\en\currencies.json"' (27b0a520)
+2018-03-02T16:24:10.0450688+02:00 0HLC094UDFQLK:00000007 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/cldr-data/supplemental/weekData.json   (ca22a1cb)
+2018-03-02T16:24:10.0937300+02:00 0HLC094UDFQLG:00000007 [INF] Request finished in 260.4462ms 200 application/json (791a596a)
+2018-03-02T16:24:10.0995254+02:00 0HLC094UDFQLH:00000007 [INF] Sending file. Request path: '"/lib/cldr-data/supplemental/timeData.json"'. Physical path: '"C:\Users\elena\Desktop\Новая папка\Citizen23\CitizenSerialInfo\wwwroot\lib\cldr-data\supplemental\timeData.json"' (27b0a520)
+2018-03-02T16:24:10.1183359+02:00 0HLC094UDFQLF:00000007 [INF] Request finished in 344.1322ms 200 application/json (791a596a)
+2018-03-02T16:24:10.1888545+02:00 0HLC094UDFQLJ:00000002 [INF] Request finished in 417.5052ms 200 application/json (791a596a)
+2018-03-02T16:24:10.2810252+02:00 0HLC094UDFQLI:00000008 [INF] Sending file. Request path: '"/lib/cldr-data/main/en/ca-gregorian.json"'. Physical path: '"C:\Users\elena\Desktop\Новая папка\Citizen23\CitizenSerialInfo\wwwroot\lib\cldr-data\main\en\ca-gregorian.json"' (27b0a520)
+2018-03-02T16:24:10.2994547+02:00 0HLC094UDFQLK:00000007 [INF] Sending file. Request path: '"/lib/cldr-data/supplemental/weekData.json"'. Physical path: '"C:\Users\elena\Desktop\Новая папка\Citizen23\CitizenSerialInfo\wwwroot\lib\cldr-data\supplemental\weekData.json"' (27b0a520)
+2018-03-02T16:24:10.3443609+02:00 0HLC094UDFQLI:00000008 [INF] Request finished in 653.1869ms 200 application/json (791a596a)
+2018-03-02T16:24:10.3527918+02:00 0HLC094UDFQLF:00000008 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/cldr-data/supplemental/currencyData.json   (ca22a1cb)
+2018-03-02T16:24:10.3959150+02:00 0HLC094UDFQLJ:00000003 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/cldr-data/supplemental/numberingSystems.json   (ca22a1cb)
+2018-03-02T16:24:10.4095163+02:00 0HLC094UDFQLG:00000008 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/css/devextreme/icons/dxicons.woff   (ca22a1cb)
+2018-03-02T16:24:10.4414075+02:00 0HLC094UDFQLK:00000007 [INF] Request finished in 683.0724ms 200 application/json (791a596a)
+2018-03-02T16:24:10.4791372+02:00 0HLC094UDFQLH:00000007 [INF] Request finished in 558.4204ms 200 application/json (791a596a)
+2018-03-02T16:24:10.5249454+02:00 0HLC094UDFQLH:00000008 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/api/administrationapi?_=1520000648728   (ca22a1cb)
+2018-03-02T16:24:10.5695624+02:00 0HLC094UDFQLF:00000008 [INF] Sending file. Request path: '"/lib/cldr-data/supplemental/currencyData.json"'. Physical path: '"C:\Users\elena\Desktop\Новая папка\Citizen23\CitizenSerialInfo\wwwroot\lib\cldr-data\supplemental\currencyData.json"' (27b0a520)
+2018-03-02T16:24:10.5725225+02:00 0HLC094UDFQLG:00000008 [INF] The file "/css/devextreme/icons/dxicons.woff" was not modified (f1f8d725)
+2018-03-02T16:24:10.6002141+02:00 0HLC094UDFQLH:00000008 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-02T16:24:10.6595544+02:00 0HLC094UDFQLG:00000008 [INF] Request finished in 328.0772ms 304 application/font-woff (791a596a)
+2018-03-02T16:24:10.7062579+02:00 0HLC094UDFQLG:00000009 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/favicon.ico   (ca22a1cb)
+2018-03-02T16:24:10.7116637+02:00 0HLC094UDFQLJ:00000003 [INF] Sending file. Request path: '"/lib/cldr-data/supplemental/numberingSystems.json"'. Physical path: '"C:\Users\elena\Desktop\Новая папка\Citizen23\CitizenSerialInfo\wwwroot\lib\cldr-data\supplemental\numberingSystems.json"' (27b0a520)
+2018-03-02T16:24:10.7275682+02:00 0HLC094UDFQLG:00000009 [INF] Sending file. Request path: '"/favicon.ico"'. Physical path: '"C:\Users\elena\Desktop\Новая папка\Citizen23\CitizenSerialInfo\wwwroot\favicon.ico"' (27b0a520)
+2018-03-02T16:24:10.7685209+02:00 0HLC094UDFQLF:00000008 [INF] Request finished in 387.8165ms 200 application/json (791a596a)
+2018-03-02T16:24:10.8107724+02:00 0HLC094UDFQLJ:00000003 [INF] Request finished in 476.436ms 200 application/json (791a596a)
+2018-03-02T16:24:10.8438813+02:00 0HLC094UDFQLG:00000009 [INF] Request finished in 58.7541ms 200 image/x-icon (791a596a)
+2018-03-02T16:24:10.9052027+02:00 0HLC094UDFQLH:00000008 [INF] Executing action method "CitizenSerialInfo.Controllers.api.AdministrationApiController.Get (CitizenSerialInfo)" with arguments (["DevExtreme.AspNet.Mvc.DataSourceLoadOptions"]) - ModelState is Valid (ba7f4ac2)
+2018-03-02T16:24:10.9392584+02:00 0HLC094UDFQLH:00000008 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-02T16:24:10.9798254+02:00 0HLC094UDFQLH:00000008 [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsApproved], [u].[LastName], [u].[MoreInfoCount], [u].[MoreInfoCountUsed], [u].[MoreInfoDate], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[SecurityStamp], [u].[UserName]
+FROM [Users] AS [u]" (0723d8ff)
+2018-03-02T16:24:10.9981119+02:00 0HLC094UDFQLH:00000008 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [r].[Id], [r].[ConcurrencyStamp], [r].[MoreInfoCount], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]" (0723d8ff)
+2018-03-02T16:24:11.0233552+02:00 0HLC094UDFQLH:00000008 [INF] Executed DbCommand ("1"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T16:24:11.0461917+02:00 0HLC094UDFQLH:00000008 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T16:24:11.0574374+02:00 0HLC094UDFQLH:00000008 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T16:24:11.0680016+02:00 0HLC094UDFQLH:00000008 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T16:24:11.1182852+02:00 0HLC094UDFQLH:00000008 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T16:24:11.1537356+02:00 0HLC094UDFQLH:00000008 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-03-02T16:24:11.2196504+02:00 0HLC094UDFQLH:00000008 [INF] Executed action "CitizenSerialInfo.Controllers.api.AdministrationApiController.Get (CitizenSerialInfo)" in 399.5869ms (afa2e885)
+2018-03-02T16:24:11.2488502+02:00 0HLC094UDFQLH:00000008 [INF] Request finished in 728.6877ms 200 application/json; charset=utf-8 (791a596a)
+2018-03-02T16:32:45.6104230+02:00 0HLC094UDFQLL:00000001 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/administration/users   (ca22a1cb)
+2018-03-02T16:32:45.6392780+02:00 0HLC094UDFQLL:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-02T16:32:45.6784562+02:00 0HLC094UDFQLL:00000001 [INF] Executing action method "CitizenSerialInfo.Controllers.AdministrationController.Users (CitizenSerialInfo)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-03-02T16:32:45.8764134+02:00 0HLC094UDFQLL:00000001 [INF] Executing ViewResult, running view at path "/Views/Administration/Users.cshtml". (9707eebe)
+2018-03-02T16:32:45.9235156+02:00 0HLC094UDFQLL:00000001 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-02T16:32:46.0055978+02:00 0HLC094UDFQLL:00000001 [INF] Executed DbCommand ("5"ms) [Parameters=["@__ToUpper_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [s].[Id], [s].[Email], [s].[EmailConfirmed], [s].[FirstName], [s].[IsApproved], [s].[LastName], [s].[MoreInfoCount], [s].[MoreInfoCountUsed], [s].[MoreInfoDate], [s].[NormalizedEmail], [s].[NormalizedUserName], [s].[PasswordHash], [s].[SecurityStamp], [s].[UserName]
+FROM [Users] AS [s]
+WHERE [s].[NormalizedUserName] = @__ToUpper_0" (0723d8ff)
+2018-03-02T16:32:46.0507378+02:00 0HLC094UDFQLL:00000001 [INF] Executed action "CitizenSerialInfo.Controllers.AdministrationController.Users (CitizenSerialInfo)" in 371.3796ms (afa2e885)
+2018-03-02T16:32:46.1034836+02:00 0HLC094UDFQLL:00000001 [INF] Request finished in 468.5568ms 200 text/html; charset=utf-8 (791a596a)
+2018-03-02T16:32:46.9564377+02:00 0HLC094UDFQLL:00000002 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/favicon.ico   (ca22a1cb)
+2018-03-02T16:32:46.9691015+02:00 0HLC094UDFQLL:00000002 [INF] Sending file. Request path: '"/favicon.ico"'. Physical path: '"C:\Users\elena\Desktop\Новая папка\Citizen23\CitizenSerialInfo\wwwroot\favicon.ico"' (27b0a520)
+2018-03-02T16:32:46.9824519+02:00 0HLC094UDFQLL:00000002 [INF] Request finished in 23.8771ms 200 image/x-icon (791a596a)
+2018-03-02T16:32:51.8242909+02:00 0HLC094UDFQLL:00000003 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/administration/users   (ca22a1cb)
+2018-03-02T16:32:51.8778649+02:00 0HLC094UDFQLL:00000003 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-02T16:32:51.9258922+02:00 0HLC094UDFQLL:00000003 [INF] Executing action method "CitizenSerialInfo.Controllers.AdministrationController.Users (CitizenSerialInfo)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-03-02T16:32:51.9746952+02:00 0HLC094UDFQLL:00000003 [INF] Executing ViewResult, running view at path "/Views/Administration/Users.cshtml". (9707eebe)
+2018-03-02T16:32:52.0109631+02:00 0HLC094UDFQLL:00000003 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-02T16:32:52.0224583+02:00 0HLC094UDFQLL:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@__ToUpper_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [s].[Id], [s].[Email], [s].[EmailConfirmed], [s].[FirstName], [s].[IsApproved], [s].[LastName], [s].[MoreInfoCount], [s].[MoreInfoCountUsed], [s].[MoreInfoDate], [s].[NormalizedEmail], [s].[NormalizedUserName], [s].[PasswordHash], [s].[SecurityStamp], [s].[UserName]
+FROM [Users] AS [s]
+WHERE [s].[NormalizedUserName] = @__ToUpper_0" (0723d8ff)
+2018-03-02T16:32:52.0356151+02:00 0HLC094UDFQLL:00000003 [INF] Executed action "CitizenSerialInfo.Controllers.AdministrationController.Users (CitizenSerialInfo)" in 145.4301ms (afa2e885)
+2018-03-02T16:32:52.0798400+02:00 0HLC094UDFQLL:00000003 [INF] Request finished in 243.761ms 200 text/html; charset=utf-8 (791a596a)
+2018-03-02T16:32:53.0553603+02:00 0HLC094UDFQLL:00000004 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/favicon.ico   (ca22a1cb)
+2018-03-02T16:32:53.1033156+02:00 0HLC094UDFQLL:00000004 [INF] Sending file. Request path: '"/favicon.ico"'. Physical path: '"C:\Users\elena\Desktop\Новая папка\Citizen23\CitizenSerialInfo\wwwroot\favicon.ico"' (27b0a520)
+2018-03-02T16:32:53.1134519+02:00 0HLC094UDFQLL:00000004 [INF] Request finished in 80.2073ms 200 image/x-icon (791a596a)
+2018-03-02T16:33:34.9244372+02:00 0HLC094UDFQLL:00000005 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/administration/users   (ca22a1cb)
+2018-03-02T16:33:34.9550629+02:00 0HLC094UDFQLL:00000005 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-02T16:33:34.9640076+02:00 0HLC094UDFQLL:00000005 [INF] Executing action method "CitizenSerialInfo.Controllers.AdministrationController.Users (CitizenSerialInfo)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-03-02T16:33:35.1816784+02:00 0HLC094UDFQLL:00000005 [INF] Executing ViewResult, running view at path "/Views/Administration/Users.cshtml". (9707eebe)
+2018-03-02T16:33:35.2309431+02:00 0HLC094UDFQLL:00000005 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-02T16:33:35.2678724+02:00 0HLC094UDFQLL:00000005 [INF] Executed DbCommand ("3"ms) [Parameters=["@__ToUpper_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [s].[Id], [s].[Email], [s].[EmailConfirmed], [s].[FirstName], [s].[IsApproved], [s].[LastName], [s].[MoreInfoCount], [s].[MoreInfoCountUsed], [s].[MoreInfoDate], [s].[NormalizedEmail], [s].[NormalizedUserName], [s].[PasswordHash], [s].[SecurityStamp], [s].[UserName]
+FROM [Users] AS [s]
+WHERE [s].[NormalizedUserName] = @__ToUpper_0" (0723d8ff)
+2018-03-02T16:33:35.2848080+02:00 0HLC094UDFQLL:00000005 [INF] Executed action "CitizenSerialInfo.Controllers.AdministrationController.Users (CitizenSerialInfo)" in 314.7221ms (afa2e885)
+2018-03-02T16:33:35.3369279+02:00 0HLC094UDFQLL:00000005 [INF] Request finished in 390.0236ms 200 text/html; charset=utf-8 (791a596a)
+2018-03-02T16:33:36.4147648+02:00 0HLC094UDFQLL:00000006 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/api/administrationapi?_=1520001215459   (ca22a1cb)
+2018-03-02T16:33:36.4723852+02:00 0HLC094UDFQLL:00000006 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-02T16:33:36.4775632+02:00 0HLC094UDFQLN:00000001 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/favicon.ico   (ca22a1cb)
+2018-03-02T16:33:36.5490316+02:00 0HLC094UDFQLN:00000001 [INF] Sending file. Request path: '"/favicon.ico"'. Physical path: '"C:\Users\elena\Desktop\Новая папка\Citizen23\CitizenSerialInfo\wwwroot\favicon.ico"' (27b0a520)
+2018-03-02T16:33:36.5717554+02:00 0HLC094UDFQLL:00000006 [INF] Executing action method "CitizenSerialInfo.Controllers.api.AdministrationApiController.Get (CitizenSerialInfo)" with arguments (["DevExtreme.AspNet.Mvc.DataSourceLoadOptions"]) - ModelState is Valid (ba7f4ac2)
+2018-03-02T16:33:36.6476044+02:00 0HLC094UDFQLL:00000006 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-02T16:33:36.6730137+02:00 0HLC094UDFQLN:00000001 [INF] Request finished in 184.4155ms 200 image/x-icon (791a596a)
+2018-03-02T16:33:36.7236402+02:00 0HLC094UDFQLL:00000006 [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsApproved], [u].[LastName], [u].[MoreInfoCount], [u].[MoreInfoCountUsed], [u].[MoreInfoDate], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[SecurityStamp], [u].[UserName]
+FROM [Users] AS [u]" (0723d8ff)
+2018-03-02T16:33:36.7440233+02:00 0HLC094UDFQLL:00000006 [INF] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [r].[Id], [r].[ConcurrencyStamp], [r].[MoreInfoCount], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]" (0723d8ff)
+2018-03-02T16:33:36.7603029+02:00 0HLC094UDFQLL:00000006 [INF] Executed DbCommand ("2"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T16:33:36.7729365+02:00 0HLC094UDFQLL:00000006 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T16:33:36.7882866+02:00 0HLC094UDFQLL:00000006 [INF] Executed DbCommand ("2"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T16:33:36.8015739+02:00 0HLC094UDFQLL:00000006 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T16:33:36.8525495+02:00 0HLC094UDFQLL:00000006 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T16:33:36.8830655+02:00 0HLC094UDFQLL:00000006 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-03-02T16:33:36.9131618+02:00 0HLC094UDFQLL:00000006 [INF] Executed action "CitizenSerialInfo.Controllers.api.AdministrationApiController.Get (CitizenSerialInfo)" in 411.8754ms (afa2e885)
+2018-03-02T16:33:36.9243178+02:00 0HLC094UDFQLL:00000006 [INF] Request finished in 532.0243ms 200 application/json; charset=utf-8 (791a596a)
+2018-03-02T16:33:45.1436914+02:00 0HLC094UDFQLL:00000007 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/toastr/toastr.js.map   (ca22a1cb)
+2018-03-02T16:33:45.1560853+02:00 0HLC094UDFQLL:00000007 [INF] Sending file. Request path: '"/lib/toastr/toastr.js.map"'. Physical path: '"C:\Users\elena\Desktop\Новая папка\Citizen23\CitizenSerialInfo\wwwroot\lib\toastr\toastr.js.map"' (27b0a520)
+2018-03-02T16:33:45.1702267+02:00 0HLC094UDFQLL:00000007 [INF] Request finished in 24.8008ms 200 text/plain (791a596a)
+2018-03-02T16:47:41.5101414+02:00 0HLC094UDFQLO:00000001 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/administration/users   (ca22a1cb)
+2018-03-02T16:47:41.5222045+02:00 0HLC094UDFQLO:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-02T16:47:41.5531502+02:00 0HLC094UDFQLO:00000001 [INF] Executing action method "CitizenSerialInfo.Controllers.AdministrationController.Users (CitizenSerialInfo)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-03-02T16:47:41.8169821+02:00 0HLC094UDFQLO:00000001 [INF] Executing ViewResult, running view at path "/Views/Administration/Users.cshtml". (9707eebe)
+2018-03-02T16:47:41.8479214+02:00 0HLC094UDFQLO:00000001 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-02T16:47:41.9371207+02:00 0HLC094UDFQLO:00000001 [INF] Executed DbCommand ("5"ms) [Parameters=["@__ToUpper_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [s].[Id], [s].[Email], [s].[EmailConfirmed], [s].[FirstName], [s].[IsApproved], [s].[LastName], [s].[MoreInfoCount], [s].[MoreInfoCountUsed], [s].[MoreInfoDate], [s].[NormalizedEmail], [s].[NormalizedUserName], [s].[PasswordHash], [s].[SecurityStamp], [s].[UserName]
+FROM [Users] AS [s]
+WHERE [s].[NormalizedUserName] = @__ToUpper_0" (0723d8ff)
+2018-03-02T16:47:41.9747246+02:00 0HLC094UDFQLO:00000001 [INF] Executed action "CitizenSerialInfo.Controllers.AdministrationController.Users (CitizenSerialInfo)" in 416.2167ms (afa2e885)
+2018-03-02T16:47:42.0068189+02:00 0HLC094UDFQLO:00000001 [INF] Request finished in 482.5152ms 200 text/html; charset=utf-8 (791a596a)
+2018-03-02T16:47:42.1199103+02:00 0HLC094UDFQLO:00000002 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/assets/layouts/global/scripts/quick-nav.min.js   (ca22a1cb)
+2018-03-02T16:47:42.1491907+02:00 0HLC094UDFQLO:00000002 [INF] Sending file. Request path: '"/assets/layouts/global/scripts/quick-nav.min.js"'. Physical path: '"C:\Users\elena\Desktop\Новая папка\Citizen23\CitizenSerialInfo\wwwroot\assets\layouts\global\scripts\quick-nav.min.js"' (27b0a520)
+2018-03-02T16:47:42.1610214+02:00 0HLC094UDFQLO:00000002 [INF] Request finished in 42.2741ms 200 application/javascript (791a596a)
+2018-03-02T16:47:42.1950924+02:00 0HLC094UDFQLO:00000003 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/assets/layouts/layout4/img/logo-light.png   (ca22a1cb)
+2018-03-02T16:47:42.2272545+02:00 0HLC094UDFQLO:00000003 [INF] Sending file. Request path: '"/assets/layouts/layout4/img/logo-light.png"'. Physical path: '"C:\Users\elena\Desktop\Новая папка\Citizen23\CitizenSerialInfo\wwwroot\assets\layouts\layout4\img\logo-light.png"' (27b0a520)
+2018-03-02T16:47:42.2375611+02:00 0HLC094UDFQLO:00000003 [INF] Request finished in 62.8403ms 200 image/png (791a596a)
+2018-03-02T16:47:42.2566139+02:00 0HLC094UDFQLO:00000004 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/assets/layouts/layout4/img/avatar.png   (ca22a1cb)
+2018-03-02T16:47:42.2900236+02:00 0HLC094UDFQLO:00000004 [INF] Sending file. Request path: '"/assets/layouts/layout4/img/avatar.png"'. Physical path: '"C:\Users\elena\Desktop\Новая папка\Citizen23\CitizenSerialInfo\wwwroot\assets\layouts\layout4\img\avatar.png"' (27b0a520)
+2018-03-02T16:47:42.3213831+02:00 0HLC094UDFQLO:00000004 [INF] Request finished in 50.74ms 200 image/png (791a596a)
+2018-03-02T16:47:42.9564978+02:00 0HLC094UDFQLO:00000005 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/assets/global/plugins/font-awesome/fonts/fontawesome-webfont.woff2?v=4.4.0   (ca22a1cb)
+2018-03-02T16:47:42.9826773+02:00 0HLC094UDFQLP:00000001 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/assets/global/plugins/simple-line-icons/fonts/Simple-Line-Icons.woff   (ca22a1cb)
+2018-03-02T16:47:43.0191739+02:00 0HLC094UDFQLP:00000001 [INF] Sending file. Request path: '"/assets/global/plugins/simple-line-icons/fonts/Simple-Line-Icons.woff"'. Physical path: '"C:\Users\elena\Desktop\Новая папка\Citizen23\CitizenSerialInfo\wwwroot\assets\global\plugins\simple-line-icons\fonts\Simple-Line-Icons.woff"' (27b0a520)
+2018-03-02T16:47:43.0645925+02:00 0HLC094UDFQLO:00000005 [INF] Sending file. Request path: '"/assets/global/plugins/font-awesome/fonts/fontawesome-webfont.woff2"'. Physical path: '"C:\Users\elena\Desktop\Новая папка\Citizen23\CitizenSerialInfo\wwwroot\assets\global\plugins\font-awesome\fonts\fontawesome-webfont.woff2"' (27b0a520)
+2018-03-02T16:47:43.1145880+02:00 0HLC094UDFQLO:00000005 [INF] Request finished in 214.1465ms 200 font/woff2 (791a596a)
+2018-03-02T16:47:43.1713271+02:00 0HLC094UDFQLQ:00000001 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/css/devextreme/icons/dxicons.woff   (ca22a1cb)
+2018-03-02T16:47:43.1940953+02:00 0HLC094UDFQLP:00000001 [INF] Request finished in 181.2787ms 200 application/font-woff (791a596a)
+2018-03-02T16:47:43.2441249+02:00 0HLC094UDFQLQ:00000001 [INF] Sending file. Request path: '"/css/devextreme/icons/dxicons.woff"'. Physical path: '"C:\Users\elena\Desktop\Новая папка\Citizen23\CitizenSerialInfo\wwwroot\css\devextreme\icons\dxicons.woff"' (27b0a520)
+2018-03-02T16:47:43.2819502+02:00 0HLC094UDFQLQ:00000001 [INF] Request finished in 206.7929ms 200 application/font-woff (791a596a)
+2018-03-02T16:47:43.3553378+02:00 0HLC094UDFQLQ:00000002 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/api/administrationapi?_=1520002062203   (ca22a1cb)
+2018-03-02T16:47:43.4362013+02:00 0HLC094UDFQLQ:00000002 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-02T16:47:43.4462280+02:00 0HLC094UDFQLQ:00000002 [INF] Executing action method "CitizenSerialInfo.Controllers.api.AdministrationApiController.Get (CitizenSerialInfo)" with arguments (["DevExtreme.AspNet.Mvc.DataSourceLoadOptions"]) - ModelState is Valid (ba7f4ac2)
+2018-03-02T16:47:43.4581798+02:00 0HLC094UDFQLQ:00000002 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-02T16:47:43.5079504+02:00 0HLC094UDFQLO:00000006 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/favicon.ico   (ca22a1cb)
+2018-03-02T16:47:43.5575517+02:00 0HLC094UDFQLQ:00000002 [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsApproved], [u].[LastName], [u].[MoreInfoCount], [u].[MoreInfoCountUsed], [u].[MoreInfoDate], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[SecurityStamp], [u].[UserName]
+FROM [Users] AS [u]" (0723d8ff)
+2018-03-02T16:47:43.6070233+02:00 0HLC094UDFQLO:00000006 [INF] Sending file. Request path: '"/favicon.ico"'. Physical path: '"C:\Users\elena\Desktop\Новая папка\Citizen23\CitizenSerialInfo\wwwroot\favicon.ico"' (27b0a520)
+2018-03-02T16:47:43.6393275+02:00 0HLC094UDFQLQ:00000002 [INF] Executed DbCommand ("21"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [r].[Id], [r].[ConcurrencyStamp], [r].[MoreInfoCount], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]" (0723d8ff)
+2018-03-02T16:47:43.6918194+02:00 0HLC094UDFQLO:00000006 [INF] Request finished in 281.792ms 200 image/x-icon (791a596a)
+2018-03-02T16:47:43.7175052+02:00 0HLC094UDFQLQ:00000002 [INF] Executed DbCommand ("3"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T16:47:43.7495807+02:00 0HLC094UDFQLQ:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T16:47:43.7800630+02:00 0HLC094UDFQLQ:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T16:47:43.8089138+02:00 0HLC094UDFQLQ:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T16:47:43.8377459+02:00 0HLC094UDFQLQ:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T16:47:43.8682329+02:00 0HLC094UDFQLQ:00000002 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-03-02T16:47:43.8793061+02:00 0HLC094UDFQLQ:00000002 [INF] Executed action "CitizenSerialInfo.Controllers.api.AdministrationApiController.Get (CitizenSerialInfo)" in 433.152ms (afa2e885)
+2018-03-02T16:47:43.8897245+02:00 0HLC094UDFQLQ:00000002 [INF] Request finished in 557.4916ms 200 application/json; charset=utf-8 (791a596a)
+2018-03-02T16:49:43.8741622+02:00  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-02T16:49:44.1834563+02:00  [INF] Executed DbCommand ("21"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'__EFMigrationsHistory');" (0723d8ff)
+2018-03-02T16:49:44.2159688+02:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2018-03-02T16:49:56.0539984+02:00 0HLC09JEIGMO0:00000001 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/administration/users   (ca22a1cb)
+2018-03-02T16:49:56.1224694+02:00 0HLC09JEIGMO0:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-02T16:49:56.4453209+02:00 0HLC09JEIGMO0:00000001 [INF] Executing action method "CitizenSerialInfo.Controllers.AdministrationController.Users (CitizenSerialInfo)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-03-02T16:49:59.8312827+02:00 0HLC09JEIGMO0:00000001 [INF] Executing ViewResult, running view at path "/Views/Administration/Users.cshtml". (9707eebe)
+2018-03-02T16:50:01.0962188+02:00 0HLC09JEIGMO0:00000001 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-02T16:50:01.3158962+02:00 0HLC09JEIGMO0:00000001 [INF] Executed DbCommand ("36"ms) [Parameters=["@__ToUpper_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [s].[Id], [s].[Email], [s].[EmailConfirmed], [s].[FirstName], [s].[IsApproved], [s].[LastName], [s].[MoreInfoCount], [s].[MoreInfoCountUsed], [s].[MoreInfoDate], [s].[NormalizedEmail], [s].[NormalizedUserName], [s].[PasswordHash], [s].[SecurityStamp], [s].[UserName]
+FROM [Users] AS [s]
+WHERE [s].[NormalizedUserName] = @__ToUpper_0" (0723d8ff)
+2018-03-02T16:50:01.9058090+02:00 0HLC09JEIGMO0:00000001 [INF] Executed action "CitizenSerialInfo.Controllers.AdministrationController.Users (CitizenSerialInfo)" in 5357.338ms (afa2e885)
+2018-03-02T16:50:01.9345220+02:00 0HLC09JEIGMO0:00000001 [INF] Request finished in 5901.053ms 200 text/html; charset=utf-8 (791a596a)
+2018-03-02T16:50:03.0383465+02:00 0HLC09JEIGMO0:00000002 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/api/administrationapi?_=1520002202025   (ca22a1cb)
+2018-03-02T16:50:03.0641271+02:00 0HLC09JEIGMO0:00000002 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-02T16:50:03.0997584+02:00 0HLC09JEIGMO1:00000001 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/favicon.ico   (ca22a1cb)
+2018-03-02T16:50:03.1224046+02:00 0HLC09JEIGMO1:00000001 [INF] Sending file. Request path: '"/favicon.ico"'. Physical path: '"C:\Users\elena\Desktop\Новая папка\Citizen23\CitizenSerialInfo\wwwroot\favicon.ico"' (27b0a520)
+2018-03-02T16:50:03.1519700+02:00 0HLC09JEIGMO1:00000001 [INF] Request finished in 47.4653ms 200 image/x-icon (791a596a)
+2018-03-02T16:50:03.2180577+02:00 0HLC09JEIGMO0:00000002 [INF] Executing action method "CitizenSerialInfo.Controllers.api.AdministrationApiController.Get (CitizenSerialInfo)" with arguments (["DevExtreme.AspNet.Mvc.DataSourceLoadOptions"]) - ModelState is Valid (ba7f4ac2)
+2018-03-02T16:50:03.2501755+02:00 0HLC09JEIGMO0:00000002 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-02T16:50:03.2963549+02:00 0HLC09JEIGMO0:00000002 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsApproved], [u].[LastName], [u].[MoreInfoCount], [u].[MoreInfoCountUsed], [u].[MoreInfoDate], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[SecurityStamp], [u].[UserName]
+FROM [Users] AS [u]" (0723d8ff)
+2018-03-02T16:50:03.3426960+02:00 0HLC09JEIGMO0:00000002 [INF] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [r].[Id], [r].[ConcurrencyStamp], [r].[MoreInfoCount], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]" (0723d8ff)
+2018-03-02T16:50:03.4014318+02:00 0HLC09JEIGMO0:00000002 [INF] Executed DbCommand ("1"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T16:50:03.4644296+02:00 0HLC09JEIGMO0:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T16:50:03.4783470+02:00 0HLC09JEIGMO0:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T16:50:03.5113732+02:00 0HLC09JEIGMO0:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T16:50:03.5281403+02:00 0HLC09JEIGMO0:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T16:50:03.5767517+02:00 0HLC09JEIGMO0:00000002 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-03-02T16:50:03.6458836+02:00 0HLC09JEIGMO0:00000002 [INF] Executed action "CitizenSerialInfo.Controllers.api.AdministrationApiController.Get (CitizenSerialInfo)" in 490.5122ms (afa2e885)
+2018-03-02T16:50:03.6579835+02:00 0HLC09JEIGMO0:00000002 [INF] Request finished in 629.6196ms 200 application/json; charset=utf-8 (791a596a)
+2018-03-02T16:55:46.1969931+02:00  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-02T16:55:46.4931852+02:00  [INF] Executed DbCommand ("18"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'__EFMigrationsHistory');" (0723d8ff)
+2018-03-02T16:55:46.5253669+02:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2018-03-02T17:03:11.2820889+02:00 0HLC09QRIBV2H:00000001 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/account/logout   (ca22a1cb)
+2018-03-02T17:03:11.3686506+02:00 0HLC09QRIBV2H:00000001 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-02T17:03:11.6843852+02:00 0HLC09QRIBV2H:00000001 [INF] Executed DbCommand ("49"ms) [Parameters=["@__get_Item_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[Email], [e].[EmailConfirmed], [e].[FirstName], [e].[IsApproved], [e].[LastName], [e].[MoreInfoCount], [e].[MoreInfoCountUsed], [e].[MoreInfoDate], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[SecurityStamp], [e].[UserName]
+FROM [Users] AS [e]
+WHERE [e].[Id] = @__get_Item_0" (0723d8ff)
+2018-03-02T17:03:11.8028039+02:00 0HLC09QRIBV2H:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [UserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:03:11.8902177+02:00 0HLC09QRIBV2H:00000001 [INF] Executed DbCommand ("7"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [UserRoles] AS [userRole]
+INNER JOIN [Roles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-03-02T17:03:11.9210499+02:00 0HLC09QRIBV2H:00000001 [INF] Executed DbCommand ("3"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[MoreInfoCount], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2018-03-02T17:03:11.9608243+02:00 0HLC09QRIBV2H:00000001 [INF] Executed DbCommand ("1"ms) [Parameters=["@__role_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [RoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0" (0723d8ff)
+2018-03-02T17:03:11.9891716+02:00 0HLC09QRIBV2H:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-02T17:03:13.8294745+02:00 0HLC09QRIBV2H:00000001 [INF] Executing action method "CitizenSerialInfo.Controllers.AccountController.Logout (CitizenSerialInfo)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-03-02T17:03:13.8522051+02:00 0HLC09QRIBV2H:00000001 [INF] AuthenticationScheme: "Identity.Application" signed out. (d3f50c8d)
+2018-03-02T17:03:13.8814382+02:00 0HLC09QRIBV2H:00000001 [INF] AuthenticationScheme: "Identity.External" signed out. (d3f50c8d)
+2018-03-02T17:03:13.9088187+02:00 0HLC09QRIBV2H:00000001 [INF] AuthenticationScheme: "Identity.TwoFactorUserId" signed out. (d3f50c8d)
+2018-03-02T17:03:13.9302578+02:00 0HLC09QRIBV2H:00000001 [INF] Executing RedirectResult, redirecting to "/". (d98d540e)
+2018-03-02T17:03:13.9456964+02:00 0HLC09QRIBV2H:00000001 [INF] Executed action "CitizenSerialInfo.Controllers.AccountController.Logout (CitizenSerialInfo)" in 134.0556ms (afa2e885)
+2018-03-02T17:03:13.9668739+02:00 0HLC09QRIBV2H:00000001 [INF] Request finished in 2712.3054ms 302  (791a596a)
+2018-03-02T17:03:14.0122935+02:00 0HLC09QRIBV2H:00000002 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/   (ca22a1cb)
+2018-03-02T17:03:14.0399862+02:00 0HLC09QRIBV2H:00000002 [INF] Authorization failed for user: null. (a4ab1676)
+2018-03-02T17:03:14.0572458+02:00 0HLC09QRIBV2H:00000002 [INF] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'. (8b6446cb)
+2018-03-02T17:03:14.0907805+02:00 0HLC09QRIBV2H:00000002 [INF] Executing ChallengeResult with authentication schemes ([]). (f3dca807)
+2018-03-02T17:03:14.1218333+02:00 0HLC09QRIBV2H:00000002 [INF] AuthenticationScheme: "Identity.Application" was challenged. (d45f1f38)
+2018-03-02T17:03:14.1492918+02:00 0HLC09QRIBV2H:00000002 [INF] Executed action "CitizenSerialInfo.Controllers.HomeController.Index (CitizenSerialInfo)" in 104.6681ms (afa2e885)
+2018-03-02T17:03:14.1593147+02:00 0HLC09QRIBV2H:00000002 [INF] Request finished in 165.2096ms 302  (791a596a)
+2018-03-02T17:03:14.1947784+02:00 0HLC09QRIBV2H:00000003 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/Account/Login?ReturnUrl=%2F   (ca22a1cb)
+2018-03-02T17:03:14.2138358+02:00 0HLC09QRIBV2H:00000003 [INF] Executing action method "CitizenSerialInfo.Controllers.AccountController.Login (CitizenSerialInfo)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-03-02T17:03:18.0575815+02:00 0HLC09QRIBV2H:00000003 [INF] Executing ViewResult, running view at path "/Views/Account/Login.cshtml". (9707eebe)
+2018-03-02T17:03:19.0965802+02:00 0HLC09QRIBV2H:00000003 [INF] Executed action "CitizenSerialInfo.Controllers.AccountController.Login (CitizenSerialInfo)" in 4843.1808ms (afa2e885)
+2018-03-02T17:03:19.1500531+02:00 0HLC09QRIBV2I:00000001 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/bootstrap/dist/css/bootstrap.css   (ca22a1cb)
+2018-03-02T17:03:19.1642597+02:00 0HLC09QRIBV2L:00000001 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/bootstrap/dist/js/bootstrap.js   (ca22a1cb)
+2018-03-02T17:03:19.2155506+02:00 0HLC09QRIBV2H:00000003 [INF] Request finished in 4946.6764ms 200 text/html; charset=utf-8 (791a596a)
+2018-03-02T17:03:19.2414949+02:00 0HLC09QRIBV2I:00000001 [INF] The file "/lib/bootstrap/dist/css/bootstrap.css" was not modified (f1f8d725)
+2018-03-02T17:03:19.2808459+02:00 0HLC09QRIBV2I:00000001 [INF] Request finished in 164.1625ms 304 text/css (791a596a)
+2018-03-02T17:03:19.3029063+02:00 0HLC09QRIBV2L:00000001 [INF] The file "/lib/bootstrap/dist/js/bootstrap.js" was not modified (f1f8d725)
+2018-03-02T17:03:19.3529526+02:00 0HLC09QRIBV2L:00000001 [INF] Request finished in 172.4761ms 304 application/javascript (791a596a)
+2018-03-02T17:03:22.7536686+02:00 0HLC09QRIBV2L:00000002 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/Account/Register   (ca22a1cb)
+2018-03-02T17:03:22.7691242+02:00 0HLC09QRIBV2L:00000002 [INF] Executing action method "CitizenSerialInfo.Controllers.AccountController.Register (CitizenSerialInfo)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-03-02T17:03:23.0311197+02:00 0HLC09QRIBV2L:00000002 [INF] Executing ViewResult, running view at path "/Views/Account/Register.cshtml". (9707eebe)
+2018-03-02T17:03:23.0837072+02:00 0HLC09QRIBV2L:00000002 [INF] Executed action "CitizenSerialInfo.Controllers.AccountController.Register (CitizenSerialInfo)" in 292.1006ms (afa2e885)
+2018-03-02T17:03:23.1217450+02:00 0HLC09QRIBV2L:00000002 [INF] Request finished in 366.7217ms 200 text/html; charset=utf-8 (791a596a)
+2018-03-02T17:03:49.7737974+02:00 0HLC09QRIBV2L:00000003 [INF] Request starting HTTP/1.1 POST http://127.0.0.1:5000/account/register application/x-www-form-urlencoded; charset=UTF-8 273 (ca22a1cb)
+2018-03-02T17:03:49.8976558+02:00 0HLC09QRIBV2L:00000003 [INF] Executing action method "CitizenSerialInfo.Controllers.AccountController.Register (CitizenSerialInfo)" with arguments (["CitizenSerialInfo.Models.ViewModels.RegisterViewModel"]) - ModelState is Valid (ba7f4ac2)
+2018-03-02T17:03:49.9104903+02:00 0HLC09QRIBV2L:00000003 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-02T17:03:49.9279444+02:00 0HLC09QRIBV2L:00000003 [INF] Executed DbCommand ("3"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[MoreInfoCount], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2018-03-02T17:03:50.0158272+02:00 0HLC09QRIBV2L:00000003 [INF] Executed DbCommand ("2"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsApproved], [u].[LastName], [u].[MoreInfoCount], [u].[MoreInfoCountUsed], [u].[MoreInfoDate], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[SecurityStamp], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-03-02T17:03:50.1104929+02:00 0HLC09QRIBV2L:00000003 [INF] Executed DbCommand ("3"ms) [Parameters=["@p0='?' (Size = 450), @p1='?' (Size = 256), @p2='?', @p3='?' (Size = 50), @p4='?', @p5='?' (Size = 50), @p6='?', @p7='?', @p8='?', @p9='?' (Size = 256), @p10='?' (Size = 256), @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [Users] ([Id], [Email], [EmailConfirmed], [FirstName], [IsApproved], [LastName], [MoreInfoCount], [MoreInfoCountUsed], [MoreInfoDate], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [SecurityStamp], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);" (0723d8ff)
+2018-03-02T17:03:50.1301286+02:00 0HLC09QRIBV2L:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsApproved], [u].[LastName], [u].[MoreInfoCount], [u].[MoreInfoCountUsed], [u].[MoreInfoDate], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[SecurityStamp], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-03-02T17:03:50.1403327+02:00 0HLC09QRIBV2L:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[MoreInfoCount], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2018-03-02T17:03:50.1693282+02:00 0HLC09QRIBV2L:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedRoleName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [r].[Id], [r].[ConcurrencyStamp], [r].[MoreInfoCount], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedRoleName_0" (0723d8ff)
+2018-03-02T17:03:50.2145970+02:00 0HLC09QRIBV2L:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (Size = 450), @__get_Item_1='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[UserId], [e].[RoleId]
+FROM [UserRoles] AS [e]
+WHERE ([e].[UserId] = @__get_Item_0) AND ([e].[RoleId] = @__get_Item_1)" (0723d8ff)
+2018-03-02T17:03:50.2457527+02:00 0HLC09QRIBV2L:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@__normalizedRoleName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [r].[Id], [r].[ConcurrencyStamp], [r].[MoreInfoCount], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedRoleName_0" (0723d8ff)
+2018-03-02T17:03:50.2698973+02:00 0HLC09QRIBV2L:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsApproved], [u].[LastName], [u].[MoreInfoCount], [u].[MoreInfoCountUsed], [u].[MoreInfoDate], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[SecurityStamp], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-03-02T17:03:50.2958715+02:00 0HLC09QRIBV2L:00000003 [INF] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (Size = 450), @p1='?' (Size = 450), @p15='?' (Size = 450), @p2='?' (Size = 256), @p3='?', @p4='?' (Size = 50), @p5='?', @p6='?' (Size = 50), @p7='?', @p8='?', @p9='?', @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [UserRoles] ([UserId], [RoleId])
+VALUES (@p0, @p1);
+UPDATE [Users] SET [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [IsApproved] = @p5, [LastName] = @p6, [MoreInfoCount] = @p7, [MoreInfoCountUsed] = @p8, [MoreInfoDate] = @p9, [NormalizedEmail] = @p10, [NormalizedUserName] = @p11, [PasswordHash] = @p12, [SecurityStamp] = @p13, [UserName] = @p14
+WHERE [Id] = @p15;
+SELECT @@ROWCOUNT;" (0723d8ff)
+2018-03-02T17:03:52.1967466+02:00 0HLC09QRIBV2L:00000003 [INF] Executing JsonResult, writing value "{ error =  }". (7bb75e80)
+2018-03-02T17:03:52.2158130+02:00 0HLC09QRIBV2L:00000003 [INF] Executed action "CitizenSerialInfo.Controllers.AccountController.Register (CitizenSerialInfo)" in 2403.4048ms (afa2e885)
+2018-03-02T17:03:52.2343034+02:00 0HLC09QRIBV2L:00000003 [INF] Request finished in 2478.2357ms 200 application/json; charset=utf-8 (791a596a)
+2018-03-02T17:04:17.6302838+02:00 0HLC09QRIBV2L:00000004 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/Account/Login   (ca22a1cb)
+2018-03-02T17:04:17.6609407+02:00 0HLC09QRIBV2L:00000004 [INF] Executing action method "CitizenSerialInfo.Controllers.AccountController.Login (CitizenSerialInfo)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-03-02T17:04:17.7104593+02:00 0HLC09QRIBV2L:00000004 [INF] Executing ViewResult, running view at path "/Views/Account/Login.cshtml". (9707eebe)
+2018-03-02T17:04:17.7389994+02:00 0HLC09QRIBV2L:00000004 [INF] Executed action "CitizenSerialInfo.Controllers.AccountController.Login (CitizenSerialInfo)" in 83.275ms (afa2e885)
+2018-03-02T17:04:17.7722281+02:00 0HLC09QRIBV2L:00000004 [INF] Request finished in 121.9054ms 200 text/html; charset=utf-8 (791a596a)
+2018-03-02T17:04:23.1527359+02:00 0HLC09QRIBV2L:00000005 [INF] Request starting HTTP/1.1 POST http://127.0.0.1:5000/account/login application/x-www-form-urlencoded; charset=UTF-8 224 (ca22a1cb)
+2018-03-02T17:04:23.1764875+02:00 0HLC09QRIBV2L:00000005 [INF] Executing action method "CitizenSerialInfo.Controllers.AccountController.Login (CitizenSerialInfo)" with arguments (["CitizenSerialInfo.Models.ViewModels.LoginViewModel"]) - ModelState is Valid (ba7f4ac2)
+2018-03-02T17:04:23.1919210+02:00 0HLC09QRIBV2L:00000005 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-02T17:04:23.2375794+02:00 0HLC09QRIBV2L:00000005 [INF] Executed DbCommand ("1"ms) [Parameters=["@__model_Login_0='?' (Size = 256), @__model_Login_1='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [s].[Id], [s].[Email], [s].[EmailConfirmed], [s].[FirstName], [s].[IsApproved], [s].[LastName], [s].[MoreInfoCount], [s].[MoreInfoCountUsed], [s].[MoreInfoDate], [s].[NormalizedEmail], [s].[NormalizedUserName], [s].[PasswordHash], [s].[SecurityStamp], [s].[UserName]
+FROM [Users] AS [s]
+WHERE ([s].[Email] = @__model_Login_0) OR ([s].[UserName] = @__model_Login_1)" (0723d8ff)
+2018-03-02T17:04:23.3122183+02:00 0HLC09QRIBV2L:00000005 [INF] Executed DbCommand ("1"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [UserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:04:23.3268326+02:00 0HLC09QRIBV2L:00000005 [INF] Executed DbCommand ("3"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [UserRoles] AS [userRole]
+INNER JOIN [Roles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-03-02T17:04:23.3375334+02:00 0HLC09QRIBV2L:00000005 [INF] Executed DbCommand ("0"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[MoreInfoCount], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2018-03-02T17:04:23.3494041+02:00 0HLC09QRIBV2L:00000005 [INF] Executed DbCommand ("2"ms) [Parameters=["@__role_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [RoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0" (0723d8ff)
+2018-03-02T17:04:23.3626000+02:00 0HLC09QRIBV2L:00000005 [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2018-03-02T17:04:23.3903811+02:00 0HLC09QRIBV2L:00000005 [INF] Executing JsonResult, writing value "{ error =  }". (7bb75e80)
+2018-03-02T17:04:23.4400438+02:00 0HLC09QRIBV2L:00000005 [INF] Executed action "CitizenSerialInfo.Controllers.AccountController.Login (CitizenSerialInfo)" in 231.3642ms (afa2e885)
+2018-03-02T17:04:23.4497113+02:00 0HLC09QRIBV2L:00000005 [INF] Request finished in 316.9049ms 200 application/json; charset=utf-8 (791a596a)
+2018-03-02T17:04:23.4692760+02:00 0HLC09QRIBV2L:00000006 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/   (ca22a1cb)
+2018-03-02T17:04:23.4851046+02:00 0HLC09QRIBV2L:00000006 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-02T17:04:23.5402722+02:00 0HLC09QRIBV2L:00000006 [INF] Authorization was successful for user: "test". (d7eb274a)
+2018-03-02T17:04:23.5693290+02:00 0HLC09QRIBV2L:00000006 [INF] Executing action method "CitizenSerialInfo.Controllers.HomeController.Index (CitizenSerialInfo)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-03-02T17:04:23.5986820+02:00 0HLC09QRIBV2L:00000006 [INF] Executed action "CitizenSerialInfo.Controllers.HomeController.Index (CitizenSerialInfo)" in 85.9293ms (afa2e885)
+2018-03-02T17:04:23.6106828+02:00 0HLC09QRIBV2L:00000006 [INF] Request finished in 143.4939ms 302  (791a596a)
+2018-03-02T17:04:23.6623910+02:00 0HLC09QRIBV2L:00000007 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/search   (ca22a1cb)
+2018-03-02T17:04:23.6923110+02:00 0HLC09QRIBV2L:00000007 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-02T17:04:23.7219686+02:00 0HLC09QRIBV2L:00000007 [INF] Authorization was successful for user: "test". (d7eb274a)
+2018-03-02T17:04:23.7312421+02:00 0HLC09QRIBV2L:00000007 [INF] Executing action method "CitizenSerialInfo.Controllers.SearchController.Index (CitizenSerialInfo)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-03-02T17:04:24.1453905+02:00 0HLC09QRIBV2L:00000007 [INF] Executing ViewResult, running view at path "/Views/Search/Index.cshtml". (9707eebe)
+2018-03-02T17:04:24.6854621+02:00 0HLC09QRIBV2L:00000007 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-02T17:04:24.7026875+02:00 0HLC09QRIBV2L:00000007 [INF] Executed DbCommand ("1"ms) [Parameters=["@__ToUpper_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [s].[Id], [s].[Email], [s].[EmailConfirmed], [s].[FirstName], [s].[IsApproved], [s].[LastName], [s].[MoreInfoCount], [s].[MoreInfoCountUsed], [s].[MoreInfoDate], [s].[NormalizedEmail], [s].[NormalizedUserName], [s].[PasswordHash], [s].[SecurityStamp], [s].[UserName]
+FROM [Users] AS [s]
+WHERE [s].[NormalizedUserName] = @__ToUpper_0" (0723d8ff)
+2018-03-02T17:04:25.0567960+02:00 0HLC09QRIBV2L:00000007 [INF] Executed action "CitizenSerialInfo.Controllers.SearchController.Index (CitizenSerialInfo)" in 1305.2616ms (afa2e885)
+2018-03-02T17:04:25.0991197+02:00 0HLC09QRIBV2L:00000007 [INF] Request finished in 1433.2053ms 200 text/html; charset=utf-8 (791a596a)
+2018-03-02T17:04:31.6346832+02:00 0HLC09QRIBV2L:00000008 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/account/logout   (ca22a1cb)
+2018-03-02T17:04:31.6509145+02:00 0HLC09QRIBV2L:00000008 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-02T17:04:31.6650828+02:00 0HLC09QRIBV2L:00000008 [INF] Executing action method "CitizenSerialInfo.Controllers.AccountController.Logout (CitizenSerialInfo)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-03-02T17:04:31.6948206+02:00 0HLC09QRIBV2L:00000008 [INF] AuthenticationScheme: "Identity.Application" signed out. (d3f50c8d)
+2018-03-02T17:04:31.7037994+02:00 0HLC09QRIBV2L:00000008 [INF] AuthenticationScheme: "Identity.External" signed out. (d3f50c8d)
+2018-03-02T17:04:31.7322828+02:00 0HLC09QRIBV2L:00000008 [INF] AuthenticationScheme: "Identity.TwoFactorUserId" signed out. (d3f50c8d)
+2018-03-02T17:04:31.7827156+02:00 0HLC09QRIBV2L:00000008 [INF] Executing RedirectResult, redirecting to "/". (d98d540e)
+2018-03-02T17:04:31.8109481+02:00 0HLC09QRIBV2L:00000008 [INF] Executed action "CitizenSerialInfo.Controllers.AccountController.Logout (CitizenSerialInfo)" in 131.2072ms (afa2e885)
+2018-03-02T17:04:31.8223607+02:00 0HLC09QRIBV2L:00000008 [INF] Request finished in 185.6055ms 302  (791a596a)
+2018-03-02T17:04:31.8545480+02:00 0HLC09QRIBV2L:00000009 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/   (ca22a1cb)
+2018-03-02T17:04:31.8849586+02:00 0HLC09QRIBV2L:00000009 [INF] Authorization failed for user: null. (a4ab1676)
+2018-03-02T17:04:31.9137078+02:00 0HLC09QRIBV2L:00000009 [INF] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'. (8b6446cb)
+2018-03-02T17:04:31.9428901+02:00 0HLC09QRIBV2L:00000009 [INF] Executing ChallengeResult with authentication schemes ([]). (f3dca807)
+2018-03-02T17:04:31.9930222+02:00 0HLC09QRIBV2L:00000009 [INF] AuthenticationScheme: "Identity.Application" was challenged. (d45f1f38)
+2018-03-02T17:04:32.0233164+02:00 0HLC09QRIBV2L:00000009 [INF] Executed action "CitizenSerialInfo.Controllers.HomeController.Index (CitizenSerialInfo)" in 137.9613ms (afa2e885)
+2018-03-02T17:04:32.0361578+02:00 0HLC09QRIBV2L:00000009 [INF] Request finished in 196.7526ms 302  (791a596a)
+2018-03-02T17:04:32.0522892+02:00 0HLC09QRIBV2L:0000000A [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/Account/Login?ReturnUrl=%2F   (ca22a1cb)
+2018-03-02T17:04:32.0626559+02:00 0HLC09QRIBV2L:0000000A [INF] Executing action method "CitizenSerialInfo.Controllers.AccountController.Login (CitizenSerialInfo)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-03-02T17:04:32.1100841+02:00 0HLC09QRIBV2L:0000000A [INF] Executing ViewResult, running view at path "/Views/Account/Login.cshtml". (9707eebe)
+2018-03-02T17:04:32.1570555+02:00 0HLC09QRIBV2L:0000000A [INF] Executed action "CitizenSerialInfo.Controllers.AccountController.Login (CitizenSerialInfo)" in 60.2555ms (afa2e885)
+2018-03-02T17:04:32.1977237+02:00 0HLC09QRIBV2L:0000000A [INF] Request finished in 125.4971ms 200 text/html; charset=utf-8 (791a596a)
+2018-03-02T17:04:40.5482218+02:00 0HLC09QRIBV2L:0000000B [INF] Request starting HTTP/1.1 POST http://127.0.0.1:5000/account/login application/x-www-form-urlencoded; charset=UTF-8 226 (ca22a1cb)
+2018-03-02T17:04:40.5579741+02:00 0HLC09QRIBV2L:0000000B [INF] Executing action method "CitizenSerialInfo.Controllers.AccountController.Login (CitizenSerialInfo)" with arguments (["CitizenSerialInfo.Models.ViewModels.LoginViewModel"]) - ModelState is Valid (ba7f4ac2)
+2018-03-02T17:04:40.5879060+02:00 0HLC09QRIBV2L:0000000B [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-02T17:04:40.5980010+02:00 0HLC09QRIBV2L:0000000B [INF] Executed DbCommand ("0"ms) [Parameters=["@__model_Login_0='?' (Size = 256), @__model_Login_1='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [s].[Id], [s].[Email], [s].[EmailConfirmed], [s].[FirstName], [s].[IsApproved], [s].[LastName], [s].[MoreInfoCount], [s].[MoreInfoCountUsed], [s].[MoreInfoDate], [s].[NormalizedEmail], [s].[NormalizedUserName], [s].[PasswordHash], [s].[SecurityStamp], [s].[UserName]
+FROM [Users] AS [s]
+WHERE ([s].[Email] = @__model_Login_0) OR ([s].[UserName] = @__model_Login_1)" (0723d8ff)
+2018-03-02T17:04:40.6218854+02:00 0HLC09QRIBV2L:0000000B [INF] Executed DbCommand ("1"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [UserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:04:40.6612889+02:00 0HLC09QRIBV2L:0000000B [INF] Executed DbCommand ("1"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [UserRoles] AS [userRole]
+INNER JOIN [Roles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-03-02T17:04:40.7025719+02:00 0HLC09QRIBV2L:0000000B [INF] Executed DbCommand ("7"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[MoreInfoCount], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2018-03-02T17:04:40.7342455+02:00 0HLC09QRIBV2L:0000000B [INF] Executed DbCommand ("1"ms) [Parameters=["@__role_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [RoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0" (0723d8ff)
+2018-03-02T17:04:40.7833126+02:00 0HLC09QRIBV2L:0000000B [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2018-03-02T17:04:40.8121641+02:00 0HLC09QRIBV2L:0000000B [INF] Executing JsonResult, writing value "{ error =  }". (7bb75e80)
+2018-03-02T17:04:40.8409002+02:00 0HLC09QRIBV2L:0000000B [INF] Executed action "CitizenSerialInfo.Controllers.AccountController.Login (CitizenSerialInfo)" in 264.3899ms (afa2e885)
+2018-03-02T17:04:40.8594077+02:00 0HLC09QRIBV2L:0000000B [INF] Request finished in 321.8901ms 200 application/json; charset=utf-8 (791a596a)
+2018-03-02T17:04:40.8737587+02:00 0HLC09QRIBV2L:0000000C [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/   (ca22a1cb)
+2018-03-02T17:04:40.9035288+02:00 0HLC09QRIBV2L:0000000C [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-02T17:04:40.9525337+02:00 0HLC09QRIBV2L:0000000C [INF] Authorization was successful for user: "Admin". (d7eb274a)
+2018-03-02T17:04:40.9802952+02:00 0HLC09QRIBV2L:0000000C [INF] Executing action method "CitizenSerialInfo.Controllers.HomeController.Index (CitizenSerialInfo)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-03-02T17:04:41.0279457+02:00 0HLC09QRIBV2L:0000000C [INF] Executed action "CitizenSerialInfo.Controllers.HomeController.Index (CitizenSerialInfo)" in 76.7893ms (afa2e885)
+2018-03-02T17:04:41.0576281+02:00 0HLC09QRIBV2L:0000000C [INF] Request finished in 163.8873ms 302  (791a596a)
+2018-03-02T17:04:41.0692880+02:00 0HLC09QRIBV2L:0000000D [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/search   (ca22a1cb)
+2018-03-02T17:04:41.0975756+02:00 0HLC09QRIBV2L:0000000D [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-02T17:04:41.1263052+02:00 0HLC09QRIBV2L:0000000D [INF] Authorization was successful for user: "Admin". (d7eb274a)
+2018-03-02T17:04:41.1357610+02:00 0HLC09QRIBV2L:0000000D [INF] Executing action method "CitizenSerialInfo.Controllers.SearchController.Index (CitizenSerialInfo)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-03-02T17:04:41.1845068+02:00 0HLC09QRIBV2L:0000000D [INF] Executing ViewResult, running view at path "/Views/Search/Index.cshtml". (9707eebe)
+2018-03-02T17:04:41.2127005+02:00 0HLC09QRIBV2L:0000000D [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-02T17:04:41.2231500+02:00 0HLC09QRIBV2L:0000000D [INF] Executed DbCommand ("0"ms) [Parameters=["@__ToUpper_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [s].[Id], [s].[Email], [s].[EmailConfirmed], [s].[FirstName], [s].[IsApproved], [s].[LastName], [s].[MoreInfoCount], [s].[MoreInfoCountUsed], [s].[MoreInfoDate], [s].[NormalizedEmail], [s].[NormalizedUserName], [s].[PasswordHash], [s].[SecurityStamp], [s].[UserName]
+FROM [Users] AS [s]
+WHERE [s].[NormalizedUserName] = @__ToUpper_0" (0723d8ff)
+2018-03-02T17:04:41.2392396+02:00 0HLC09QRIBV2L:0000000D [INF] Executed action "CitizenSerialInfo.Controllers.SearchController.Index (CitizenSerialInfo)" in 127.8272ms (afa2e885)
+2018-03-02T17:04:41.3458623+02:00 0HLC09QRIBV2L:0000000D [INF] Request finished in 179.2648ms 200 text/html; charset=utf-8 (791a596a)
+2018-03-02T17:04:44.2663734+02:00 0HLC09QRIBV2L:0000000E [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/administration/users   (ca22a1cb)
+2018-03-02T17:04:44.2942066+02:00 0HLC09QRIBV2L:0000000E [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-02T17:04:44.3503487+02:00 0HLC09QRIBV2L:0000000E [INF] Executing action method "CitizenSerialInfo.Controllers.AdministrationController.Users (CitizenSerialInfo)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-03-02T17:04:44.5740031+02:00 0HLC09QRIBV2L:0000000E [INF] Executing ViewResult, running view at path "/Views/Administration/Users.cshtml". (9707eebe)
+2018-03-02T17:04:44.6985122+02:00 0HLC09QRIBV2L:0000000E [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-02T17:04:44.7276423+02:00 0HLC09QRIBV2L:0000000E [INF] Executed DbCommand ("0"ms) [Parameters=["@__ToUpper_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [s].[Id], [s].[Email], [s].[EmailConfirmed], [s].[FirstName], [s].[IsApproved], [s].[LastName], [s].[MoreInfoCount], [s].[MoreInfoCountUsed], [s].[MoreInfoDate], [s].[NormalizedEmail], [s].[NormalizedUserName], [s].[PasswordHash], [s].[SecurityStamp], [s].[UserName]
+FROM [Users] AS [s]
+WHERE [s].[NormalizedUserName] = @__ToUpper_0" (0723d8ff)
+2018-03-02T17:04:44.7481881+02:00 0HLC09QRIBV2L:0000000E [INF] Executed action "CitizenSerialInfo.Controllers.AdministrationController.Users (CitizenSerialInfo)" in 433.5313ms (afa2e885)
+2018-03-02T17:04:44.8023931+02:00 0HLC09QRIBV2L:0000000E [INF] Request finished in 526.5587ms 200 text/html; charset=utf-8 (791a596a)
+2018-03-02T17:04:45.3140172+02:00 0HLC09QRIBV2L:0000000F [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/api/administrationapi?_=1520003084899   (ca22a1cb)
+2018-03-02T17:04:45.3448153+02:00 0HLC09QRIBV2L:0000000F [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-02T17:04:45.3723084+02:00 0HLC09QRIBV2L:0000000F [INF] Executing action method "CitizenSerialInfo.Controllers.api.AdministrationApiController.Get (CitizenSerialInfo)" with arguments (["DevExtreme.AspNet.Mvc.DataSourceLoadOptions"]) - ModelState is Valid (ba7f4ac2)
+2018-03-02T17:04:45.4035438+02:00 0HLC09QRIBV2L:0000000F [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-02T17:04:45.4191393+02:00 0HLC09QRIBV2L:0000000F [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsApproved], [u].[LastName], [u].[MoreInfoCount], [u].[MoreInfoCountUsed], [u].[MoreInfoDate], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[SecurityStamp], [u].[UserName]
+FROM [Users] AS [u]" (0723d8ff)
+2018-03-02T17:04:45.4575044+02:00 0HLC09QRIBV2L:0000000F [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [r].[Id], [r].[ConcurrencyStamp], [r].[MoreInfoCount], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]" (0723d8ff)
+2018-03-02T17:04:45.5005960+02:00 0HLC09QRIBV2L:0000000F [INF] Executed DbCommand ("1"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:04:45.5347396+02:00 0HLC09QRIBV2L:0000000F [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:04:45.5840900+02:00 0HLC09QRIBV2L:0000000F [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:04:45.6144712+02:00 0HLC09QRIBV2L:0000000F [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:04:45.6445874+02:00 0HLC09QRIBV2L:0000000F [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:04:45.6536806+02:00 0HLC09QRIBV2L:0000000F [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:04:45.6945386+02:00 0HLC09QRIBV2L:0000000F [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-03-02T17:04:45.7803421+02:00 0HLC09QRIBV2L:0000000F [INF] Executed action "CitizenSerialInfo.Controllers.api.AdministrationApiController.Get (CitizenSerialInfo)" in 401.1822ms (afa2e885)
+2018-03-02T17:04:45.8282392+02:00 0HLC09QRIBV2L:0000000F [INF] Request finished in 480.2606ms 200 application/json; charset=utf-8 (791a596a)
+2018-03-02T17:04:59.8622992+02:00 0HLC09QRIBV2L:00000010 [INF] Request starting HTTP/1.1 PUT http://127.0.0.1:5000/api/administrationapi application/x-www-form-urlencoded; charset=UTF-8 205 (ca22a1cb)
+2018-03-02T17:04:59.8917414+02:00 0HLC09QRIBV2L:00000010 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-02T17:04:59.9173768+02:00 0HLC09QRIBV2L:00000010 [INF] Executing action method "CitizenSerialInfo.Controllers.api.AdministrationApiController.Put (CitizenSerialInfo)" with arguments (["5864e206-f8d8-4c49-b0ec-46cb986d7025", "{\"Roles\":[{\"IsPermitted\":\"true\",\"Id\":\"a675ad4a-571d-4afe-b657-06d2818e841f\",\"RoleName\":\"Administrator\"}]}"]) - ModelState is Valid (ba7f4ac2)
+2018-03-02T17:04:59.9385590+02:00 0HLC09QRIBV2L:00000010 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-02T17:04:59.9594410+02:00 0HLC09QRIBV2L:00000010 [INF] Executed DbCommand ("1"ms) [Parameters=["@__key_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[IsApproved], [a].[LastName], [a].[MoreInfoCount], [a].[MoreInfoCountUsed], [a].[MoreInfoDate], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[SecurityStamp], [a].[UserName]
+FROM [Users] AS [a]
+WHERE [a].[Id] = @__key_0" (0723d8ff)
+2018-03-02T17:04:59.9789733+02:00 0HLC09QRIBV2L:00000010 [INF] Executed DbCommand ("1"ms) [Parameters=["@__key_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__key_0" (0723d8ff)
+2018-03-02T17:05:00.0431778+02:00 0HLC09QRIBV2L:00000010 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [r].[Id], [r].[ConcurrencyStamp], [r].[MoreInfoCount], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]" (0723d8ff)
+2018-03-02T17:05:00.0777040+02:00 0HLC09QRIBV2L:00000010 [INF] Executed DbCommand ("3"ms) [Parameters=["@__normalizedRoleName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [r].[Id], [r].[ConcurrencyStamp], [r].[MoreInfoCount], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedRoleName_0" (0723d8ff)
+2018-03-02T17:05:00.1305176+02:00 0HLC09QRIBV2L:00000010 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (Size = 450), @__get_Item_1='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[UserId], [e].[RoleId]
+FROM [UserRoles] AS [e]
+WHERE ([e].[UserId] = @__get_Item_0) AND ([e].[RoleId] = @__get_Item_1)" (0723d8ff)
+2018-03-02T17:05:00.1820578+02:00 0HLC09QRIBV2L:00000010 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedRoleName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [r].[Id], [r].[ConcurrencyStamp], [r].[MoreInfoCount], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedRoleName_0" (0723d8ff)
+2018-03-02T17:05:00.1939183+02:00 0HLC09QRIBV2L:00000010 [INF] Executed DbCommand ("2"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsApproved], [u].[LastName], [u].[MoreInfoCount], [u].[MoreInfoCountUsed], [u].[MoreInfoDate], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[SecurityStamp], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-03-02T17:05:00.2114325+02:00 0HLC09QRIBV2L:00000010 [INF] Executed DbCommand ("6"ms) [Parameters=["@p0='?' (Size = 450), @p1='?' (Size = 450), @p15='?' (Size = 450), @p2='?' (Size = 256), @p3='?', @p4='?' (Size = 50), @p5='?', @p6='?' (Size = 50), @p7='?', @p8='?', @p9='?', @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [UserRoles] ([UserId], [RoleId])
+VALUES (@p0, @p1);
+UPDATE [Users] SET [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [IsApproved] = @p5, [LastName] = @p6, [MoreInfoCount] = @p7, [MoreInfoCountUsed] = @p8, [MoreInfoDate] = @p9, [NormalizedEmail] = @p10, [NormalizedUserName] = @p11, [PasswordHash] = @p12, [SecurityStamp] = @p13, [UserName] = @p14
+WHERE [Id] = @p15;
+SELECT @@ROWCOUNT;" (0723d8ff)
+2018-03-02T17:05:00.2508287+02:00 0HLC09QRIBV2L:00000010 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200 (e28ccfae)
+2018-03-02T17:05:00.2792076+02:00 0HLC09QRIBV2L:00000010 [INF] Executed action "CitizenSerialInfo.Controllers.api.AdministrationApiController.Put (CitizenSerialInfo)" in 347.4615ms (afa2e885)
+2018-03-02T17:05:00.3087359+02:00 0HLC09QRIBV2L:00000010 [INF] Request finished in 427.3501ms 200  (791a596a)
+2018-03-02T17:05:00.3708099+02:00 0HLC09QRIBV2L:00000011 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/api/administrationapi?_=1520003084900   (ca22a1cb)
+2018-03-02T17:05:00.4004339+02:00 0HLC09QRIBV2L:00000011 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-02T17:05:00.4095675+02:00 0HLC09QRIBV2L:00000011 [INF] Executing action method "CitizenSerialInfo.Controllers.api.AdministrationApiController.Get (CitizenSerialInfo)" with arguments (["DevExtreme.AspNet.Mvc.DataSourceLoadOptions"]) - ModelState is Valid (ba7f4ac2)
+2018-03-02T17:05:00.4434427+02:00 0HLC09QRIBV2L:00000011 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-02T17:05:00.4736085+02:00 0HLC09QRIBV2L:00000011 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsApproved], [u].[LastName], [u].[MoreInfoCount], [u].[MoreInfoCountUsed], [u].[MoreInfoDate], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[SecurityStamp], [u].[UserName]
+FROM [Users] AS [u]" (0723d8ff)
+2018-03-02T17:05:00.5316697+02:00 0HLC09QRIBV2L:00000011 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [r].[Id], [r].[ConcurrencyStamp], [r].[MoreInfoCount], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]" (0723d8ff)
+2018-03-02T17:05:00.5610743+02:00 0HLC09QRIBV2L:00000011 [INF] Executed DbCommand ("1"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:05:00.5922696+02:00 0HLC09QRIBV2L:00000011 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:05:00.6034982+02:00 0HLC09QRIBV2L:00000011 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:05:00.6351893+02:00 0HLC09QRIBV2L:00000011 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:05:00.6859801+02:00 0HLC09QRIBV2L:00000011 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:05:00.6955417+02:00 0HLC09QRIBV2L:00000011 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:05:00.7244646+02:00 0HLC09QRIBV2L:00000011 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-03-02T17:05:00.7563229+02:00 0HLC09QRIBV2L:00000011 [INF] Executed action "CitizenSerialInfo.Controllers.api.AdministrationApiController.Get (CitizenSerialInfo)" in 326.9324ms (afa2e885)
+2018-03-02T17:05:00.7676002+02:00 0HLC09QRIBV2L:00000011 [INF] Request finished in 414.8296ms 200 application/json; charset=utf-8 (791a596a)
+2018-03-02T17:05:12.9426094+02:00 0HLC09QRIBV2L:00000012 [INF] Request starting HTTP/1.1 PUT http://127.0.0.1:5000/api/administrationapi application/x-www-form-urlencoded; charset=UTF-8 197 (ca22a1cb)
+2018-03-02T17:05:12.9955472+02:00 0HLC09QRIBV2L:00000012 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-02T17:05:13.0477371+02:00 0HLC09QRIBV2L:00000012 [INF] Executing action method "CitizenSerialInfo.Controllers.api.AdministrationApiController.Put (CitizenSerialInfo)" with arguments (["9a162aa3-fb55-4486-ae9b-0a16a9ded8a6", "{\"Roles\":[{\"IsPermitted\":\"true\",\"Id\":\"de27450f-d551-486b-ba7d-66dfc5ed4a13\",\"RoleName\":\"Staff\"}]}"]) - ModelState is Valid (ba7f4ac2)
+2018-03-02T17:05:13.0790531+02:00 0HLC09QRIBV2L:00000012 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-02T17:05:13.1088844+02:00 0HLC09QRIBV2L:00000012 [INF] Executed DbCommand ("0"ms) [Parameters=["@__key_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[IsApproved], [a].[LastName], [a].[MoreInfoCount], [a].[MoreInfoCountUsed], [a].[MoreInfoDate], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[SecurityStamp], [a].[UserName]
+FROM [Users] AS [a]
+WHERE [a].[Id] = @__key_0" (0723d8ff)
+2018-03-02T17:05:13.1612790+02:00 0HLC09QRIBV2L:00000012 [INF] Executed DbCommand ("1"ms) [Parameters=["@__key_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__key_0" (0723d8ff)
+2018-03-02T17:05:13.1756535+02:00 0HLC09QRIBV2L:00000012 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [r].[Id], [r].[ConcurrencyStamp], [r].[MoreInfoCount], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]" (0723d8ff)
+2018-03-02T17:05:13.2130030+02:00 0HLC09QRIBV2L:00000012 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedRoleName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [r].[Id], [r].[ConcurrencyStamp], [r].[MoreInfoCount], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedRoleName_0" (0723d8ff)
+2018-03-02T17:05:13.2270020+02:00 0HLC09QRIBV2L:00000012 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (Size = 450), @__get_Item_1='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[UserId], [e].[RoleId]
+FROM [UserRoles] AS [e]
+WHERE ([e].[UserId] = @__get_Item_0) AND ([e].[RoleId] = @__get_Item_1)" (0723d8ff)
+2018-03-02T17:05:13.2605742+02:00 0HLC09QRIBV2L:00000012 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedRoleName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [r].[Id], [r].[ConcurrencyStamp], [r].[MoreInfoCount], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedRoleName_0" (0723d8ff)
+2018-03-02T17:05:13.2706141+02:00 0HLC09QRIBV2L:00000012 [INF] Executed DbCommand ("0"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsApproved], [u].[LastName], [u].[MoreInfoCount], [u].[MoreInfoCountUsed], [u].[MoreInfoDate], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[SecurityStamp], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-03-02T17:05:13.2828424+02:00 0HLC09QRIBV2L:00000012 [INF] Executed DbCommand ("1"ms) [Parameters=["@p0='?' (Size = 450), @p1='?' (Size = 450), @p15='?' (Size = 450), @p2='?' (Size = 256), @p3='?', @p4='?' (Size = 50), @p5='?', @p6='?' (Size = 50), @p7='?', @p8='?', @p9='?', @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [UserRoles] ([UserId], [RoleId])
+VALUES (@p0, @p1);
+UPDATE [Users] SET [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [IsApproved] = @p5, [LastName] = @p6, [MoreInfoCount] = @p7, [MoreInfoCountUsed] = @p8, [MoreInfoDate] = @p9, [NormalizedEmail] = @p10, [NormalizedUserName] = @p11, [PasswordHash] = @p12, [SecurityStamp] = @p13, [UserName] = @p14
+WHERE [Id] = @p15;
+SELECT @@ROWCOUNT;" (0723d8ff)
+2018-03-02T17:05:13.3150263+02:00 0HLC09QRIBV2L:00000012 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200 (e28ccfae)
+2018-03-02T17:05:13.3439458+02:00 0HLC09QRIBV2L:00000012 [INF] Executed action "CitizenSerialInfo.Controllers.api.AdministrationApiController.Put (CitizenSerialInfo)" in 319.1731ms (afa2e885)
+2018-03-02T17:05:13.3752558+02:00 0HLC09QRIBV2L:00000012 [INF] Request finished in 431.9718ms 200  (791a596a)
+2018-03-02T17:05:13.3982207+02:00 0HLC09QRIBV2L:00000013 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/api/administrationapi?_=1520003084901   (ca22a1cb)
+2018-03-02T17:05:13.4091707+02:00 0HLC09QRIBV2L:00000013 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-02T17:05:13.4420710+02:00 0HLC09QRIBV2L:00000013 [INF] Executing action method "CitizenSerialInfo.Controllers.api.AdministrationApiController.Get (CitizenSerialInfo)" with arguments (["DevExtreme.AspNet.Mvc.DataSourceLoadOptions"]) - ModelState is Valid (ba7f4ac2)
+2018-03-02T17:05:13.4707093+02:00 0HLC09QRIBV2L:00000013 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-02T17:05:13.4795647+02:00 0HLC09QRIBV2L:00000013 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsApproved], [u].[LastName], [u].[MoreInfoCount], [u].[MoreInfoCountUsed], [u].[MoreInfoDate], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[SecurityStamp], [u].[UserName]
+FROM [Users] AS [u]" (0723d8ff)
+2018-03-02T17:05:13.5284935+02:00 0HLC09QRIBV2L:00000013 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [r].[Id], [r].[ConcurrencyStamp], [r].[MoreInfoCount], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]" (0723d8ff)
+2018-03-02T17:05:13.5593928+02:00 0HLC09QRIBV2L:00000013 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:05:13.5692095+02:00 0HLC09QRIBV2L:00000013 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:05:13.5977582+02:00 0HLC09QRIBV2L:00000013 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:05:13.6058653+02:00 0HLC09QRIBV2L:00000013 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:05:13.6352801+02:00 0HLC09QRIBV2L:00000013 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:05:13.6453810+02:00 0HLC09QRIBV2L:00000013 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:05:13.6536916+02:00 0HLC09QRIBV2L:00000013 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-03-02T17:05:13.6643588+02:00 0HLC09QRIBV2L:00000013 [INF] Executed action "CitizenSerialInfo.Controllers.api.AdministrationApiController.Get (CitizenSerialInfo)" in 245.0056ms (afa2e885)
+2018-03-02T17:05:13.6751990+02:00 0HLC09QRIBV2L:00000013 [INF] Request finished in 279.3826ms 200 application/json; charset=utf-8 (791a596a)
+2018-03-02T17:05:47.3881173+02:00 0HLC09QRIBV2L:00000014 [INF] Request starting HTTP/1.1 PUT http://127.0.0.1:5000/api/administrationapi application/x-www-form-urlencoded; charset=UTF-8 268 (ca22a1cb)
+2018-03-02T17:05:47.4017322+02:00 0HLC09QRIBV2L:00000014 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-02T17:05:47.4172953+02:00 0HLC09QRIBV2L:00000014 [INF] Executing action method "CitizenSerialInfo.Controllers.api.AdministrationApiController.Put (CitizenSerialInfo)" with arguments (["22707a63-01d8-4daf-858a-1a93751e114c", "{\"FirstName\":\"Admin\",\"LastName\":\"Admin\",\"Roles\":[{\"IsPermitted\":\"true\",\"Id\":\"a675ad4a-571d-4afe-b657-06d2818e841f\",\"RoleName\":\"Administrator\"}]}"]) - ModelState is Valid (ba7f4ac2)
+2018-03-02T17:05:47.4379608+02:00 0HLC09QRIBV2L:00000014 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-02T17:05:47.4705066+02:00 0HLC09QRIBV2L:00000014 [INF] Executed DbCommand ("0"ms) [Parameters=["@__key_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[IsApproved], [a].[LastName], [a].[MoreInfoCount], [a].[MoreInfoCountUsed], [a].[MoreInfoDate], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[SecurityStamp], [a].[UserName]
+FROM [Users] AS [a]
+WHERE [a].[Id] = @__key_0" (0723d8ff)
+2018-03-02T17:05:47.4817027+02:00 0HLC09QRIBV2L:00000014 [INF] Executed DbCommand ("0"ms) [Parameters=["@__key_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__key_0" (0723d8ff)
+2018-03-02T17:05:47.5316949+02:00 0HLC09QRIBV2L:00000014 [INF] Executed DbCommand ("3"ms) [Parameters=["@p0='?' (Size = 450), @p1='?' (Size = 450), @p4='?' (Size = 450), @p2='?' (Size = 50), @p3='?' (Size = 50)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+DELETE FROM [UserRoles]
+WHERE [UserId] = @p0 AND [RoleId] = @p1;
+SELECT @@ROWCOUNT;
+
+UPDATE [Users] SET [FirstName] = @p2, [LastName] = @p3
+WHERE [Id] = @p4;
+SELECT @@ROWCOUNT;" (0723d8ff)
+2018-03-02T17:05:47.5628539+02:00 0HLC09QRIBV2L:00000014 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [r].[Id], [r].[ConcurrencyStamp], [r].[MoreInfoCount], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]" (0723d8ff)
+2018-03-02T17:05:47.5772497+02:00 0HLC09QRIBV2L:00000014 [INF] Executed DbCommand ("2"ms) [Parameters=["@__normalizedRoleName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [r].[Id], [r].[ConcurrencyStamp], [r].[MoreInfoCount], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedRoleName_0" (0723d8ff)
+2018-03-02T17:05:47.5947579+02:00 0HLC09QRIBV2L:00000014 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (Size = 450), @__get_Item_1='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[UserId], [e].[RoleId]
+FROM [UserRoles] AS [e]
+WHERE ([e].[UserId] = @__get_Item_0) AND ([e].[RoleId] = @__get_Item_1)" (0723d8ff)
+2018-03-02T17:05:47.6273028+02:00 0HLC09QRIBV2L:00000014 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedRoleName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [r].[Id], [r].[ConcurrencyStamp], [r].[MoreInfoCount], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedRoleName_0" (0723d8ff)
+2018-03-02T17:05:47.6406353+02:00 0HLC09QRIBV2L:00000014 [INF] Executed DbCommand ("0"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsApproved], [u].[LastName], [u].[MoreInfoCount], [u].[MoreInfoCountUsed], [u].[MoreInfoDate], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[SecurityStamp], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-03-02T17:05:47.6750758+02:00 0HLC09QRIBV2L:00000014 [INF] Executed DbCommand ("1"ms) [Parameters=["@p0='?' (Size = 450), @p1='?' (Size = 450), @p15='?' (Size = 450), @p2='?' (Size = 256), @p3='?', @p4='?' (Size = 50), @p5='?', @p6='?' (Size = 50), @p7='?', @p8='?', @p9='?', @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [UserRoles] ([UserId], [RoleId])
+VALUES (@p0, @p1);
+UPDATE [Users] SET [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [IsApproved] = @p5, [LastName] = @p6, [MoreInfoCount] = @p7, [MoreInfoCountUsed] = @p8, [MoreInfoDate] = @p9, [NormalizedEmail] = @p10, [NormalizedUserName] = @p11, [PasswordHash] = @p12, [SecurityStamp] = @p13, [UserName] = @p14
+WHERE [Id] = @p15;
+SELECT @@ROWCOUNT;" (0723d8ff)
+2018-03-02T17:05:47.7057744+02:00 0HLC09QRIBV2L:00000014 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200 (e28ccfae)
+2018-03-02T17:05:47.7358971+02:00 0HLC09QRIBV2L:00000014 [INF] Executed action "CitizenSerialInfo.Controllers.api.AdministrationApiController.Put (CitizenSerialInfo)" in 303.662ms (afa2e885)
+2018-03-02T17:05:47.7467920+02:00 0HLC09QRIBV2L:00000014 [INF] Request finished in 355.7312ms 200  (791a596a)
+2018-03-02T17:05:47.8015802+02:00 0HLC09QRIBV2L:00000015 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/api/administrationapi?_=1520003084902   (ca22a1cb)
+2018-03-02T17:05:47.8300457+02:00 0HLC09QRIBV2L:00000015 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-02T17:05:47.8594320+02:00 0HLC09QRIBV2L:00000015 [INF] Executing action method "CitizenSerialInfo.Controllers.api.AdministrationApiController.Get (CitizenSerialInfo)" with arguments (["DevExtreme.AspNet.Mvc.DataSourceLoadOptions"]) - ModelState is Valid (ba7f4ac2)
+2018-03-02T17:05:47.8880101+02:00 0HLC09QRIBV2L:00000015 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-02T17:05:47.9367329+02:00 0HLC09QRIBV2L:00000015 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsApproved], [u].[LastName], [u].[MoreInfoCount], [u].[MoreInfoCountUsed], [u].[MoreInfoDate], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[SecurityStamp], [u].[UserName]
+FROM [Users] AS [u]" (0723d8ff)
+2018-03-02T17:05:47.9659733+02:00 0HLC09QRIBV2L:00000015 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [r].[Id], [r].[ConcurrencyStamp], [r].[MoreInfoCount], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]" (0723d8ff)
+2018-03-02T17:05:47.9940509+02:00 0HLC09QRIBV2L:00000015 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:05:48.0430053+02:00 0HLC09QRIBV2L:00000015 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:05:48.0922068+02:00 0HLC09QRIBV2L:00000015 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:05:48.1015082+02:00 0HLC09QRIBV2L:00000015 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:05:48.1120328+02:00 0HLC09QRIBV2L:00000015 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:05:48.1213337+02:00 0HLC09QRIBV2L:00000015 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:05:48.1505676+02:00 0HLC09QRIBV2L:00000015 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-03-02T17:05:48.1994815+02:00 0HLC09QRIBV2L:00000015 [INF] Executed action "CitizenSerialInfo.Controllers.api.AdministrationApiController.Get (CitizenSerialInfo)" in 321.4003ms (afa2e885)
+2018-03-02T17:05:48.2092868+02:00 0HLC09QRIBV2L:00000015 [INF] Request finished in 424.2359ms 200 application/json; charset=utf-8 (791a596a)
+2018-03-02T17:06:02.9717811+02:00 0HLC09QRIBV2L:00000016 [INF] Request starting HTTP/1.1 PUT http://127.0.0.1:5000/api/administrationapi application/x-www-form-urlencoded; charset=UTF-8 205 (ca22a1cb)
+2018-03-02T17:06:03.0042564+02:00 0HLC09QRIBV2L:00000016 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-02T17:06:03.0370875+02:00 0HLC09QRIBV2L:00000016 [INF] Executing action method "CitizenSerialInfo.Controllers.api.AdministrationApiController.Put (CitizenSerialInfo)" with arguments (["22707a63-01d8-4daf-858a-1a93751e114c", "{\"Roles\":[{\"IsPermitted\":\"true\",\"Id\":\"a675ad4a-571d-4afe-b657-06d2818e841f\",\"RoleName\":\"Administrator\"}]}"]) - ModelState is Valid (ba7f4ac2)
+2018-03-02T17:06:03.0876915+02:00 0HLC09QRIBV2L:00000016 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-02T17:06:03.1027528+02:00 0HLC09QRIBV2L:00000016 [INF] Executed DbCommand ("4"ms) [Parameters=["@__key_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[IsApproved], [a].[LastName], [a].[MoreInfoCount], [a].[MoreInfoCountUsed], [a].[MoreInfoDate], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[SecurityStamp], [a].[UserName]
+FROM [Users] AS [a]
+WHERE [a].[Id] = @__key_0" (0723d8ff)
+2018-03-02T17:06:03.1377701+02:00 0HLC09QRIBV2L:00000016 [INF] Executed DbCommand ("5"ms) [Parameters=["@__key_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__key_0" (0723d8ff)
+2018-03-02T17:06:03.1765806+02:00 0HLC09QRIBV2L:00000016 [INF] Executed DbCommand ("4"ms) [Parameters=["@p0='?' (Size = 450), @p1='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+DELETE FROM [UserRoles]
+WHERE [UserId] = @p0 AND [RoleId] = @p1;
+SELECT @@ROWCOUNT;" (0723d8ff)
+2018-03-02T17:06:03.2103525+02:00 0HLC09QRIBV2L:00000016 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [r].[Id], [r].[ConcurrencyStamp], [r].[MoreInfoCount], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]" (0723d8ff)
+2018-03-02T17:06:03.2219408+02:00 0HLC09QRIBV2L:00000016 [INF] Executed DbCommand ("2"ms) [Parameters=["@__normalizedRoleName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [r].[Id], [r].[ConcurrencyStamp], [r].[MoreInfoCount], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedRoleName_0" (0723d8ff)
+2018-03-02T17:06:03.2576071+02:00 0HLC09QRIBV2L:00000016 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (Size = 450), @__get_Item_1='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[UserId], [e].[RoleId]
+FROM [UserRoles] AS [e]
+WHERE ([e].[UserId] = @__get_Item_0) AND ([e].[RoleId] = @__get_Item_1)" (0723d8ff)
+2018-03-02T17:06:03.2889740+02:00 0HLC09QRIBV2L:00000016 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedRoleName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [r].[Id], [r].[ConcurrencyStamp], [r].[MoreInfoCount], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedRoleName_0" (0723d8ff)
+2018-03-02T17:06:03.3237042+02:00 0HLC09QRIBV2L:00000016 [INF] Executed DbCommand ("2"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsApproved], [u].[LastName], [u].[MoreInfoCount], [u].[MoreInfoCountUsed], [u].[MoreInfoDate], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[SecurityStamp], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-03-02T17:06:03.3483575+02:00 0HLC09QRIBV2L:00000016 [INF] Executed DbCommand ("9"ms) [Parameters=["@p0='?' (Size = 450), @p1='?' (Size = 450), @p15='?' (Size = 450), @p2='?' (Size = 256), @p3='?', @p4='?' (Size = 50), @p5='?', @p6='?' (Size = 50), @p7='?', @p8='?', @p9='?', @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [UserRoles] ([UserId], [RoleId])
+VALUES (@p0, @p1);
+UPDATE [Users] SET [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [IsApproved] = @p5, [LastName] = @p6, [MoreInfoCount] = @p7, [MoreInfoCountUsed] = @p8, [MoreInfoDate] = @p9, [NormalizedEmail] = @p10, [NormalizedUserName] = @p11, [PasswordHash] = @p12, [SecurityStamp] = @p13, [UserName] = @p14
+WHERE [Id] = @p15;
+SELECT @@ROWCOUNT;" (0723d8ff)
+2018-03-02T17:06:03.3629661+02:00 0HLC09QRIBV2L:00000016 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200 (e28ccfae)
+2018-03-02T17:06:03.3920191+02:00 0HLC09QRIBV2L:00000016 [INF] Executed action "CitizenSerialInfo.Controllers.api.AdministrationApiController.Put (CitizenSerialInfo)" in 358.4593ms (afa2e885)
+2018-03-02T17:06:03.4417949+02:00 0HLC09QRIBV2L:00000016 [INF] Request finished in 448.884ms 200  (791a596a)
+2018-03-02T17:06:03.4934796+02:00 0HLC09QRIBV2L:00000017 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/api/administrationapi?_=1520003084903   (ca22a1cb)
+2018-03-02T17:06:03.5239291+02:00 0HLC09QRIBV2L:00000017 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-02T17:06:03.5336259+02:00 0HLC09QRIBV2L:00000017 [INF] Executing action method "CitizenSerialInfo.Controllers.api.AdministrationApiController.Get (CitizenSerialInfo)" with arguments (["DevExtreme.AspNet.Mvc.DataSourceLoadOptions"]) - ModelState is Valid (ba7f4ac2)
+2018-03-02T17:06:03.5452450+02:00 0HLC09QRIBV2L:00000017 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-02T17:06:03.5781106+02:00 0HLC09QRIBV2L:00000017 [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsApproved], [u].[LastName], [u].[MoreInfoCount], [u].[MoreInfoCountUsed], [u].[MoreInfoDate], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[SecurityStamp], [u].[UserName]
+FROM [Users] AS [u]" (0723d8ff)
+2018-03-02T17:06:03.5954551+02:00 0HLC09QRIBV2L:00000017 [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [r].[Id], [r].[ConcurrencyStamp], [r].[MoreInfoCount], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]" (0723d8ff)
+2018-03-02T17:06:03.6699908+02:00 0HLC09QRIBV2L:00000017 [INF] Executed DbCommand ("2"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:06:03.6839026+02:00 0HLC09QRIBV2L:00000017 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:06:03.6969271+02:00 0HLC09QRIBV2L:00000017 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:06:03.7066896+02:00 0HLC09QRIBV2L:00000017 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:06:03.7165687+02:00 0HLC09QRIBV2L:00000017 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:06:03.7670284+02:00 0HLC09QRIBV2L:00000017 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:06:03.7784571+02:00 0HLC09QRIBV2L:00000017 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-03-02T17:06:03.7887765+02:00 0HLC09QRIBV2L:00000017 [INF] Executed action "CitizenSerialInfo.Controllers.api.AdministrationApiController.Get (CitizenSerialInfo)" in 255.3152ms (afa2e885)
+2018-03-02T17:06:03.8029538+02:00 0HLC09QRIBV2L:00000017 [INF] Request finished in 326.9883ms 200 application/json; charset=utf-8 (791a596a)
+2018-03-02T17:06:22.7887074+02:00 0HLC09QRIBV2L:00000018 [INF] Request starting HTTP/1.1 PUT http://127.0.0.1:5000/api/administrationapi application/x-www-form-urlencoded; charset=UTF-8 205 (ca22a1cb)
+2018-03-02T17:06:22.8016234+02:00 0HLC09QRIBV2L:00000018 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-02T17:06:22.8130845+02:00 0HLC09QRIBV2L:00000018 [INF] Executing action method "CitizenSerialInfo.Controllers.api.AdministrationApiController.Put (CitizenSerialInfo)" with arguments (["5864e206-f8d8-4c49-b0ec-46cb986d7025", "{\"Roles\":[{\"IsPermitted\":\"true\",\"Id\":\"a675ad4a-571d-4afe-b657-06d2818e841f\",\"RoleName\":\"Administrator\"}]}"]) - ModelState is Valid (ba7f4ac2)
+2018-03-02T17:06:22.8271538+02:00 0HLC09QRIBV2L:00000018 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-02T17:06:22.8581145+02:00 0HLC09QRIBV2L:00000018 [INF] Executed DbCommand ("0"ms) [Parameters=["@__key_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[IsApproved], [a].[LastName], [a].[MoreInfoCount], [a].[MoreInfoCountUsed], [a].[MoreInfoDate], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[SecurityStamp], [a].[UserName]
+FROM [Users] AS [a]
+WHERE [a].[Id] = @__key_0" (0723d8ff)
+2018-03-02T17:06:22.8879688+02:00 0HLC09QRIBV2L:00000018 [INF] Executed DbCommand ("0"ms) [Parameters=["@__key_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__key_0" (0723d8ff)
+2018-03-02T17:06:22.9374698+02:00 0HLC09QRIBV2L:00000018 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 450), @p1='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+DELETE FROM [UserRoles]
+WHERE [UserId] = @p0 AND [RoleId] = @p1;
+SELECT @@ROWCOUNT;" (0723d8ff)
+2018-03-02T17:06:22.9713049+02:00 0HLC09QRIBV2L:00000018 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [r].[Id], [r].[ConcurrencyStamp], [r].[MoreInfoCount], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]" (0723d8ff)
+2018-03-02T17:06:22.9831585+02:00 0HLC09QRIBV2L:00000018 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedRoleName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [r].[Id], [r].[ConcurrencyStamp], [r].[MoreInfoCount], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedRoleName_0" (0723d8ff)
+2018-03-02T17:06:23.0168379+02:00 0HLC09QRIBV2L:00000018 [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (Size = 450), @__get_Item_1='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[UserId], [e].[RoleId]
+FROM [UserRoles] AS [e]
+WHERE ([e].[UserId] = @__get_Item_0) AND ([e].[RoleId] = @__get_Item_1)" (0723d8ff)
+2018-03-02T17:06:23.0281893+02:00 0HLC09QRIBV2L:00000018 [INF] Executed DbCommand ("0"ms) [Parameters=["@__normalizedRoleName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [r].[Id], [r].[ConcurrencyStamp], [r].[MoreInfoCount], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedRoleName_0" (0723d8ff)
+2018-03-02T17:06:23.0589690+02:00 0HLC09QRIBV2L:00000018 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsApproved], [u].[LastName], [u].[MoreInfoCount], [u].[MoreInfoCountUsed], [u].[MoreInfoDate], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[SecurityStamp], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-03-02T17:06:23.0927551+02:00 0HLC09QRIBV2L:00000018 [INF] Executed DbCommand ("1"ms) [Parameters=["@p0='?' (Size = 450), @p1='?' (Size = 450), @p15='?' (Size = 450), @p2='?' (Size = 256), @p3='?', @p4='?' (Size = 50), @p5='?', @p6='?' (Size = 50), @p7='?', @p8='?', @p9='?', @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [UserRoles] ([UserId], [RoleId])
+VALUES (@p0, @p1);
+UPDATE [Users] SET [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [IsApproved] = @p5, [LastName] = @p6, [MoreInfoCount] = @p7, [MoreInfoCountUsed] = @p8, [MoreInfoDate] = @p9, [NormalizedEmail] = @p10, [NormalizedUserName] = @p11, [PasswordHash] = @p12, [SecurityStamp] = @p13, [UserName] = @p14
+WHERE [Id] = @p15;
+SELECT @@ROWCOUNT;" (0723d8ff)
+2018-03-02T17:06:23.1039649+02:00 0HLC09QRIBV2L:00000018 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200 (e28ccfae)
+2018-03-02T17:06:23.1360392+02:00 0HLC09QRIBV2L:00000018 [INF] Executed action "CitizenSerialInfo.Controllers.api.AdministrationApiController.Put (CitizenSerialInfo)" in 302.9179ms (afa2e885)
+2018-03-02T17:06:23.1468544+02:00 0HLC09QRIBV2L:00000018 [INF] Request finished in 355.9057ms 200  (791a596a)
+2018-03-02T17:06:23.2006062+02:00 0HLC09QRIBV2L:00000019 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/api/administrationapi?_=1520003084904   (ca22a1cb)
+2018-03-02T17:06:23.2485892+02:00 0HLC09QRIBV2L:00000019 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-02T17:06:23.2792088+02:00 0HLC09QRIBV2L:00000019 [INF] Executing action method "CitizenSerialInfo.Controllers.api.AdministrationApiController.Get (CitizenSerialInfo)" with arguments (["DevExtreme.AspNet.Mvc.DataSourceLoadOptions"]) - ModelState is Valid (ba7f4ac2)
+2018-03-02T17:06:23.3082888+02:00 0HLC09QRIBV2L:00000019 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-02T17:06:23.3374275+02:00 0HLC09QRIBV2L:00000019 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsApproved], [u].[LastName], [u].[MoreInfoCount], [u].[MoreInfoCountUsed], [u].[MoreInfoDate], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[SecurityStamp], [u].[UserName]
+FROM [Users] AS [u]" (0723d8ff)
+2018-03-02T17:06:23.3479090+02:00 0HLC09QRIBV2L:00000019 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [r].[Id], [r].[ConcurrencyStamp], [r].[MoreInfoCount], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]" (0723d8ff)
+2018-03-02T17:06:23.3804206+02:00 0HLC09QRIBV2L:00000019 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:06:23.3932637+02:00 0HLC09QRIBV2L:00000019 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:06:23.4101610+02:00 0HLC09QRIBV2L:00000019 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:06:23.4197021+02:00 0HLC09QRIBV2L:00000019 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:06:23.4683110+02:00 0HLC09QRIBV2L:00000019 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:06:23.5223048+02:00 0HLC09QRIBV2L:00000019 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:06:23.5515344+02:00 0HLC09QRIBV2L:00000019 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-03-02T17:06:23.5614143+02:00 0HLC09QRIBV2L:00000019 [INF] Executed action "CitizenSerialInfo.Controllers.api.AdministrationApiController.Get (CitizenSerialInfo)" in 304.2039ms (afa2e885)
+2018-03-02T17:06:23.5922214+02:00 0HLC09QRIBV2L:00000019 [INF] Request finished in 388.2551ms 200 application/json; charset=utf-8 (791a596a)
+2018-03-02T17:10:00.7690934+02:00 0HLC09QRIBV2L:0000001A [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/administration/roles   (ca22a1cb)
+2018-03-02T17:10:00.7816238+02:00 0HLC09QRIBV2L:0000001A [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-02T17:10:00.8152793+02:00 0HLC09QRIBV2L:0000001A [INF] Executing action method "CitizenSerialInfo.Controllers.AdministrationController.Roles (CitizenSerialInfo)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-03-02T17:10:01.0338773+02:00 0HLC09QRIBV2L:0000001A [INF] Executing ViewResult, running view at path "/Views/Administration/Roles.cshtml". (9707eebe)
+2018-03-02T17:10:01.0839948+02:00 0HLC09QRIBV2L:0000001A [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-02T17:10:01.1161859+02:00 0HLC09QRIBV2L:0000001A [INF] Executed DbCommand ("3"ms) [Parameters=["@__ToUpper_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [s].[Id], [s].[Email], [s].[EmailConfirmed], [s].[FirstName], [s].[IsApproved], [s].[LastName], [s].[MoreInfoCount], [s].[MoreInfoCountUsed], [s].[MoreInfoDate], [s].[NormalizedEmail], [s].[NormalizedUserName], [s].[PasswordHash], [s].[SecurityStamp], [s].[UserName]
+FROM [Users] AS [s]
+WHERE [s].[NormalizedUserName] = @__ToUpper_0" (0723d8ff)
+2018-03-02T17:10:01.1323280+02:00 0HLC09QRIBV2L:0000001A [INF] Executed action "CitizenSerialInfo.Controllers.AdministrationController.Roles (CitizenSerialInfo)" in 332.8324ms (afa2e885)
+2018-03-02T17:10:01.1593544+02:00 0HLC09QRIBV2L:0000001A [INF] Request finished in 394.2958ms 200 text/html; charset=utf-8 (791a596a)
+2018-03-02T17:10:02.0991948+02:00 0HLC09QRIBV2L:0000001B [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/api/moreinfoapi?_=1520003401313   (ca22a1cb)
+2018-03-02T17:10:02.1123707+02:00 0HLC09QRIBV2L:0000001B [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-02T17:10:02.1470898+02:00 0HLC09QRIBV2L:0000001B [INF] Executing action method "CitizenSerialInfo.Controllers.api.MoreInfoApiController.Get (CitizenSerialInfo)" with arguments (["DevExtreme.AspNet.Mvc.DataSourceLoadOptions"]) - ModelState is Valid (ba7f4ac2)
+2018-03-02T17:10:02.1639504+02:00 0HLC09QRIBV2L:0000001B [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-02T17:10:02.1756317+02:00 0HLC09QRIBV2L:0000001B [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-03-02T17:10:02.2156454+02:00 0HLC09QRIBV2L:0000001B [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[Id], [s].[Name], [s].[MoreInfoCount]
+FROM [Roles] AS [s]" (0723d8ff)
+2018-03-02T17:10:02.2472690+02:00 0HLC09QRIBV2L:0000001B [INF] Executed action "CitizenSerialInfo.Controllers.api.MoreInfoApiController.Get (CitizenSerialInfo)" in 102.4891ms (afa2e885)
+2018-03-02T17:10:02.2565665+02:00 0HLC09QRIBV2L:0000001B [INF] Request finished in 158.3526ms 200 application/json; charset=utf-8 (791a596a)
+2018-03-02T17:10:14.6497641+02:00 0HLC09QRIBV2L:0000001C [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/administration/users   (ca22a1cb)
+2018-03-02T17:10:14.6801228+02:00 0HLC09QRIBV2L:0000001C [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-02T17:10:14.7290422+02:00 0HLC09QRIBV2L:0000001C [INF] Executing action method "CitizenSerialInfo.Controllers.AdministrationController.Users (CitizenSerialInfo)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-03-02T17:10:14.7772364+02:00 0HLC09QRIBV2L:0000001C [INF] Executing ViewResult, running view at path "/Views/Administration/Users.cshtml". (9707eebe)
+2018-03-02T17:10:14.8114039+02:00 0HLC09QRIBV2L:0000001C [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-02T17:10:14.8417399+02:00 0HLC09QRIBV2L:0000001C [INF] Executed DbCommand ("0"ms) [Parameters=["@__ToUpper_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [s].[Id], [s].[Email], [s].[EmailConfirmed], [s].[FirstName], [s].[IsApproved], [s].[LastName], [s].[MoreInfoCount], [s].[MoreInfoCountUsed], [s].[MoreInfoDate], [s].[NormalizedEmail], [s].[NormalizedUserName], [s].[PasswordHash], [s].[SecurityStamp], [s].[UserName]
+FROM [Users] AS [s]
+WHERE [s].[NormalizedUserName] = @__ToUpper_0" (0723d8ff)
+2018-03-02T17:10:14.8903573+02:00 0HLC09QRIBV2L:0000001C [INF] Executed action "CitizenSerialInfo.Controllers.AdministrationController.Users (CitizenSerialInfo)" in 163.1214ms (afa2e885)
+2018-03-02T17:10:14.9248946+02:00 0HLC09QRIBV2L:0000001C [INF] Request finished in 273.2962ms 200 text/html; charset=utf-8 (791a596a)
+2018-03-02T17:10:15.8402466+02:00 0HLC09QRIBV2L:0000001D [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/api/administrationapi?_=1520003415031   (ca22a1cb)
+2018-03-02T17:10:15.8764782+02:00 0HLC09QRIBV2L:0000001D [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-02T17:10:15.8946303+02:00 0HLC09QRIBV2L:0000001D [INF] Executing action method "CitizenSerialInfo.Controllers.api.AdministrationApiController.Get (CitizenSerialInfo)" with arguments (["DevExtreme.AspNet.Mvc.DataSourceLoadOptions"]) - ModelState is Valid (ba7f4ac2)
+2018-03-02T17:10:15.9143445+02:00 0HLC09QRIBV2L:0000001D [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-02T17:10:15.9283374+02:00 0HLC09QRIBV2L:0000001D [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsApproved], [u].[LastName], [u].[MoreInfoCount], [u].[MoreInfoCountUsed], [u].[MoreInfoDate], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[SecurityStamp], [u].[UserName]
+FROM [Users] AS [u]" (0723d8ff)
+2018-03-02T17:10:15.9406506+02:00 0HLC09QRIBV2L:0000001D [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [r].[Id], [r].[ConcurrencyStamp], [r].[MoreInfoCount], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]" (0723d8ff)
+2018-03-02T17:10:15.9517973+02:00 0HLC09QRIBV2L:0000001D [INF] Executed DbCommand ("1"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:10:15.9820125+02:00 0HLC09QRIBV2L:0000001D [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:10:15.9915933+02:00 0HLC09QRIBV2L:0000001D [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:10:16.0006429+02:00 0HLC09QRIBV2L:0000001D [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:10:16.0090375+02:00 0HLC09QRIBV2L:0000001D [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:10:16.0182220+02:00 0HLC09QRIBV2L:0000001D [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:10:16.0493742+02:00 0HLC09QRIBV2L:0000001D [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-03-02T17:10:16.0797089+02:00 0HLC09QRIBV2L:0000001D [INF] Executed action "CitizenSerialInfo.Controllers.api.AdministrationApiController.Get (CitizenSerialInfo)" in 173.7194ms (afa2e885)
+2018-03-02T17:10:16.0894441+02:00 0HLC09QRIBV2L:0000001D [INF] Request finished in 252.4296ms 200 application/json; charset=utf-8 (791a596a)
+2018-03-02T17:10:28.0627106+02:00 0HLC09QRIBV2L:0000001E [INF] Request starting HTTP/1.1 PUT http://127.0.0.1:5000/api/administrationapi application/x-www-form-urlencoded; charset=UTF-8 333 (ca22a1cb)
+2018-03-02T17:10:28.0928396+02:00 0HLC09QRIBV2L:0000001E [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-02T17:10:28.1040293+02:00 0HLC09QRIBV2L:0000001E [INF] Executing action method "CitizenSerialInfo.Controllers.api.AdministrationApiController.Put (CitizenSerialInfo)" with arguments (["108a7909-1735-46f0-b781-f9e99210b1e9", "{\"Roles\":[{\"IsPermitted\":\"true\",\"Id\":\"a675ad4a-571d-4afe-b657-06d2818e841f\",\"RoleName\":\"Administrator\"},{\"IsPermitted\":\"true\",\"Id\":\"cb09b512-80a5-45e6-b1cc-78b070aab175\",\"RoleName\":\"Default\"}]}"]) - ModelState is Valid (ba7f4ac2)
+2018-03-02T17:10:28.1345651+02:00 0HLC09QRIBV2L:0000001E [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-02T17:10:28.1479799+02:00 0HLC09QRIBV2L:0000001E [INF] Executed DbCommand ("4"ms) [Parameters=["@__key_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[IsApproved], [a].[LastName], [a].[MoreInfoCount], [a].[MoreInfoCountUsed], [a].[MoreInfoDate], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[SecurityStamp], [a].[UserName]
+FROM [Users] AS [a]
+WHERE [a].[Id] = @__key_0" (0723d8ff)
+2018-03-02T17:10:28.1997892+02:00 0HLC09QRIBV2L:0000001E [INF] Executed DbCommand ("1"ms) [Parameters=["@__key_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__key_0" (0723d8ff)
+2018-03-02T17:10:28.2379165+02:00 0HLC09QRIBV2L:0000001E [INF] Executed DbCommand ("3"ms) [Parameters=["@p0='?' (Size = 450), @p1='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+DELETE FROM [UserRoles]
+WHERE [UserId] = @p0 AND [RoleId] = @p1;
+SELECT @@ROWCOUNT;" (0723d8ff)
+2018-03-02T17:10:28.2701064+02:00 0HLC09QRIBV2L:0000001E [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [r].[Id], [r].[ConcurrencyStamp], [r].[MoreInfoCount], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]" (0723d8ff)
+2018-03-02T17:10:28.3051254+02:00 0HLC09QRIBV2L:0000001E [INF] Executed DbCommand ("5"ms) [Parameters=["@__normalizedRoleName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [r].[Id], [r].[ConcurrencyStamp], [r].[MoreInfoCount], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedRoleName_0" (0723d8ff)
+2018-03-02T17:10:28.3217463+02:00 0HLC09QRIBV2L:0000001E [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (Size = 450), @__get_Item_1='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[UserId], [e].[RoleId]
+FROM [UserRoles] AS [e]
+WHERE ([e].[UserId] = @__get_Item_0) AND ([e].[RoleId] = @__get_Item_1)" (0723d8ff)
+2018-03-02T17:10:28.3343522+02:00 0HLC09QRIBV2L:0000001E [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedRoleName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [r].[Id], [r].[ConcurrencyStamp], [r].[MoreInfoCount], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedRoleName_0" (0723d8ff)
+2018-03-02T17:10:28.3713492+02:00 0HLC09QRIBV2L:0000001E [INF] Executed DbCommand ("3"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsApproved], [u].[LastName], [u].[MoreInfoCount], [u].[MoreInfoCountUsed], [u].[MoreInfoDate], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[SecurityStamp], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-03-02T17:10:28.3907643+02:00 0HLC09QRIBV2L:0000001E [INF] Executed DbCommand ("5"ms) [Parameters=["@p0='?' (Size = 450), @p1='?' (Size = 450), @p15='?' (Size = 450), @p2='?' (Size = 256), @p3='?', @p4='?' (Size = 50), @p5='?', @p6='?' (Size = 50), @p7='?', @p8='?', @p9='?', @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [UserRoles] ([UserId], [RoleId])
+VALUES (@p0, @p1);
+UPDATE [Users] SET [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [IsApproved] = @p5, [LastName] = @p6, [MoreInfoCount] = @p7, [MoreInfoCountUsed] = @p8, [MoreInfoDate] = @p9, [NormalizedEmail] = @p10, [NormalizedUserName] = @p11, [PasswordHash] = @p12, [SecurityStamp] = @p13, [UserName] = @p14
+WHERE [Id] = @p15;
+SELECT @@ROWCOUNT;" (0723d8ff)
+2018-03-02T17:10:28.4230919+02:00 0HLC09QRIBV2L:0000001E [INF] Executed DbCommand ("0"ms) [Parameters=["@__normalizedRoleName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [r].[Id], [r].[ConcurrencyStamp], [r].[MoreInfoCount], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedRoleName_0" (0723d8ff)
+2018-03-02T17:10:28.4355383+02:00 0HLC09QRIBV2L:0000001E [INF] Executed DbCommand ("0"ms) [Parameters=["@__get_Item_0='?' (Size = 450), @__get_Item_1='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[UserId], [e].[RoleId]
+FROM [UserRoles] AS [e]
+WHERE ([e].[UserId] = @__get_Item_0) AND ([e].[RoleId] = @__get_Item_1)" (0723d8ff)
+2018-03-02T17:10:28.4474606+02:00 0HLC09QRIBV2L:0000001E [INF] Executed DbCommand ("0"ms) [Parameters=["@__normalizedRoleName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [r].[Id], [r].[ConcurrencyStamp], [r].[MoreInfoCount], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedRoleName_0" (0723d8ff)
+2018-03-02T17:10:28.4799927+02:00 0HLC09QRIBV2L:0000001E [INF] Executed DbCommand ("0"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsApproved], [u].[LastName], [u].[MoreInfoCount], [u].[MoreInfoCountUsed], [u].[MoreInfoDate], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[SecurityStamp], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-03-02T17:10:28.5122427+02:00 0HLC09QRIBV2L:0000001E [INF] Executed DbCommand ("1"ms) [Parameters=["@p0='?' (Size = 450), @p1='?' (Size = 450), @p15='?' (Size = 450), @p2='?' (Size = 256), @p3='?', @p4='?' (Size = 50), @p5='?', @p6='?' (Size = 50), @p7='?', @p8='?', @p9='?', @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [UserRoles] ([UserId], [RoleId])
+VALUES (@p0, @p1);
+UPDATE [Users] SET [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [IsApproved] = @p5, [LastName] = @p6, [MoreInfoCount] = @p7, [MoreInfoCountUsed] = @p8, [MoreInfoDate] = @p9, [NormalizedEmail] = @p10, [NormalizedUserName] = @p11, [PasswordHash] = @p12, [SecurityStamp] = @p13, [UserName] = @p14
+WHERE [Id] = @p15;
+SELECT @@ROWCOUNT;" (0723d8ff)
+2018-03-02T17:10:28.5628603+02:00 0HLC09QRIBV2L:0000001E [INF] Executing HttpStatusCodeResult, setting HTTP status code 200 (e28ccfae)
+2018-03-02T17:10:28.6091570+02:00 0HLC09QRIBV2L:0000001E [INF] Executed action "CitizenSerialInfo.Controllers.api.AdministrationApiController.Put (CitizenSerialInfo)" in 469.3819ms (afa2e885)
+2018-03-02T17:10:28.6186205+02:00 0HLC09QRIBV2L:0000001E [INF] Request finished in 573.2262ms 200  (791a596a)
+2018-03-02T17:10:28.6784857+02:00 0HLC09QRIBV2L:0000001F [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/api/administrationapi?_=1520003415032   (ca22a1cb)
+2018-03-02T17:10:28.7071086+02:00 0HLC09QRIBV2L:0000001F [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-02T17:10:28.7346435+02:00 0HLC09QRIBV2L:0000001F [INF] Executing action method "CitizenSerialInfo.Controllers.api.AdministrationApiController.Get (CitizenSerialInfo)" with arguments (["DevExtreme.AspNet.Mvc.DataSourceLoadOptions"]) - ModelState is Valid (ba7f4ac2)
+2018-03-02T17:10:28.7638067+02:00 0HLC09QRIBV2L:0000001F [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-02T17:10:28.7728298+02:00 0HLC09QRIBV2L:0000001F [INF] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsApproved], [u].[LastName], [u].[MoreInfoCount], [u].[MoreInfoCountUsed], [u].[MoreInfoDate], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[SecurityStamp], [u].[UserName]
+FROM [Users] AS [u]" (0723d8ff)
+2018-03-02T17:10:28.8020236+02:00 0HLC09QRIBV2L:0000001F [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [r].[Id], [r].[ConcurrencyStamp], [r].[MoreInfoCount], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]" (0723d8ff)
+2018-03-02T17:10:28.8328937+02:00 0HLC09QRIBV2L:0000001F [INF] Executed DbCommand ("1"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:10:28.8623679+02:00 0HLC09QRIBV2L:0000001F [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:10:28.8730981+02:00 0HLC09QRIBV2L:0000001F [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:10:28.8820159+02:00 0HLC09QRIBV2L:0000001F [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:10:28.9122115+02:00 0HLC09QRIBV2L:0000001F [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:10:28.9408729+02:00 0HLC09QRIBV2L:0000001F [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:10:28.9884407+02:00 0HLC09QRIBV2L:0000001F [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-03-02T17:10:29.0191065+02:00 0HLC09QRIBV2L:0000001F [INF] Executed action "CitizenSerialInfo.Controllers.api.AdministrationApiController.Get (CitizenSerialInfo)" in 282.7302ms (afa2e885)
+2018-03-02T17:10:29.0472229+02:00 0HLC09QRIBV2L:0000001F [INF] Request finished in 368.8708ms 200 application/json; charset=utf-8 (791a596a)
+2018-03-02T17:10:37.1167657+02:00 0HLC09QRIBV2L:00000020 [INF] Request starting HTTP/1.1 DELETE http://127.0.0.1:5000/api/administrationapi application/x-www-form-urlencoded; charset=UTF-8 40 (ca22a1cb)
+2018-03-02T17:10:37.1458188+02:00 0HLC09QRIBV2L:00000020 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-02T17:10:37.1791568+02:00 0HLC09QRIBV2L:00000020 [INF] Executing action method "CitizenSerialInfo.Controllers.api.AdministrationApiController.Delete (CitizenSerialInfo)" with arguments (["108a7909-1735-46f0-b781-f9e99210b1e9"]) - ModelState is Valid (ba7f4ac2)
+2018-03-02T17:10:37.1915549+02:00 0HLC09QRIBV2L:00000020 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-02T17:10:37.2217676+02:00 0HLC09QRIBV2L:00000020 [INF] Executed DbCommand ("0"ms) [Parameters=["@__key_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__key_0" (0723d8ff)
+2018-03-02T17:10:37.2435583+02:00 0HLC09QRIBV2L:00000020 [INF] Executed DbCommand ("1"ms) [Parameters=["@__get_Item_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[Email], [e].[EmailConfirmed], [e].[FirstName], [e].[IsApproved], [e].[LastName], [e].[MoreInfoCount], [e].[MoreInfoCountUsed], [e].[MoreInfoDate], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[SecurityStamp], [e].[UserName]
+FROM [Users] AS [e]
+WHERE [e].[Id] = @__get_Item_0" (0723d8ff)
+2018-03-02T17:10:37.2718459+02:00 0HLC09QRIBV2L:00000020 [INF] Executed DbCommand ("2"ms) [Parameters=["@p0='?' (Size = 450), @p1='?' (Size = 450), @p2='?' (Size = 450), @p3='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+DELETE FROM [UserRoles]
+WHERE [UserId] = @p0 AND [RoleId] = @p1;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [UserRoles]
+WHERE [UserId] = @p2 AND [RoleId] = @p3;
+SELECT @@ROWCOUNT;" (0723d8ff)
+2018-03-02T17:10:37.3155925+02:00 0HLC09QRIBV2L:00000020 [INF] Executed DbCommand ("16"ms) [Parameters=["@p4='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+DELETE FROM [Users]
+WHERE [Id] = @p4;
+SELECT @@ROWCOUNT;" (0723d8ff)
+2018-03-02T17:10:37.3657535+02:00 0HLC09QRIBV2L:00000020 [INF] Executed action "CitizenSerialInfo.Controllers.api.AdministrationApiController.Delete (CitizenSerialInfo)" in 168.5132ms (afa2e885)
+2018-03-02T17:10:37.3959713+02:00 0HLC09QRIBV2L:00000020 [INF] Request finished in 277.7766ms 200  (791a596a)
+2018-03-02T17:10:37.4321732+02:00 0HLC09QRIBV2L:00000021 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/api/administrationapi?_=1520003415033   (ca22a1cb)
+2018-03-02T17:10:37.4413081+02:00 0HLC09QRIBV2L:00000021 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-03-02T17:10:37.4707221+02:00 0HLC09QRIBV2L:00000021 [INF] Executing action method "CitizenSerialInfo.Controllers.api.AdministrationApiController.Get (CitizenSerialInfo)" with arguments (["DevExtreme.AspNet.Mvc.DataSourceLoadOptions"]) - ModelState is Valid (ba7f4ac2)
+2018-03-02T17:10:37.5000763+02:00 0HLC09QRIBV2L:00000021 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-03-02T17:10:37.5318075+02:00 0HLC09QRIBV2L:00000021 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsApproved], [u].[LastName], [u].[MoreInfoCount], [u].[MoreInfoCountUsed], [u].[MoreInfoDate], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[SecurityStamp], [u].[UserName]
+FROM [Users] AS [u]" (0723d8ff)
+2018-03-02T17:10:37.5805849+02:00 0HLC09QRIBV2L:00000021 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [r].[Id], [r].[ConcurrencyStamp], [r].[MoreInfoCount], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]" (0723d8ff)
+2018-03-02T17:10:37.5899702+02:00 0HLC09QRIBV2L:00000021 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:10:37.6209897+02:00 0HLC09QRIBV2L:00000021 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:10:37.6312439+02:00 0HLC09QRIBV2L:00000021 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:10:37.6607351+02:00 0HLC09QRIBV2L:00000021 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:10:37.6713271+02:00 0HLC09QRIBV2L:00000021 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-03-02T17:10:37.6804253+02:00 0HLC09QRIBV2L:00000021 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-03-02T17:10:37.6923028+02:00 0HLC09QRIBV2L:00000021 [INF] Executed action "CitizenSerialInfo.Controllers.api.AdministrationApiController.Get (CitizenSerialInfo)" in 240.2914ms (afa2e885)
+2018-03-02T17:10:37.7025975+02:00 0HLC09QRIBV2L:00000021 [INF] Request finished in 288.3413ms 200 application/json; charset=utf-8 (791a596a)

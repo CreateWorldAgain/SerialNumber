@@ -1,0 +1,36 @@
+﻿@using CitizenSerialInfo.Models.ViewModels;
+@{
+    Layout = null;
+}
+
+@model  ConfirmEmailViewModel;
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Account validation </title>
+</head>
+<body>
+    <div id="main-wrapper" style="background-color: #ededed; font-family: Verdana; margin: 0px; font-size: 14px; color: #7e8383;">
+        <div style="margin: auto; padding-top:20px; margin-top: 20px; width: 650px; min-height: 100%;height: auto !important; height: 100%;">
+            <table style="width: 650px;"></table>
+            <div style="height: 100%; margin-top: 20px;">
+                <div style="padding: 35px; margin: auto;background-color: white;border: 1px solid lightgrey; ">
+                    <div style="font-size: 22px;color: #283848;margin-bottom: 30px;">Confirm your email address</div>
+                    <div style=" margin: auto;background-color: white; ">Hello, @Model.FirstName @Model.LastName</div>
+
+                    Your account is approved by manager. Now you can sign in!
+                    <div style=" margin: auto;background-color: white; ">Please, press button below to confirm: </div>
+                    <div style="text-align: center;">
+                       
+                    </div>
+                </div>
+                <div style="font-size: 12px; margin-top: 40px; text-align: center;margin-bottom:40px;">
+                    <span>Copyright ©2018  All rights reserved.</span><br>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

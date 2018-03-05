@@ -1,0 +1,105 @@
+﻿@if (User.IsInRole("Default"))
+{
+    <ul class="page-sidebar-menu   " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+
+        <li class="nav-item" id="li-search">
+            <a href="/search" class="nav-link nav-toggle">
+                <i class="icon-home"></i>
+                <span class="title">Search</span>
+                <span class="selected"></span>
+            </a>
+        </li>
+
+    </ul>
+}
+
+@if (User.IsInRole("Staff"))
+{
+    <ul class="page-sidebar-menu   " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+
+        <li class="nav-item" id="li-search">
+            <a href="/search" class="nav-link nav-toggle">
+                <i class="icon-home"></i>
+                <span class="title">Search</span>
+                <span class="selected"></span>
+            </a>
+        </li>
+
+        <li class="nav-item" id="li-upload">
+            <a href="/administration/uploadfile" class="nav-link ">
+                <i class="fa fa-film"></i>
+                <span class="title">Upload file</span>
+            </a>
+        </li>
+
+    </ul>
+}
+
+@if (User.IsInRole("Administrator"))
+{
+
+    <ul class="page-sidebar-menu   " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+        <li class="nav-item start active">
+
+        <li class="nav-item" id="li-search">
+            <a href="/search" class="nav-link nav-toggle">
+                <i class="icon-home"></i>
+                <span class="title">Search</span>
+                <span class="selected"></span>
+            </a>
+        </li>
+
+        <li class="nav-item" id="li-upload">
+            <a href="/administration/uploadfile" class="nav-link ">
+                <i class="fa fa-film"></i>
+                <span class="title">Upload file</span>
+            </a>
+        </li>
+        <li class="nav-item" id="li-users">
+            <a href="/administration/users" class="nav-link ">
+                <i class="icon-user"></i>
+                <span class="title">Users</span>
+            </a>
+        </li>
+        <li class="nav-item" id="li-imported-data">
+            <a href="/administration/importdata" class="nav-link ">
+                <i class="icon-docs"></i>
+                <span class="title"> Imported files</span>
+            </a>
+        </li>
+        <li class="nav-item" id="li-roles">
+            <a href="/administration/roles" class="nav-link ">
+                <i class="icon-users"></i>
+                <span class="title">Roles</span>
+            </a>
+        </li>
+        @*<li class="nav-item" id="li-admin">
+                <a href="javascript:;" class="nav-link" id="li-admin-items">
+                    <i class="icon-layers"></i>
+                    <span class="title">Administration</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub-menu">
+
+                    <li class="nav-item" id="li-roles">
+                        <a href="/administration/roles" class="nav-link" id="li-role">
+                            <span class="title">Roles</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item" id="li-users">
+                        <a href="/administration/users" class="nav-link " id="li-permission">
+                            <span class="title">Users</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" id="li-imported-data">
+                        <a href="/administration/importdata" class="nav-link ">
+                            <span class="title">Imported files</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>*@
+
+    </ul>
+
+}

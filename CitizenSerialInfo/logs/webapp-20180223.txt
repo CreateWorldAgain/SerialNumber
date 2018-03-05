@@ -1,0 +1,140 @@
+2018-02-23T17:49:03.2254294+02:00  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-02-23T17:49:04.5129949+02:00  [INF] Executed DbCommand ("37"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'__EFMigrationsHistory');" (0723d8ff)
+2018-02-23T17:49:04.5473279+02:00  [INF] Executed DbCommand ("11"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2018-02-23T17:49:06.7146106+02:00 0HLBQQJS9OCSM:00000001 [INF] Request starting HTTP/1.1 GET http://lena.almelnic.ru:5000/   (ca22a1cb)
+2018-02-23T17:49:07.1767582+02:00 0HLBQQJS9OCSM:00000001 [INF] Authorization failed for user: null. (a4ab1676)
+2018-02-23T17:49:07.1946437+02:00 0HLBQQJS9OCSM:00000001 [INF] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'. (8b6446cb)
+2018-02-23T17:49:07.2165731+02:00 0HLBQQJS9OCSM:00000001 [INF] Executing ChallengeResult with authentication schemes ([]). (f3dca807)
+2018-02-23T17:49:07.2531153+02:00 0HLBQQJS9OCSM:00000001 [INF] AuthenticationScheme: "Identity.Application" was challenged. (d45f1f38)
+2018-02-23T17:49:07.2734584+02:00 0HLBQQJS9OCSM:00000001 [INF] Executed action "CitizenSerialInfo.Controllers.HomeController.Index (CitizenSerialInfo)" in 118.7114ms (afa2e885)
+2018-02-23T17:49:07.3127659+02:00 0HLBQQJS9OCSM:00000001 [INF] Request finished in 615.4843ms 302  (791a596a)
+2018-02-23T17:49:07.3497186+02:00 0HLBQQJS9OCSM:00000002 [INF] Request starting HTTP/1.1 GET http://lena.almelnic.ru:5000/Account/Login?ReturnUrl=%2F   (ca22a1cb)
+2018-02-23T17:49:07.4085896+02:00 0HLBQQJS9OCSM:00000002 [INF] Executing action method "CitizenSerialInfo.Controllers.AccountController.Login (CitizenSerialInfo)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-02-23T17:49:12.5194828+02:00 0HLBQQJS9OCSM:00000002 [INF] Executing ViewResult, running view at path "/Views/Account/Login.cshtml". (9707eebe)
+2018-02-23T17:49:14.5086105+02:00 0HLBQQJS9OCSN:00000001 [INF] Request starting HTTP/1.1 GET http://lena.almelnic.ru:5000/css/bootstrap.min.css   (ca22a1cb)
+2018-02-23T17:49:14.5257958+02:00 0HLBQQJS9OCSO:00000001 [INF] Request starting HTTP/1.1 GET http://lena.almelnic.ru:5000/js/jquery-3.2.1.min.js   (ca22a1cb)
+2018-02-23T17:49:14.6265261+02:00 0HLBQQJS9OCSM:00000002 [INF] Executed action "CitizenSerialInfo.Controllers.AccountController.Login (CitizenSerialInfo)" in 6948.2201ms (afa2e885)
+2018-02-23T17:49:14.7001688+02:00 0HLBQQJS9OCSO:00000001 [INF] Sending file. Request path: '"/js/jquery-3.2.1.min.js"'. Physical path: '"C:\Users\elena\Desktop\app\CitizenSerialInfo\wwwroot\js\jquery-3.2.1.min.js"' (27b0a520)
+2018-02-23T17:49:14.7063068+02:00 0HLBQQJS9OCSN:00000001 [INF] Sending file. Request path: '"/css/bootstrap.min.css"'. Physical path: '"C:\Users\elena\Desktop\app\CitizenSerialInfo\wwwroot\css\bootstrap.min.css"' (27b0a520)
+2018-02-23T17:49:14.7085020+02:00 0HLBQQJS9OCSP:00000001 [INF] Request starting HTTP/1.1 GET http://lena.almelnic.ru:5000/js/bootstrap.min.js   (ca22a1cb)
+2018-02-23T17:49:14.7263350+02:00 0HLBQQJS9OCSP:00000001 [INF] Sending file. Request path: '"/js/bootstrap.min.js"'. Physical path: '"C:\Users\elena\Desktop\app\CitizenSerialInfo\wwwroot\js\bootstrap.min.js"' (27b0a520)
+2018-02-23T17:49:14.8549544+02:00 0HLBQQJS9OCSP:00000001 [INF] Request finished in 304.8847ms 200 application/javascript (791a596a)
+2018-02-23T17:49:14.8682200+02:00 0HLBQQJS9OCSM:00000002 [INF] Request finished in 7305.2845ms 200 text/html; charset=utf-8 (791a596a)
+2018-02-23T17:49:14.9181515+02:00 0HLBQQJS9OCSR:00000001 [INF] Request starting HTTP/1.1 GET http://lena.almelnic.ru:5000/js/popper.min.js   (ca22a1cb)
+2018-02-23T17:49:14.9341796+02:00 0HLBQQJS9OCSR:00000001 [INF] Sending file. Request path: '"/js/popper.min.js"'. Physical path: '"C:\Users\elena\Desktop\app\CitizenSerialInfo\wwwroot\js\popper.min.js"' (27b0a520)
+2018-02-23T17:49:14.9971137+02:00 0HLBQQJS9OCSO:00000001 [INF] Request finished in 524.0211ms 200 application/javascript (791a596a)
+2018-02-23T17:49:15.0604822+02:00 0HLBQQJS9OCSM:00000003 [INF] Request starting HTTP/1.1 GET http://lena.almelnic.ru:5000/js/mdb.js   (ca22a1cb)
+2018-02-23T17:49:15.5531915+02:00 0HLBQQJS9OCSN:00000001 [INF] Request finished in 462.5026ms 200 text/css (791a596a)
+2018-02-23T17:49:15.7877298+02:00 0HLBQQJS9OCSR:00000001 [INF] Request finished in 178.6742ms 200 application/javascript (791a596a)
+2018-02-23T17:49:15.8240215+02:00 0HLBQQJS9OCSQ:00000001 [INF] Request starting HTTP/1.1 GET http://lena.almelnic.ru:5000/css/mdb.min.css   (ca22a1cb)
+2018-02-23T17:49:15.8678769+02:00 0HLBQQJS9OCSQ:00000001 [INF] Sending file. Request path: '"/css/mdb.min.css"'. Physical path: '"C:\Users\elena\Desktop\app\CitizenSerialInfo\wwwroot\css\mdb.min.css"' (27b0a520)
+2018-02-23T17:49:15.9142658+02:00 0HLBQQJS9OCSM:00000003 [INF] Sending file. Request path: '"/js/mdb.js"'. Physical path: '"C:\Users\elena\Desktop\app\CitizenSerialInfo\wwwroot\js\mdb.js"' (27b0a520)
+2018-02-23T17:49:15.9525399+02:00 0HLBQQJS9OCSQ:00000001 [INF] Request finished in 1053.495ms 200 text/css (791a596a)
+2018-02-23T17:49:16.0303417+02:00 0HLBQQJS9OCSM:00000003 [INF] Request finished in 957.0052ms 200 application/javascript (791a596a)
+2018-02-23T17:49:16.2089878+02:00 0HLBQQJS9OCSQ:00000002 [INF] Request starting HTTP/1.1 GET http://lena.almelnic.ru:5000/font/roboto/Roboto-Light.woff2   (ca22a1cb)
+2018-02-23T17:49:16.2789969+02:00 0HLBQQJS9OCSM:00000004 [INF] Request starting HTTP/1.1 GET http://lena.almelnic.ru:5000/images/string-top.png   (ca22a1cb)
+2018-02-23T17:49:16.3358020+02:00 0HLBQQJS9OCSR:00000002 [INF] Request starting HTTP/1.1 GET http://lena.almelnic.ru:5000/font/roboto/Roboto-Regular.woff2   (ca22a1cb)
+2018-02-23T17:49:16.3560968+02:00 0HLBQQJS9OCSO:00000002 [INF] Request starting HTTP/1.1 GET http://lena.almelnic.ru:5000/images/string.png   (ca22a1cb)
+2018-02-23T17:49:16.3824175+02:00 0HLBQQJS9OCSO:00000002 [INF] Sending file. Request path: '"/images/string.png"'. Physical path: '"C:\Users\elena\Desktop\app\CitizenSerialInfo\wwwroot\images\string.png"' (27b0a520)
+2018-02-23T17:49:16.3989687+02:00 0HLBQQJS9OCSQ:00000002 [INF] Sending file. Request path: '"/font/roboto/Roboto-Light.woff2"'. Physical path: '"C:\Users\elena\Desktop\app\CitizenSerialInfo\wwwroot\font\roboto\Roboto-Light.woff2"' (27b0a520)
+2018-02-23T17:49:16.4242918+02:00 0HLBQQJS9OCSO:00000002 [INF] Request finished in 376.6351ms 200 image/png (791a596a)
+2018-02-23T17:49:16.5173495+02:00 0HLBQQJS9OCSR:00000002 [INF] Sending file. Request path: '"/font/roboto/Roboto-Regular.woff2"'. Physical path: '"C:\Users\elena\Desktop\app\CitizenSerialInfo\wwwroot\font\roboto\Roboto-Regular.woff2"' (27b0a520)
+2018-02-23T17:49:16.5199559+02:00 0HLBQQJS9OCSM:00000004 [INF] Sending file. Request path: '"/images/string-top.png"'. Physical path: '"C:\Users\elena\Desktop\app\CitizenSerialInfo\wwwroot\images\string-top.png"' (27b0a520)
+2018-02-23T17:49:16.5645111+02:00 0HLBQQJS9OCSQ:00000002 [INF] Request finished in 414.308ms 200 font/woff2 (791a596a)
+2018-02-23T17:49:16.6652086+02:00 0HLBQQJS9OCSM:00000004 [INF] Request finished in 392.0744ms 200 image/png (791a596a)
+2018-02-23T17:49:16.7653916+02:00 0HLBQQJS9OCSR:00000002 [INF] Request finished in 505.2145ms 200 font/woff2 (791a596a)
+2018-02-23T17:49:26.0788903+02:00 0HLBQQJS9OCSM:00000005 [INF] Request starting HTTP/1.1 GET http://lena.almelnic.ru:5000/images/upload_inv.gif   (ca22a1cb)
+2018-02-23T17:49:26.1037368+02:00 0HLBQQJS9OCSR:00000003 [INF] Request starting HTTP/1.1 POST http://lena.almelnic.ru:5000/account/login application/x-www-form-urlencoded; charset=UTF-8 225 (ca22a1cb)
+2018-02-23T17:49:26.1310896+02:00 0HLBQQJS9OCSM:00000005 [INF] Sending file. Request path: '"/images/upload_inv.gif"'. Physical path: '"C:\Users\elena\Desktop\app\CitizenSerialInfo\wwwroot\images\upload_inv.gif"' (27b0a520)
+2018-02-23T17:49:26.1469403+02:00 0HLBQQJS9OCSM:00000005 [INF] Request finished in 85.0064ms 200 image/gif (791a596a)
+2018-02-23T17:49:26.2974622+02:00 0HLBQQJS9OCSR:00000003 [INF] Executing action method "CitizenSerialInfo.Controllers.AccountController.Login (CitizenSerialInfo)" with arguments (["CitizenSerialInfo.Models.ViewModels.LoginViewModel"]) - ModelState is Valid (ba7f4ac2)
+2018-02-23T17:49:26.3161131+02:00 0HLBQQJS9OCSR:00000003 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-02-23T17:49:26.5360327+02:00 0HLBQQJS9OCSR:00000003 [INF] Executed DbCommand ("35"ms) [Parameters=["@__model_Login_0='?' (Size = 256), @__model_Login_1='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [s].[Id], [s].[Email], [s].[EmailConfirmed], [s].[FirstName], [s].[IsApproved], [s].[LastName], [s].[NormalizedEmail], [s].[NormalizedUserName], [s].[PasswordHash], [s].[SecurityStamp], [s].[UserName]
+FROM [Users] AS [s]
+WHERE ([s].[Email] = @__model_Login_0) OR ([s].[UserName] = @__model_Login_1)" (0723d8ff)
+2018-02-23T17:49:27.5708304+02:00 0HLBQQJS9OCSR:00000003 [INF] Executed DbCommand ("709"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [UserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2018-02-23T17:49:27.6698456+02:00 0HLBQQJS9OCSR:00000003 [INF] Executed DbCommand ("10"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [UserRoles] AS [userRole]
+INNER JOIN [Roles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-02-23T17:49:27.7267621+02:00 0HLBQQJS9OCSR:00000003 [INF] Executed DbCommand ("2"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2018-02-23T17:49:27.7959609+02:00 0HLBQQJS9OCSR:00000003 [INF] Executed DbCommand ("3"ms) [Parameters=["@__role_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [RoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0" (0723d8ff)
+2018-02-23T17:49:27.8118295+02:00 0HLBQQJS9OCSR:00000003 [INF] Executed DbCommand ("0"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2018-02-23T17:49:27.8329717+02:00 0HLBQQJS9OCSR:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=["@__role_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [RoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0" (0723d8ff)
+2018-02-23T17:49:27.8515884+02:00 0HLBQQJS9OCSR:00000003 [INF] Executed DbCommand ("3"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2018-02-23T17:49:27.8658041+02:00 0HLBQQJS9OCSR:00000003 [INF] Executed DbCommand ("1"ms) [Parameters=["@__role_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [RoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0" (0723d8ff)
+2018-02-23T17:49:27.9002259+02:00 0HLBQQJS9OCSR:00000003 [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2018-02-23T17:49:27.9121998+02:00 0HLBQQJS9OCSR:00000003 [INF] Executing JsonResult, writing value "{ error =  }". (7bb75e80)
+2018-02-23T17:49:28.0276426+02:00 0HLBQQJS9OCSR:00000003 [INF] Executed action "CitizenSerialInfo.Controllers.AccountController.Login (CitizenSerialInfo)" in 1800.4997ms (afa2e885)
+2018-02-23T17:49:28.0698361+02:00 0HLBQQJS9OCSR:00000003 [INF] Request finished in 1985.7335ms 200 application/json; charset=utf-8 (791a596a)
+2018-02-23T17:49:28.0876938+02:00 0HLBQQJS9OCSR:00000004 [INF] Request starting HTTP/1.1 GET http://lena.almelnic.ru:5000/   (ca22a1cb)
+2018-02-23T17:49:28.1084681+02:00 0HLBQQJS9OCSR:00000004 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-02-23T17:49:28.1235056+02:00 0HLBQQJS9OCSR:00000004 [INF] Authorization was successful for user: "Admin". (d7eb274a)
+2018-02-23T17:49:28.1538211+02:00 0HLBQQJS9OCSR:00000004 [INF] Executing action method "CitizenSerialInfo.Controllers.HomeController.Index (CitizenSerialInfo)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-02-23T17:49:28.4478698+02:00 0HLBQQJS9OCSR:00000004 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2018-02-23T17:49:29.9113645+02:00 0HLBQQJS9OCSR:00000004 [INF] Executed action "CitizenSerialInfo.Controllers.HomeController.Index (CitizenSerialInfo)" in 1665.083ms (afa2e885)
+2018-02-23T17:49:29.9552880+02:00 0HLBQQJS9OCSR:00000004 [INF] Request finished in 1846.7584ms 200 text/html; charset=utf-8 (791a596a)
+2018-02-23T17:49:45.7672049+02:00 0HLBQQJS9OCSR:00000005 [INF] Request starting HTTP/1.1 GET http://lena.almelnic.ru:5000/administration/ImportData   (ca22a1cb)
+2018-02-23T17:49:45.7859180+02:00 0HLBQQJS9OCSR:00000005 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-02-23T17:49:45.8066221+02:00 0HLBQQJS9OCSR:00000005 [INF] Executing action method "CitizenSerialInfo.Controllers.AdministrationController.ImportData (CitizenSerialInfo)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-02-23T17:49:46.1825946+02:00 0HLBQQJS9OCSR:00000005 [INF] Executing ViewResult, running view at path "/Views/Administration/ImportData.cshtml". (9707eebe)
+2018-02-23T17:49:46.4384640+02:00 0HLBQQJS9OCSR:00000005 [INF] Executed action "CitizenSerialInfo.Controllers.AdministrationController.ImportData (CitizenSerialInfo)" in 558.0136ms (afa2e885)
+2018-02-23T17:49:46.4778073+02:00 0HLBQQJS9OCSR:00000005 [INF] Request finished in 689.5544ms 200 text/html; charset=utf-8 (791a596a)
+2018-02-23T17:49:47.5350902+02:00 0HLBQQJS9OCSR:00000006 [INF] Request starting HTTP/1.1 GET http://lena.almelnic.ru:5000/api/importedfilesapi?_=1519400986396   (ca22a1cb)
+2018-02-23T17:49:47.5538580+02:00 0HLBQQJS9OCSR:00000006 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-02-23T17:49:47.6050648+02:00 0HLBQQJS9OCSR:00000006 [INF] Executing action method "CitizenSerialInfo.Controllers.api.ImportedFilesApiController.Get (CitizenSerialInfo)" with arguments (["DevExtreme.AspNet.Mvc.DataSourceLoadOptions"]) - ModelState is Valid (ba7f4ac2)
+2018-02-23T17:49:47.6316867+02:00 0HLBQQJS9OCSR:00000006 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-02-23T17:49:47.7675053+02:00 0HLBQQJS9OCSR:00000006 [ERR] Failed executing DbCommand ("11"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [i].[Id], [i].[DateFile], [i].[FileName], [i].[FirstName], [i].[ImportDate], [i].[LastName], [i].[Login], [i].[UserId]
+FROM [ImportFileInfo] AS [i]" (627a98df)
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'FirstName'.
+Invalid column name 'LastName'.
+Invalid column name 'Login'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(Boolean buffer)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.<_TrackEntities>d__17`2.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+ClientConnectionId:08eb8d21-4793-4364-b292-ea9002907804
+Error Number:207,State:1,Class:16

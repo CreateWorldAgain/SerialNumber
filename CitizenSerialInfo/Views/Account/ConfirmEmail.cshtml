@@ -1,0 +1,44 @@
+﻿@{
+    Layout = "_LayoutLogin";
+}
+
+@model string;
+
+<div id="card-with-string">
+    <div class="card card-cascade narrower bg1" style="width: 350px;margin: 100px auto;margin-bottom: 20px;height: auto;display: block;">
+
+        <div class="card-header bg2 " style="text-align:center;color:white;padding-top:5px;">
+            <h4>Registration</h4>
+        </div>
+
+
+        <div class="card-body" style="padding-top:0px">
+            
+            <div style="display:block" id="reg-success">
+
+            @if (Model.Equals(""))
+            {
+                <p style="font-size:16px;">
+                    Your confirmation is successful!<br />
+                    Please, wait manager approval. You will recieve email confirmation letter. Then you can SignIn.
+                </p>
+            }
+            else
+            {
+                        <h4>@Model</h4>
+
+            }
+
+            </div>
+        </div>
+    </div>
+
+    <div class="card bg1" style="width:350px; max-width:100%; height:auto; margin:0 auto; display:block;">
+        <div class="card-body">
+            <div id="loginFooterContainer" style="margin-top:20px;">
+                <a href="http://ilab.md" style="font-size:14px;">Powered by</a>
+                @await Html.PartialAsync("_SelectLanguagePartial")
+            </div>
+        </div>
+    </div>
+</div>

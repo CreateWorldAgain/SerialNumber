@@ -1,0 +1,167 @@
+﻿@{
+    ViewData["Title"] = "Search Page";
+}
+
+
+<script>
+    var searchGrid = undefined;
+
+    function cellPrepared(e) {
+
+        if (e.rowType === "data" && e.column.command === "edit") {
+            var isEditing = e.row.isEditing,
+                $links = e.cellElement.find(".dx-link");
+
+            $links.html("<span style='color:navy; text-decoration:underline'>More info</span>");
+        }
+    }
+
+    function searchTextChanged() {
+        searchGrid.option("dataSource", []);
+    }
+
+    function editingStart() {
+        setTimeout(function () { $("[aria-label=Save]").hide(); }, 100);
+
+        $.ajax({
+            type: "GET",
+            url: "/api/searchapi/requestmoreinfo",
+            success: function (data) {
+                debugger
+                if (data.canRequestMoreInfo == false) {
+                    toastr["error"]("You can't view More info");
+                    searchGrid.option("editing", null);
+                }
+            }
+        });
+    }
+
+</script>
+
+            <div class="container-fluid">
+                <div class="row" style="margin-bottom:5px">
+                  
+                    <div class="col-lg-4 col-md-3 col-sm-3 col-xl-3" style="padding:0px;  padding-right:10px; margin-bottom:5px;">
+                        <input type="text"  placeholder="Please enter search data" onkeydown="searchTextChanged()" id="search-data" name="search-data" required="" class="form-control" />
+                    </div>
+
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xl-2" style="padding:0px;margin-bottom:5px;">
+                        <input type="button" class="form-control" value="Search" id="btSearch" style="background-color:#383d50;color:white;border-width:0px; " />
+                    </div>
+                </div>
+            </div>
+
+            <div id="search-result">
+                <div style="color:white; margin:0 auto; width:auto; background-color:white;
+         height:auto;   padding:0px; ">
+
+
+                    @(Html.DevExtreme().DataGrid()
+                                                    .ID("serials-grid")
+                                                    .Sorting(sorting => sorting.Mode(GridSortingMode.Multiple))
+                                                    .ShowBorders(true)
+                                                    .ShowRowLines(true)
+                                                    .Height("100%")
+                                                    .OnEditingStart("editingStart")
+                                                    .OnCellPrepared("cellPrepared")
+                                                    .Editing(s => s.AllowAdding(false).AllowDeleting(false).
+                                                                AllowUpdating(true).Mode(GridEditMode.Form))
+
+                                                    .HoverStateEnabled(true)
+                                                    .RowAlternationEnabled(true)
+                                                    .Paging(paging => paging.Enabled(true))
+                                                    .StateStoring(s => s
+                                                        .Enabled(true)
+                                                        .Type(StateStoringType.LocalStorage)
+                                                        .StorageKey("serials-search-ersult")
+                                                    )
+                                                    .Pager(p => p
+                                                        .ShowInfo(true)
+                                                        .ShowNavigationButtons(true)
+                                                        .ShowPageSizeSelector(true)
+                                                        .AllowedPageSizes(new int[] { 25, 50, 100 })
+                                                    )
+                                                    .HeaderFilter(headerFilter => headerFilter.Visible(true))
+                                                    .Columns(columns =>
+                                                    {
+                                                        columns.Add()
+                                                            .AllowFiltering(true)
+                                                            .AllowEditing(false)
+                                                            .DataField("SerialNumber")
+                                                            .Caption("Serial number");
+                                                        columns.Add()
+                                                            .AllowEditing(false)
+                                                            .Visible(true)
+                                                            .AllowFiltering(true)
+                                                            .DataField("Model")
+                                                            .Caption("Model");
+                                                        columns.Add()
+                                                            .AllowEditing(false)
+                                                            .Visible(false)
+                                                            .AllowFiltering(true)
+                                                            .DataField("Date")
+                                                            .DataType(GridColumnDataType.Date)
+                                                            .Format(Format.ShortDate)
+                                                            .Caption("Date");
+                                                        columns.Add()
+                                                            .AllowEditing(false)
+                                                            .Visible(false)
+                                                            .AllowFiltering(true)
+                                                            .DataField("Reference1")
+                                                            .Caption("Reference1");
+                                                        columns.Add()
+                                                            .AllowEditing(false)
+                                                            .Visible(false)
+                                                            .AllowFiltering(true)
+                                                            .DataField("Reference2")
+                                                            .Caption("Reference2");
+                                                        columns.Add()
+                                                        .AllowEditing(false)
+                                                        .Visible(false)
+                                                        .AllowFiltering(true)
+                                                        .DataField("ActualModel")
+                                                        .Caption("ActualModel");
+
+                                                        columns.Add()
+                                                            .AllowEditing(false)
+                                                            .Visible(false)
+                                                            .AllowFiltering(true)
+                                                            .DataField("DateExtensionStarted")
+                                                            .Caption("DateExtensionStarted");
+
+                                                        columns.Add()
+                                                            .AllowEditing(false)
+                                                            .Visible(false)
+                                                            .AllowFiltering(true)
+                                                            .DataField("ExtendedWarrantyPeriod")
+                                                            .Caption("ExtendedWarrantyPeriod");
+                                                    })
+                    )
+
+                </div>
+
+            </div>
+
+
+            <script>
+
+                $(function () {
+                    searchGrid = $("#serials-grid").dxDataGrid("instance");
+                    searchGrid.option("dataSource", []);
+                });
+
+                $("#btSearch").click(function () {
+                    var searchText = $("#search-data").val();
+                    if (searchText != "") {
+                        var store = {
+                            "store": DevExpress.data.AspNet.createStore({
+                                "key": "Id",
+                                "loadParams": { "searchText": searchText },
+                                "loadUrl": "/api/searchapi"
+                            })
+                        };
+                        searchGrid.option("dataSource", store);
+                    }
+                });
+
+            </script>

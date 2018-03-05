@@ -1,0 +1,3 @@
+@using CitizenSerialInfo
+@using CitizenSerialInfo.Models
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers

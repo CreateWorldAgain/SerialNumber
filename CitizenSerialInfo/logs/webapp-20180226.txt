@@ -1,0 +1,263 @@
+2018-02-26T14:08:29.6667518+02:00  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-02-26T14:08:31.2907512+02:00  [INF] Executed DbCommand ("50"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'__EFMigrationsHistory');" (0723d8ff)
+2018-02-26T14:08:31.3319028+02:00  [INF] Executed DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2018-02-26T14:08:31.6550812+02:00  [INF] Executed DbCommand ("91"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Discriminator], [r].[Name], [r].[NormalizedName], [r].[MoreInfoCount]
+FROM [AspNetRoles] AS [r]
+WHERE ([r].[Discriminator] = N'ApplicationRole') AND ([r].[NormalizedName] = @__normalizedName_0)" (0723d8ff)
+2018-02-26T14:08:31.7358996+02:00  [INF] Executed DbCommand ("9"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsApproved], [u].[LastName], [u].[MoreInfoCount], [u].[MoreInfoCountUsed], [u].[MoreInfoDate], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[SecurityStamp], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-02-26T14:08:31.7917967+02:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [u].[Id], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsApproved], [u].[LastName], [u].[MoreInfoCount], [u].[MoreInfoCountUsed], [u].[MoreInfoDate], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[SecurityStamp], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2018-02-26T14:08:31.8058276+02:00  [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Discriminator], [r].[Name], [r].[NormalizedName], [r].[MoreInfoCount]
+FROM [AspNetRoles] AS [r]
+WHERE ([r].[Discriminator] = N'ApplicationRole') AND ([r].[NormalizedName] = @__normalizedName_0)" (0723d8ff)
+2018-02-26T14:08:31.8430838+02:00  [INF] Executed DbCommand ("3"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Discriminator], [r].[Name], [r].[NormalizedName], [r].[MoreInfoCount]
+FROM [AspNetRoles] AS [r]
+WHERE ([r].[Discriminator] = N'ApplicationRole') AND ([r].[NormalizedName] = @__normalizedName_0)" (0723d8ff)
+2018-02-26T14:08:46.6093789+02:00 0HLBT26O0O3OM:00000001 [INF] Request starting HTTP/1.1 GET http://lena.almelnic.ru:5000/administration/ImportData   (ca22a1cb)
+2018-02-26T14:08:46.7180333+02:00 0HLBT26O0O3OM:00000001 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-02-26T14:08:46.7558189+02:00 0HLBT26O0O3OM:00000001 [INF] Executed DbCommand ("3"ms) [Parameters=["@__get_Item_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [e].[Id], [e].[Email], [e].[EmailConfirmed], [e].[FirstName], [e].[IsApproved], [e].[LastName], [e].[MoreInfoCount], [e].[MoreInfoCountUsed], [e].[MoreInfoDate], [e].[NormalizedEmail], [e].[NormalizedUserName], [e].[PasswordHash], [e].[SecurityStamp], [e].[UserName]
+FROM [Users] AS [e]
+WHERE [e].[Id] = @__get_Item_0" (0723d8ff)
+2018-02-26T14:08:46.8253357+02:00 0HLBT26O0O3OM:00000001 [INF] Executed DbCommand ("5"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [UserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2018-02-26T14:08:46.9133105+02:00 0HLBT26O0O3OM:00000001 [INF] Executed DbCommand ("8"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [UserRoles] AS [userRole]
+INNER JOIN [AspNetRoles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE ([role].[Discriminator] = N'ApplicationRole') AND ([userRole].[UserId] = @__userId_0)" (0723d8ff)
+2018-02-26T14:08:46.9316345+02:00 0HLBT26O0O3OM:00000001 [INF] Executed DbCommand ("0"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Discriminator], [r].[Name], [r].[NormalizedName], [r].[MoreInfoCount]
+FROM [AspNetRoles] AS [r]
+WHERE ([r].[Discriminator] = N'ApplicationRole') AND ([r].[NormalizedName] = @__normalizedName_0)" (0723d8ff)
+2018-02-26T14:08:47.0038099+02:00 0HLBT26O0O3OM:00000001 [INF] Executed DbCommand ("4"ms) [Parameters=["@__role_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [RoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0" (0723d8ff)
+2018-02-26T14:08:47.0164955+02:00 0HLBT26O0O3OM:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-02-26T14:08:48.2959125+02:00 0HLBT26O0O3OM:00000001 [INF] Executing action method "CitizenSerialInfo.Controllers.AdministrationController.ImportData (CitizenSerialInfo)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-02-26T14:08:54.0614568+02:00 0HLBT26O0O3OM:00000001 [INF] Executing ViewResult, running view at path "/Views/Administration/ImportData.cshtml". (9707eebe)
+2018-02-26T14:08:58.3640542+02:00 0HLBT26O0O3OM:00000001 [INF] Executed action "CitizenSerialInfo.Controllers.AdministrationController.ImportData (CitizenSerialInfo)" in 9956.2491ms (afa2e885)
+2018-02-26T14:08:58.4040495+02:00 0HLBT26O0O3OM:00000001 [INF] Request finished in 11803.8055ms 200 text/html; charset=utf-8 (791a596a)
+2018-02-26T14:08:59.8821771+02:00 0HLBT26O0O3OM:00000002 [INF] Request starting HTTP/1.1 GET http://lena.almelnic.ru:5000/api/importedfilesapi?_=1519646938280   (ca22a1cb)
+2018-02-26T14:08:59.9252665+02:00 0HLBT26O0O3OM:00000002 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-02-26T14:09:00.0882877+02:00 0HLBT26O0O3OM:00000002 [INF] Executing action method "CitizenSerialInfo.Controllers.api.ImportedFilesApiController.Get (CitizenSerialInfo)" with arguments (["DevExtreme.AspNet.Mvc.DataSourceLoadOptions"]) - ModelState is Valid (ba7f4ac2)
+2018-02-26T14:09:00.1081132+02:00 0HLBT26O0O3OM:00000002 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-02-26T14:09:00.1899645+02:00 0HLBT26O0O3OM:00000002 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-02-26T14:09:00.3061935+02:00 0HLBT26O0O3OM:00000002 [INF] Executed DbCommand ("17"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[Id], [s.User].[FirstName], [s.User].[LastName], [s].[ImportDate], [s].[DateFile], [s].[FileName], [s].[ImportedRowCount]
+FROM [ImportFileInfo] AS [s]
+LEFT JOIN [Users] AS [s.User] ON [s].[UserId] = [s.User].[Id]
+ORDER BY [s].[Id]" (0723d8ff)
+2018-02-26T14:09:00.3588518+02:00 0HLBT26O0O3OM:00000002 [INF] Executed action "CitizenSerialInfo.Controllers.api.ImportedFilesApiController.Get (CitizenSerialInfo)" in 356.2933ms (afa2e885)
+2018-02-26T14:09:00.3710746+02:00 0HLBT26O0O3OM:00000002 [INF] Request finished in 1084.9736ms 200 application/json; charset=utf-8 (791a596a)
+2018-02-26T14:09:09.0831711+02:00 0HLBT26O0O3OM:00000003 [INF] Request starting HTTP/1.1 GET http://lena.almelnic.ru:5000/administration/ImportData   (ca22a1cb)
+2018-02-26T14:09:09.1044635+02:00 0HLBT26O0O3OM:00000003 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-02-26T14:09:09.1424419+02:00 0HLBT26O0O3OM:00000003 [INF] Executing action method "CitizenSerialInfo.Controllers.AdministrationController.ImportData (CitizenSerialInfo)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-02-26T14:09:09.1813501+02:00 0HLBT26O0O3OM:00000003 [INF] Executing ViewResult, running view at path "/Views/Administration/ImportData.cshtml". (9707eebe)
+2018-02-26T14:09:09.2270225+02:00 0HLBT26O0O3OM:00000003 [INF] Executed action "CitizenSerialInfo.Controllers.AdministrationController.ImportData (CitizenSerialInfo)" in 84.8993ms (afa2e885)
+2018-02-26T14:09:09.2863624+02:00 0HLBT26O0O3OM:00000003 [INF] Request finished in 168.1206ms 200 text/html; charset=utf-8 (791a596a)
+2018-02-26T14:09:09.6016639+02:00 0HLBT26O0O3OM:00000004 [INF] Request starting HTTP/1.1 GET http://lena.almelnic.ru:5000/api/importedfilesapi?_=1519646949235   (ca22a1cb)
+2018-02-26T14:09:09.6127580+02:00 0HLBT26O0O3OM:00000004 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-02-26T14:09:09.6257108+02:00 0HLBT26O0O3OM:00000004 [INF] Executing action method "CitizenSerialInfo.Controllers.api.ImportedFilesApiController.Get (CitizenSerialInfo)" with arguments (["DevExtreme.AspNet.Mvc.DataSourceLoadOptions"]) - ModelState is Valid (ba7f4ac2)
+2018-02-26T14:09:09.6364923+02:00 0HLBT26O0O3OM:00000004 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-02-26T14:09:09.6641842+02:00 0HLBT26O0O3OM:00000004 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-02-26T14:09:09.6740487+02:00 0HLBT26O0O3OM:00000004 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[Id], [s.User].[FirstName], [s.User].[LastName], [s].[ImportDate], [s].[DateFile], [s].[FileName], [s].[ImportedRowCount]
+FROM [ImportFileInfo] AS [s]
+LEFT JOIN [Users] AS [s.User] ON [s].[UserId] = [s.User].[Id]
+ORDER BY [s].[Id]" (0723d8ff)
+2018-02-26T14:09:09.6857458+02:00 0HLBT26O0O3OM:00000004 [INF] Executed action "CitizenSerialInfo.Controllers.api.ImportedFilesApiController.Get (CitizenSerialInfo)" in 59.889ms (afa2e885)
+2018-02-26T14:09:09.6989588+02:00 0HLBT26O0O3OM:00000004 [INF] Request finished in 115.5822ms 200 application/json; charset=utf-8 (791a596a)
+2018-02-26T14:09:13.5708841+02:00 0HLBT26O0O3OM:00000005 [INF] Request starting HTTP/1.1 GET http://lena.almelnic.ru:5000/administration/users   (ca22a1cb)
+2018-02-26T14:09:13.6219698+02:00 0HLBT26O0O3OM:00000005 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-02-26T14:09:13.6545006+02:00 0HLBT26O0O3OM:00000005 [INF] Executing action method "CitizenSerialInfo.Controllers.AdministrationController.Users (CitizenSerialInfo)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-02-26T14:09:13.9890485+02:00 0HLBT26O0O3OM:00000005 [INF] Executing ViewResult, running view at path "/Views/Administration/Users.cshtml". (9707eebe)
+2018-02-26T14:09:14.1382699+02:00 0HLBT26O0O3OM:00000005 [INF] Executed action "CitizenSerialInfo.Controllers.AdministrationController.Users (CitizenSerialInfo)" in 436.0996ms (afa2e885)
+2018-02-26T14:09:14.1756468+02:00 0HLBT26O0O3OM:00000005 [INF] Request finished in 603.4352ms 200 text/html; charset=utf-8 (791a596a)
+2018-02-26T14:09:14.5242888+02:00 0HLBT26O0O3OM:00000006 [INF] Request starting HTTP/1.1 GET http://lena.almelnic.ru:5000/api/administrationapi?_=1519646954094   (ca22a1cb)
+2018-02-26T14:09:14.5740828+02:00 0HLBT26O0O3OM:00000006 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-02-26T14:09:14.5894710+02:00 0HLBT26O0O3OM:00000006 [INF] Executing action method "CitizenSerialInfo.Controllers.api.AdministrationApiController.Get (CitizenSerialInfo)" with arguments (["DevExtreme.AspNet.Mvc.DataSourceLoadOptions"]) - ModelState is Valid (ba7f4ac2)
+2018-02-26T14:09:14.6034951+02:00 0HLBT26O0O3OM:00000006 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-02-26T14:09:14.6446966+02:00 0HLBT26O0O3OM:00000006 [INF] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [u].[Id], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[IsApproved], [u].[LastName], [u].[MoreInfoCount], [u].[MoreInfoCountUsed], [u].[MoreInfoDate], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[SecurityStamp], [u].[UserName]
+FROM [Users] AS [u]" (0723d8ff)
+2018-02-26T14:09:14.6720997+02:00 0HLBT26O0O3OM:00000006 [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[Id], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Name], [a].[NormalizedName], [a].[MoreInfoCount]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[Discriminator] IN (N'ApplicationRole', N'IdentityRole')" (0723d8ff)
+2018-02-26T14:09:14.7129628+02:00 0HLBT26O0O3OM:00000006 [INF] Executed DbCommand ("1"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-02-26T14:09:14.7589318+02:00 0HLBT26O0O3OM:00000006 [INF] Executed DbCommand ("0"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__user_Id_0" (0723d8ff)
+2018-02-26T14:09:14.7735315+02:00 0HLBT26O0O3OM:00000006 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-02-26T14:09:14.8013049+02:00 0HLBT26O0O3OM:00000006 [INF] Executed action "CitizenSerialInfo.Controllers.api.AdministrationApiController.Get (CitizenSerialInfo)" in 213.5154ms (afa2e885)
+2018-02-26T14:09:14.8552992+02:00 0HLBT26O0O3OM:00000006 [INF] Request finished in 334.8218ms 200 application/json; charset=utf-8 (791a596a)
+2018-02-26T14:15:24.6045055+02:00 0HLBT26O0O3ON:00000001 [INF] Request starting HTTP/1.1 PUT http://lena.almelnic.ru:5000/api/administrationapi application/x-www-form-urlencoded; charset=UTF-8 80 (ca22a1cb)
+2018-02-26T14:15:24.6212035+02:00 0HLBT26O0O3ON:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-02-26T14:15:24.7021507+02:00 0HLBT26O0O3ON:00000001 [INF] Executing action method "CitizenSerialInfo.Controllers.api.AdministrationApiController.Put (CitizenSerialInfo)" with arguments (["4754f688-c62e-4903-baf7-3695c208ed76", "{\"MoreInfoCount\":1000}"]) - ModelState is Valid (ba7f4ac2)
+2018-02-26T14:15:24.7386465+02:00 0HLBT26O0O3ON:00000001 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-02-26T14:15:24.8436546+02:00 0HLBT26O0O3ON:00000001 [INF] Executed DbCommand ("5"ms) [Parameters=["@__key_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[IsApproved], [a].[LastName], [a].[MoreInfoCount], [a].[MoreInfoCountUsed], [a].[MoreInfoDate], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[SecurityStamp], [a].[UserName]
+FROM [Users] AS [a]
+WHERE [a].[Id] = @__key_0" (0723d8ff)
+2018-02-26T14:15:24.8873926+02:00 0HLBT26O0O3ON:00000001 [INF] Executed DbCommand ("2"ms) [Parameters=["@__key_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__key_0" (0723d8ff)
+2018-02-26T14:15:25.0620153+02:00 0HLBT26O0O3ON:00000001 [INF] Executed DbCommand ("19"ms) [Parameters=["@p0='?' (Size = 450), @p1='?' (Size = 450), @p3='?' (Size = 450), @p2='?'"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+DELETE FROM [UserRoles]
+WHERE [UserId] = @p0 AND [RoleId] = @p1;
+SELECT @@ROWCOUNT;
+
+UPDATE [Users] SET [MoreInfoCount] = @p2
+WHERE [Id] = @p3;
+SELECT @@ROWCOUNT;" (0723d8ff)
+2018-02-26T14:15:25.8054466+02:00 0HLBT26O0O3ON:00000001 [INF] Executed DbCommand ("20"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[Id], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Name], [a].[NormalizedName], [a].[MoreInfoCount]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[Discriminator] IN (N'ApplicationRole', N'IdentityRole')" (0723d8ff)
+2018-02-26T14:15:25.9871835+02:00 0HLBT26O0O3ON:00000001 [INF] Executed action "CitizenSerialInfo.Controllers.api.AdministrationApiController.Put (CitizenSerialInfo)" in 1328.959ms (afa2e885)
+2018-02-26T14:15:26.2114151+02:00 0HLBT26O0O3ON:00000001 [ERR] An unhandled exception has occurred while executing the request (cf926119)
+System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.Any[TSource](IEnumerable`1 source, Func`2 predicate)
+   at CitizenSerialInfo.Controllers.api.AdministrationApiController.<Put>d__7.MoveNext() in C:\Users\elena\Desktop\app\CitizenSerialInfo\Controllers\api\AdministrationApiController.cs:line 146
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2018-02-26T14:15:26.3433515+02:00 0HLBT26O0O3ON:00000001 [INF] Request finished in 1735.8618ms 500 text/html; charset=utf-8 (791a596a)
+2018-02-26T14:15:40.7774876+02:00 0HLBT26O0O3ON:00000002 [INF] Request starting HTTP/1.1 PUT http://lena.almelnic.ru:5000/api/administrationapi application/x-www-form-urlencoded; charset=UTF-8 80 (ca22a1cb)
+2018-02-26T14:15:40.8094142+02:00 0HLBT26O0O3ON:00000002 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-02-26T14:15:40.8274584+02:00 0HLBT26O0O3ON:00000002 [INF] Executing action method "CitizenSerialInfo.Controllers.api.AdministrationApiController.Put (CitizenSerialInfo)" with arguments (["8a3c9bd5-7c6d-4b1f-8fa3-4fd20ead08c2", "{\"MoreInfoCount\":1000}"]) - ModelState is Valid (ba7f4ac2)
+2018-02-26T14:15:40.8402123+02:00 0HLBT26O0O3ON:00000002 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-02-26T14:15:40.8600458+02:00 0HLBT26O0O3ON:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__key_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[IsApproved], [a].[LastName], [a].[MoreInfoCount], [a].[MoreInfoCountUsed], [a].[MoreInfoDate], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[SecurityStamp], [a].[UserName]
+FROM [Users] AS [a]
+WHERE [a].[Id] = @__key_0" (0723d8ff)
+2018-02-26T14:15:40.8752245+02:00 0HLBT26O0O3ON:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@__key_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [s].[UserId], [s].[RoleId]
+FROM [UserRoles] AS [s]
+WHERE [s].[UserId] = @__key_0" (0723d8ff)
+2018-02-26T14:15:40.9111140+02:00 0HLBT26O0O3ON:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=["@p0='?' (Size = 450), @p1='?' (Size = 450), @p3='?' (Size = 450), @p2='?'"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+DELETE FROM [UserRoles]
+WHERE [UserId] = @p0 AND [RoleId] = @p1;
+SELECT @@ROWCOUNT;
+
+UPDATE [Users] SET [MoreInfoCount] = @p2
+WHERE [Id] = @p3;
+SELECT @@ROWCOUNT;" (0723d8ff)
+2018-02-26T14:15:40.9470517+02:00 0HLBT26O0O3ON:00000002 [INF] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[Id], [a].[ConcurrencyStamp], [a].[Discriminator], [a].[Name], [a].[NormalizedName], [a].[MoreInfoCount]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[Discriminator] IN (N'ApplicationRole', N'IdentityRole')" (0723d8ff)
+2018-02-26T14:15:41.0486230+02:00 0HLBT26O0O3ON:00000002 [INF] Executed action "CitizenSerialInfo.Controllers.api.AdministrationApiController.Put (CitizenSerialInfo)" in 220.8301ms (afa2e885)
+2018-02-26T14:15:41.9417388+02:00 0HLBT26O0O3ON:00000002 [ERR] An unhandled exception has occurred while executing the request (cf926119)
+System.ArgumentNullException: Value cannot be null.
+Parameter name: source
+   at System.Linq.Enumerable.Any[TSource](IEnumerable`1 source, Func`2 predicate)
+   at CitizenSerialInfo.Controllers.api.AdministrationApiController.<Put>d__7.MoveNext() in C:\Users\elena\Desktop\app\CitizenSerialInfo\Controllers\api\AdministrationApiController.cs:line 146
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2018-02-26T14:15:42.1110554+02:00 0HLBT26O0O3ON:00000002 [INF] Request finished in 1346.8853ms 500 text/html; charset=utf-8 (791a596a)

@@ -1,0 +1,191 @@
+2018-02-22T21:55:21.8775519+02:00  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-02-22T21:55:23.2492663+02:00  [INF] Executed DbCommand ("24"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'__EFMigrationsHistory');" (0723d8ff)
+2018-02-22T21:55:23.3276646+02:00  [INF] Executed DbCommand ("11"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2018-02-22T21:55:28.0975079+02:00 0HLBQ5OS41BAP:00000001 [INF] Request starting HTTP/1.1 GET http://lena.almelnic.ru:5000/   (ca22a1cb)
+2018-02-22T21:55:28.3484790+02:00 0HLBQ5OS41BAP:00000001 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-02-22T21:55:30.5575627+02:00 0HLBQ5OS41BAP:00000001 [INF] Authorization was successful for user: "Admin". (d7eb274a)
+2018-02-22T21:55:30.6473683+02:00 0HLBQ5OS41BAP:00000001 [INF] Executing action method "CitizenSerialInfo.Controllers.HomeController.Index (CitizenSerialInfo)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-02-22T21:55:36.7010912+02:00 0HLBQ5OS41BAP:00000001 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2018-02-22T21:55:41.3254271+02:00 0HLBQ5OS41BAP:00000001 [INF] Executed action "CitizenSerialInfo.Controllers.HomeController.Index (CitizenSerialInfo)" in 11347.3752ms (afa2e885)
+2018-02-22T21:55:41.3574181+02:00 0HLBQ5OS41BAP:00000001 [INF] Request finished in 13355.388ms 200 text/html; charset=utf-8 (791a596a)
+2018-02-22T21:55:42.0322244+02:00 0HLBQ5OS41BAP:00000002 [INF] Request starting HTTP/1.1 GET http://lena.almelnic.ru:5000/favicon.ico   (ca22a1cb)
+2018-02-22T21:55:42.0490582+02:00 0HLBQ5OS41BAP:00000002 [INF] Sending file. Request path: '"/favicon.ico"'. Physical path: '"C:\Users\elena\Desktop\app\CitizenSerialInfo\wwwroot\favicon.ico"' (27b0a520)
+2018-02-22T21:55:42.0974597+02:00 0HLBQ5OS41BAP:00000002 [INF] Request finished in 72.8665ms 200 image/x-icon (791a596a)
+2018-02-22T21:55:46.4863747+02:00 0HLBQ5OS41BAP:00000003 [INF] Request starting HTTP/1.1 GET http://lena.almelnic.ru:5000/administration/ImportData   (ca22a1cb)
+2018-02-22T21:55:46.5460837+02:00 0HLBQ5OS41BAP:00000003 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-02-22T21:55:46.6508209+02:00 0HLBQ5OS41BAP:00000003 [INF] Executing action method "CitizenSerialInfo.Controllers.AdministrationController.ImportData (CitizenSerialInfo)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-02-22T21:55:47.6044218+02:00 0HLBQ5OS41BAP:00000003 [INF] Executing ViewResult, running view at path "/Views/Administration/ImportData.cshtml". (9707eebe)
+2018-02-22T21:55:48.7905772+02:00 0HLBQ5OS41BAP:00000003 [INF] Executed action "CitizenSerialInfo.Controllers.AdministrationController.ImportData (CitizenSerialInfo)" in 1924.0947ms (afa2e885)
+2018-02-22T21:55:48.8575356+02:00 0HLBQ5OS41BAP:00000003 [INF] Request finished in 2348.5203ms 200 text/html; charset=utf-8 (791a596a)
+2018-02-22T21:55:49.4409291+02:00 0HLBQ5OS41BAP:00000004 [INF] Request starting HTTP/1.1 GET http://lena.almelnic.ru:5000/api/importedfilesapi?_=1519329348605   (ca22a1cb)
+2018-02-22T21:55:49.4831337+02:00 0HLBQ5OS41BAP:00000004 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-02-22T21:55:49.6407524+02:00 0HLBQ5OS41BAP:00000004 [INF] Executing action method "CitizenSerialInfo.Controllers.api.ImportedFilesApiController.Get (CitizenSerialInfo)" with arguments (["DevExtreme.AspNet.Mvc.DataSourceLoadOptions"]) - ModelState is Valid (ba7f4ac2)
+2018-02-22T21:55:49.6819322+02:00 0HLBQ5OS41BAP:00000004 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-02-22T21:55:50.9726149+02:00 0HLBQ5OS41BAP:00000004 [INF] Executed DbCommand ("32"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [i].[Id], [i].[DateFile], [i].[FileName], [i].[ImportDate], [i].[UserId]
+FROM [ImportFileInfo] AS [i]" (0723d8ff)
+2018-02-22T21:55:51.2612040+02:00 0HLBQ5OS41BAP:00000004 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-02-22T21:55:51.4137065+02:00 0HLBQ5OS41BAP:00000004 [INF] Executed action "CitizenSerialInfo.Controllers.api.ImportedFilesApiController.Get (CitizenSerialInfo)" in 1792.9135ms (afa2e885)
+2018-02-22T21:55:51.5406872+02:00 0HLBQ5OS41BAP:00000004 [INF] Request finished in 2035.4099ms 200 application/json; charset=utf-8 (791a596a)
+2018-02-22T22:01:12.9443385+02:00  [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-02-22T22:01:13.3383491+02:00  [INF] Executed DbCommand ("32"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'__EFMigrationsHistory');" (0723d8ff)
+2018-02-22T22:01:13.3913821+02:00  [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" (0723d8ff)
+2018-02-22T22:01:27.2896430+02:00 0HLBQ5S74RKM9:00000001 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/   (ca22a1cb)
+2018-02-22T22:01:27.7680467+02:00 0HLBQ5S74RKM9:00000001 [INF] Authorization failed for user: null. (a4ab1676)
+2018-02-22T22:01:27.7930625+02:00 0HLBQ5S74RKM9:00000001 [INF] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'. (8b6446cb)
+2018-02-22T22:01:27.8185068+02:00 0HLBQ5S74RKM9:00000001 [INF] Executing ChallengeResult with authentication schemes ([]). (f3dca807)
+2018-02-22T22:01:27.8899568+02:00 0HLBQ5S74RKM9:00000001 [INF] AuthenticationScheme: "Identity.Application" was challenged. (d45f1f38)
+2018-02-22T22:01:27.9208636+02:00 0HLBQ5S74RKM9:00000001 [INF] Executed action "CitizenSerialInfo.Controllers.HomeController.Index (CitizenSerialInfo)" in 151.5173ms (afa2e885)
+2018-02-22T22:01:27.9868250+02:00 0HLBQ5S74RKM9:00000001 [INF] Request finished in 701.8254ms 302  (791a596a)
+2018-02-22T22:01:28.0545810+02:00 0HLBQ5S74RKM9:00000002 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/Account/Login?ReturnUrl=%2F   (ca22a1cb)
+2018-02-22T22:01:28.2102519+02:00 0HLBQ5S74RKM9:00000002 [INF] Executing action method "CitizenSerialInfo.Controllers.AccountController.Login (CitizenSerialInfo)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-02-22T22:01:35.4567695+02:00 0HLBQ5S74RKM9:00000002 [INF] Executing ViewResult, running view at path "/Views/Account/Login.cshtml". (9707eebe)
+2018-02-22T22:01:37.7393162+02:00 0HLBQ5S74RKM9:00000002 [INF] Executed action "CitizenSerialInfo.Controllers.AccountController.Login (CitizenSerialInfo)" in 9594.4142ms (afa2e885)
+2018-02-22T22:01:37.9250331+02:00 0HLBQ5S74RKMD:00000001 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/css/bootstrap.min.css   (ca22a1cb)
+2018-02-22T22:01:38.0791450+02:00 0HLBQ5S74RKMA:00000001 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/css/site.css   (ca22a1cb)
+2018-02-22T22:01:38.1443132+02:00 0HLBQ5S74RKMB:00000001 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/css/mdb.min.css   (ca22a1cb)
+2018-02-22T22:01:38.1814528+02:00 0HLBQ5S74RKM9:00000002 [INF] Request finished in 9810.7717ms 200 text/html; charset=utf-8 (791a596a)
+2018-02-22T22:01:38.2251434+02:00 0HLBQ5S74RKMC:00000001 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/devextreme/css/dx.light.css   (ca22a1cb)
+2018-02-22T22:01:38.2897527+02:00 0HLBQ5S74RKMD:00000001 [INF] Sending file. Request path: '"/css/bootstrap.min.css"'. Physical path: '"C:\Users\elena\Desktop\app\CitizenSerialInfo\wwwroot\css\bootstrap.min.css"' (27b0a520)
+2018-02-22T22:01:38.3701558+02:00 0HLBQ5S74RKMB:00000001 [INF] Sending file. Request path: '"/css/mdb.min.css"'. Physical path: '"C:\Users\elena\Desktop\app\CitizenSerialInfo\wwwroot\css\mdb.min.css"' (27b0a520)
+2018-02-22T22:01:38.4858960+02:00 0HLBQ5S74RKMA:00000001 [INF] Sending file. Request path: '"/css/site.css"'. Physical path: '"C:\Users\elena\Desktop\app\CitizenSerialInfo\wwwroot\css\site.css"' (27b0a520)
+2018-02-22T22:01:38.5185245+02:00 0HLBQ5S74RKME:00000001 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/devextreme/css/dx.common.css   (ca22a1cb)
+2018-02-22T22:01:38.5676837+02:00 0HLBQ5S74RKMC:00000001 [INF] Sending file. Request path: '"/lib/devextreme/css/dx.light.css"'. Physical path: '"C:\Users\elena\Desktop\app\CitizenSerialInfo\wwwroot\lib\devextreme\css\dx.light.css"' (27b0a520)
+2018-02-22T22:01:38.5844713+02:00 0HLBQ5S74RKM9:00000003 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/toastr/toastr.css   (ca22a1cb)
+2018-02-22T22:01:38.6393082+02:00 0HLBQ5S74RKMD:00000001 [INF] Request finished in 616.6674ms 200 text/css (791a596a)
+2018-02-22T22:01:39.3512942+02:00 0HLBQ5S74RKMA:00000001 [INF] Request finished in 760.3819ms 200 text/css (791a596a)
+2018-02-22T22:01:39.4207376+02:00 0HLBQ5S74RKM9:00000003 [INF] Sending file. Request path: '"/lib/toastr/toastr.css"'. Physical path: '"C:\Users\elena\Desktop\app\CitizenSerialInfo\wwwroot\lib\toastr\toastr.css"' (27b0a520)
+2018-02-22T22:01:39.4414770+02:00 0HLBQ5S74RKME:00000001 [INF] Sending file. Request path: '"/lib/devextreme/css/dx.common.css"'. Physical path: '"C:\Users\elena\Desktop\app\CitizenSerialInfo\wwwroot\lib\devextreme\css\dx.common.css"' (27b0a520)
+2018-02-22T22:01:39.4650396+02:00 0HLBQ5S74RKMD:00000002 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/js/jquery-3.2.1.min.js   (ca22a1cb)
+2018-02-22T22:01:39.5284116+02:00 0HLBQ5S74RKM9:00000003 [INF] Request finished in 1219.7528ms 200 text/css (791a596a)
+2018-02-22T22:01:39.5452841+02:00 0HLBQ5S74RKMB:00000001 [INF] Request finished in 898.6103ms 200 text/css (791a596a)
+2018-02-22T22:01:39.5900222+02:00 0HLBQ5S74RKME:00000001 [INF] Request finished in 1118.4046ms 200 text/css (791a596a)
+2018-02-22T22:01:39.7285130+02:00 0HLBQ5S74RKMD:00000002 [INF] Sending file. Request path: '"/js/jquery-3.2.1.min.js"'. Physical path: '"C:\Users\elena\Desktop\app\CitizenSerialInfo\wwwroot\js\jquery-3.2.1.min.js"' (27b0a520)
+2018-02-22T22:01:39.7614218+02:00 0HLBQ5S74RKME:00000002 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/devextreme/js/dx.all.js   (ca22a1cb)
+2018-02-22T22:01:39.8082621+02:00 0HLBQ5S74RKME:00000002 [INF] Sending file. Request path: '"/lib/devextreme/js/dx.all.js"'. Physical path: '"C:\Users\elena\Desktop\app\CitizenSerialInfo\wwwroot\lib\devextreme\js\dx.all.js"' (27b0a520)
+2018-02-22T22:01:39.8127101+02:00 0HLBQ5S74RKM9:00000004 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/js/mdb.js   (ca22a1cb)
+2018-02-22T22:01:39.8716809+02:00 0HLBQ5S74RKMB:00000002 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/js/bootstrap.min.js   (ca22a1cb)
+2018-02-22T22:01:39.9248252+02:00 0HLBQ5S74RKMD:00000002 [INF] Request finished in 373.7461ms 200 application/javascript (791a596a)
+2018-02-22T22:01:39.9478533+02:00 0HLBQ5S74RKMA:00000002 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/js/popper.min.js   (ca22a1cb)
+2018-02-22T22:01:39.9660399+02:00 0HLBQ5S74RKM9:00000004 [INF] Sending file. Request path: '"/js/mdb.js"'. Physical path: '"C:\Users\elena\Desktop\app\CitizenSerialInfo\wwwroot\js\mdb.js"' (27b0a520)
+2018-02-22T22:01:39.9900531+02:00 0HLBQ5S74RKMA:00000002 [INF] Sending file. Request path: '"/js/popper.min.js"'. Physical path: '"C:\Users\elena\Desktop\app\CitizenSerialInfo\wwwroot\js\popper.min.js"' (27b0a520)
+2018-02-22T22:01:39.9970087+02:00 0HLBQ5S74RKMC:00000001 [INF] Request finished in 2010.3509ms 200 text/css (791a596a)
+2018-02-22T22:01:40.0570624+02:00 0HLBQ5S74RKMB:00000002 [INF] Sending file. Request path: '"/js/bootstrap.min.js"'. Physical path: '"C:\Users\elena\Desktop\app\CitizenSerialInfo\wwwroot\js\bootstrap.min.js"' (27b0a520)
+2018-02-22T22:01:40.1412608+02:00 0HLBQ5S74RKMC:00000002 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/images/bg.jpg   (ca22a1cb)
+2018-02-22T22:01:40.1901017+02:00 0HLBQ5S74RKMC:00000002 [INF] Sending file. Request path: '"/images/bg.jpg"'. Physical path: '"C:\Users\elena\Desktop\app\CitizenSerialInfo\wwwroot\images\bg.jpg"' (27b0a520)
+2018-02-22T22:01:40.2350694+02:00 0HLBQ5S74RKMD:00000003 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/toastr/toastr.js   (ca22a1cb)
+2018-02-22T22:01:40.2652881+02:00 0HLBQ5S74RKMD:00000003 [INF] Sending file. Request path: '"/lib/toastr/toastr.js"'. Physical path: '"C:\Users\elena\Desktop\app\CitizenSerialInfo\wwwroot\lib\toastr\toastr.js"' (27b0a520)
+2018-02-22T22:01:40.3368422+02:00 0HLBQ5S74RKM9:00000004 [INF] Request finished in 574.7991ms 200 application/javascript (791a596a)
+2018-02-22T22:01:40.4079944+02:00 0HLBQ5S74RKMD:00000003 [INF] Request finished in 54.9921ms 200 application/javascript (791a596a)
+2018-02-22T22:01:40.4819877+02:00 0HLBQ5S74RKMB:00000002 [INF] Request finished in 493.3514ms 200 application/javascript (791a596a)
+2018-02-22T22:01:40.5557609+02:00 0HLBQ5S74RKMC:00000002 [INF] Request finished in 407.9964ms 200 image/jpeg (791a596a)
+2018-02-22T22:01:40.6353743+02:00 0HLBQ5S74RKMA:00000002 [INF] Request finished in 487.8389ms 200 application/javascript (791a596a)
+2018-02-22T22:01:40.7753810+02:00 0HLBQ5S74RKME:00000002 [INF] Request finished in 1155.0808ms 200 application/javascript (791a596a)
+2018-02-22T22:01:42.4865368+02:00 0HLBQ5S74RKMC:00000003 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/font/roboto/Roboto-Regular.woff2   (ca22a1cb)
+2018-02-22T22:01:42.6523083+02:00 0HLBQ5S74RKMC:00000003 [INF] Sending file. Request path: '"/font/roboto/Roboto-Regular.woff2"'. Physical path: '"C:\Users\elena\Desktop\app\CitizenSerialInfo\wwwroot\font\roboto\Roboto-Regular.woff2"' (27b0a520)
+2018-02-22T22:01:42.7171082+02:00 0HLBQ5S74RKMD:00000004 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/images/string.png   (ca22a1cb)
+2018-02-22T22:01:43.1843836+02:00 0HLBQ5S74RKME:00000003 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/images/string-top.png   (ca22a1cb)
+2018-02-22T22:01:43.5564085+02:00 0HLBQ5S74RKMB:00000003 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/font/roboto/Roboto-Light.woff2   (ca22a1cb)
+2018-02-22T22:01:43.9204831+02:00 0HLBQ5S74RKMB:00000003 [INF] Sending file. Request path: '"/font/roboto/Roboto-Light.woff2"'. Physical path: '"C:\Users\elena\Desktop\app\CitizenSerialInfo\wwwroot\font\roboto\Roboto-Light.woff2"' (27b0a520)
+2018-02-22T22:01:43.9392965+02:00 0HLBQ5S74RKMC:00000003 [INF] Request finished in 291.1998ms 200 font/woff2 (791a596a)
+2018-02-22T22:01:43.9604263+02:00 0HLBQ5S74RKME:00000003 [INF] Sending file. Request path: '"/images/string-top.png"'. Physical path: '"C:\Users\elena\Desktop\app\CitizenSerialInfo\wwwroot\images\string-top.png"' (27b0a520)
+2018-02-22T22:01:43.9667409+02:00 0HLBQ5S74RKMD:00000004 [INF] Sending file. Request path: '"/images/string.png"'. Physical path: '"C:\Users\elena\Desktop\app\CitizenSerialInfo\wwwroot\images\string.png"' (27b0a520)
+2018-02-22T22:01:44.1596019+02:00 0HLBQ5S74RKME:00000003 [INF] Request finished in 1604.0543ms 200 image/png (791a596a)
+2018-02-22T22:01:44.2044654+02:00 0HLBQ5S74RKMB:00000003 [INF] Request finished in 1567.4523ms 200 font/woff2 (791a596a)
+2018-02-22T22:01:44.2562158+02:00 0HLBQ5S74RKMD:00000004 [INF] Request finished in 1622.2956ms 200 image/png (791a596a)
+2018-02-22T22:01:44.3440673+02:00 0HLBQ5S74RKMD:00000005 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/favicon.ico   (ca22a1cb)
+2018-02-22T22:01:44.3780692+02:00 0HLBQ5S74RKMD:00000005 [INF] Sending file. Request path: '"/favicon.ico"'. Physical path: '"C:\Users\elena\Desktop\app\CitizenSerialInfo\wwwroot\favicon.ico"' (27b0a520)
+2018-02-22T22:01:44.4243787+02:00 0HLBQ5S74RKMD:00000005 [INF] Request finished in 94.6845ms 200 image/x-icon (791a596a)
+2018-02-22T22:01:52.7869633+02:00 0HLBQ5S74RKME:00000004 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/images/upload_inv.gif   (ca22a1cb)
+2018-02-22T22:01:52.8596537+02:00 0HLBQ5S74RKMD:00000006 [INF] Request starting HTTP/1.1 POST http://127.0.0.1:5000/account/login application/x-www-form-urlencoded; charset=UTF-8 225 (ca22a1cb)
+2018-02-22T22:01:52.8696228+02:00 0HLBQ5S74RKME:00000004 [INF] Sending file. Request path: '"/images/upload_inv.gif"'. Physical path: '"C:\Users\elena\Desktop\app\CitizenSerialInfo\wwwroot\images\upload_inv.gif"' (27b0a520)
+2018-02-22T22:01:52.8927668+02:00 0HLBQ5S74RKME:00000004 [INF] Request finished in 125.2573ms 200 image/gif (791a596a)
+2018-02-22T22:01:53.1086976+02:00 0HLBQ5S74RKMD:00000006 [INF] Executing action method "CitizenSerialInfo.Controllers.AccountController.Login (CitizenSerialInfo)" with arguments (["CitizenSerialInfo.Models.ViewModels.LoginViewModel"]) - ModelState is Valid (ba7f4ac2)
+2018-02-22T22:01:53.1875110+02:00 0HLBQ5S74RKMD:00000006 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-02-22T22:01:53.5566710+02:00 0HLBQ5S74RKMD:00000006 [INF] Executed DbCommand ("44"ms) [Parameters=["@__model_Login_0='?' (Size = 256), @__model_Login_1='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [s].[Id], [s].[Email], [s].[EmailConfirmed], [s].[FirstName], [s].[IsApproved], [s].[LastName], [s].[NormalizedEmail], [s].[NormalizedUserName], [s].[PasswordHash], [s].[SecurityStamp], [s].[UserName]
+FROM [Users] AS [s]
+WHERE ([s].[Email] = @__model_Login_0) OR ([s].[UserName] = @__model_Login_1)" (0723d8ff)
+2018-02-22T22:01:53.8691743+02:00 0HLBQ5S74RKMD:00000006 [INF] Executed DbCommand ("20"ms) [Parameters=["@__user_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [uc].[Id], [uc].[ClaimType], [uc].[ClaimValue], [uc].[UserId]
+FROM [UserClaims] AS [uc]
+WHERE [uc].[UserId] = @__user_Id_0" (0723d8ff)
+2018-02-22T22:01:53.9693364+02:00 0HLBQ5S74RKMD:00000006 [INF] Executed DbCommand ("16"ms) [Parameters=["@__userId_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [role].[Name]
+FROM [UserRoles] AS [userRole]
+INNER JOIN [Roles] AS [role] ON [userRole].[RoleId] = [role].[Id]
+WHERE [userRole].[UserId] = @__userId_0" (0723d8ff)
+2018-02-22T22:01:54.0311855+02:00 0HLBQ5S74RKMD:00000006 [INF] Executed DbCommand ("2"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2018-02-22T22:01:54.1888123+02:00 0HLBQ5S74RKMD:00000006 [INF] Executed DbCommand ("3"ms) [Parameters=["@__role_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [RoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0" (0723d8ff)
+2018-02-22T22:01:54.2265856+02:00 0HLBQ5S74RKMD:00000006 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2018-02-22T22:01:54.2554828+02:00 0HLBQ5S74RKMD:00000006 [INF] Executed DbCommand ("0"ms) [Parameters=["@__role_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [RoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0" (0723d8ff)
+2018-02-22T22:01:54.3288063+02:00 0HLBQ5S74RKMD:00000006 [INF] Executed DbCommand ("1"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [Roles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2018-02-22T22:01:54.3595169+02:00 0HLBQ5S74RKMD:00000006 [INF] Executed DbCommand ("2"ms) [Parameters=["@__role_Id_0='?' (Size = 450)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [rc].[ClaimType], [rc].[ClaimValue]
+FROM [RoleClaims] AS [rc]
+WHERE [rc].[RoleId] = @__role_Id_0" (0723d8ff)
+2018-02-22T22:01:54.3905190+02:00 0HLBQ5S74RKMD:00000006 [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2018-02-22T22:01:54.4217705+02:00 0HLBQ5S74RKMD:00000006 [INF] Executing JsonResult, writing value "{ error =  }". (7bb75e80)
+2018-02-22T22:01:55.1910621+02:00 0HLBQ5S74RKMD:00000006 [INF] Executed action "CitizenSerialInfo.Controllers.AccountController.Login (CitizenSerialInfo)" in 1819.6698ms (afa2e885)
+2018-02-22T22:01:55.2916603+02:00 0HLBQ5S74RKMD:00000006 [INF] Request finished in 2411.4677ms 200 application/json; charset=utf-8 (791a596a)
+2018-02-22T22:01:55.4089500+02:00 0HLBQ5S74RKMD:00000007 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/   (ca22a1cb)
+2018-02-22T22:01:55.4570814+02:00 0HLBQ5S74RKMD:00000007 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-02-22T22:01:55.4815525+02:00 0HLBQ5S74RKMD:00000007 [INF] Authorization was successful for user: "Admin". (d7eb274a)
+2018-02-22T22:01:55.5167819+02:00 0HLBQ5S74RKMD:00000007 [INF] Executing action method "CitizenSerialInfo.Controllers.HomeController.Index (CitizenSerialInfo)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-02-22T22:01:55.9917611+02:00 0HLBQ5S74RKMD:00000007 [INF] Executing ViewResult, running view at path "/Views/Home/Index.cshtml". (9707eebe)
+2018-02-22T22:01:58.1746982+02:00 0HLBQ5S74RKMB:00000004 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/css/bootstrap.css   (ca22a1cb)
+2018-02-22T22:01:58.2820181+02:00 0HLBQ5S74RKM9:00000005 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/devextreme-aspnet-data/js/dx.aspnet.data.js   (ca22a1cb)
+2018-02-22T22:01:58.3766032+02:00 0HLBQ5S74RKMB:00000004 [INF] Sending file. Request path: '"/css/bootstrap.css"'. Physical path: '"C:\Users\elena\Desktop\app\CitizenSerialInfo\wwwroot\css\bootstrap.css"' (27b0a520)
+2018-02-22T22:01:58.4305100+02:00 0HLBQ5S74RKMD:00000007 [INF] Executed action "CitizenSerialInfo.Controllers.HomeController.Index (CitizenSerialInfo)" in 2563.2513ms (afa2e885)
+2018-02-22T22:01:58.4860734+02:00 0HLBQ5S74RKME:00000005 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/jquery/dist/jquery.js   (ca22a1cb)
+2018-02-22T22:01:58.4898081+02:00 0HLBQ5S74RKM9:00000005 [INF] Sending file. Request path: '"/lib/devextreme-aspnet-data/js/dx.aspnet.data.js"'. Physical path: '"C:\Users\elena\Desktop\app\CitizenSerialInfo\wwwroot\lib\devextreme-aspnet-data\js\dx.aspnet.data.js"' (27b0a520)
+2018-02-22T22:01:58.5710219+02:00 0HLBQ5S74RKMD:00000007 [INF] Request finished in 3057.5338ms 200 text/html; charset=utf-8 (791a596a)
+2018-02-22T22:01:58.6282067+02:00 0HLBQ5S74RKME:00000005 [INF] Sending file. Request path: '"/lib/jquery/dist/jquery.js"'. Physical path: '"C:\Users\elena\Desktop\app\CitizenSerialInfo\wwwroot\lib\jquery\dist\jquery.js"' (27b0a520)
+2018-02-22T22:01:58.6612703+02:00 0HLBQ5S74RKMC:00000004 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/js/devextreme/aspnet/dx.aspnet.mvc.js   (ca22a1cb)
+2018-02-22T22:01:58.7226707+02:00 0HLBQ5S74RKMC:00000004 [INF] Sending file. Request path: '"/js/devextreme/aspnet/dx.aspnet.mvc.js"'. Physical path: '"C:\Users\elena\Desktop\app\CitizenSerialInfo\wwwroot\js\devextreme\aspnet\dx.aspnet.mvc.js"' (27b0a520)
+2018-02-22T22:01:58.7747500+02:00 0HLBQ5S74RKMC:00000004 [INF] Request finished in 303.3167ms 200 application/javascript (791a596a)
+2018-02-22T22:01:58.9188758+02:00 0HLBQ5S74RKME:00000005 [INF] Request finished in 757.9657ms 200 application/javascript (791a596a)
+2018-02-22T22:01:58.9299368+02:00 0HLBQ5S74RKM9:00000005 [INF] Request finished in 448.7904ms 200 application/javascript (791a596a)
+2018-02-22T22:01:58.9458176+02:00 0HLBQ5S74RKMB:00000004 [INF] Request finished in 599.1331ms 200 text/css (791a596a)
+2018-02-22T22:02:00.7883172+02:00 0HLBQ5S74RKME:00000006 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/lib/devextreme/css/icons/dxicons.woff   (ca22a1cb)
+2018-02-22T22:02:00.8450987+02:00 0HLBQ5S74RKME:00000006 [INF] Sending file. Request path: '"/lib/devextreme/css/icons/dxicons.woff"'. Physical path: '"C:\Users\elena\Desktop\app\CitizenSerialInfo\wwwroot\lib\devextreme\css\icons\dxicons.woff"' (27b0a520)
+2018-02-22T22:02:00.9215250+02:00 0HLBQ5S74RKME:00000006 [INF] Request finished in 206.3333ms 200 application/font-woff (791a596a)
+2018-02-22T22:02:04.6764265+02:00 0HLBQ5S74RKME:00000007 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/administration/ImportData   (ca22a1cb)
+2018-02-22T22:02:04.8413275+02:00 0HLBQ5S74RKME:00000007 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-02-22T22:02:04.8951289+02:00 0HLBQ5S74RKME:00000007 [INF] Executing action method "CitizenSerialInfo.Controllers.AdministrationController.ImportData (CitizenSerialInfo)" with arguments (null) - ModelState is Valid (ba7f4ac2)
+2018-02-22T22:02:05.5222198+02:00 0HLBQ5S74RKME:00000007 [INF] Executing ViewResult, running view at path "/Views/Administration/ImportData.cshtml". (9707eebe)
+2018-02-22T22:02:06.6969162+02:00 0HLBQ5S74RKME:00000007 [INF] Executed action "CitizenSerialInfo.Controllers.AdministrationController.ImportData (CitizenSerialInfo)" in 1130.8662ms (afa2e885)
+2018-02-22T22:02:08.1723174+02:00 0HLBQ5S74RKME:00000007 [INF] Request finished in 2042.7946ms 200 text/html; charset=utf-8 (791a596a)
+2018-02-22T22:02:08.4446757+02:00 0HLBQ5S74RKME:00000008 [INF] Request starting HTTP/1.1 GET http://127.0.0.1:5000/api/importedfilesapi?_=1519329726237   (ca22a1cb)
+2018-02-22T22:02:08.5736544+02:00 0HLBQ5S74RKME:00000008 [INF] AuthenticationScheme: "Identity.Application" was successfully authenticated. (1805f3b3)
+2018-02-22T22:02:08.6422304+02:00 0HLBQ5S74RKME:00000008 [INF] Executing action method "CitizenSerialInfo.Controllers.api.ImportedFilesApiController.Get (CitizenSerialInfo)" with arguments (["DevExtreme.AspNet.Mvc.DataSourceLoadOptions"]) - ModelState is Valid (ba7f4ac2)
+2018-02-22T22:02:08.7215182+02:00 0HLBQ5S74RKME:00000008 [INF] Entity Framework Core "2.0.1-rtm-125" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-02-22T22:02:08.7948046+02:00 0HLBQ5S74RKME:00000008 [INF] Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [i].[Id], [i].[DateFile], [i].[FileName], [i].[ImportDate], [i].[UserId]
+FROM [ImportFileInfo] AS [i]" (0723d8ff)
+2018-02-22T22:02:09.0029662+02:00 0HLBQ5S74RKME:00000008 [INF] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext". (4e968210)
+2018-02-22T22:02:09.1142536+02:00 0HLBQ5S74RKME:00000008 [INF] Executed action "CitizenSerialInfo.Controllers.api.ImportedFilesApiController.Get (CitizenSerialInfo)" in 495.1882ms (afa2e885)
+2018-02-22T22:02:09.1750596+02:00 0HLBQ5S74RKME:00000008 [INF] Request finished in 793.0048ms 200 application/json; charset=utf-8 (791a596a)

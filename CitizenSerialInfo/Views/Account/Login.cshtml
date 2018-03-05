@@ -1,0 +1,137 @@
+﻿@{
+    Layout = "_LayoutLogin";
+    var data = new LoginViewModel();
+}
+
+<div id="card-with-string">
+    <div class="card login bg1">
+
+        <h4   class="card-header page-header navbar white-text" >Login Page</h4>
+        <div class="card-body bordered-blue">
+            @using (Html.BeginForm())
+            {
+                using (Html.DevExtreme().ValidationGroup())
+                {
+
+                    @Html.AntiForgeryToken()
+
+                    @(Html.DevExtreme().Form<LoginViewModel>()
+                            .ID("loginForm")
+                            .ShowColonAfterLabel(false)
+                            .ShowRequiredMark(false)
+                            .ShowValidationSummary(false)
+                            .Items(g =>
+                            {
+                                g.AddSimpleFor(m => m.Login)
+                                    .ValidationRules(rule => rule.AddCustom().ValidationCallback("isEmpty").Message(""));
+                                g.AddSimpleFor(m => m.Password)
+                                    .ValidationRules(rule => rule.AddCustom().ValidationCallback("isEmpty").Message(""))
+                                    .Editor(e => e.TextBox().Mode(TextBoxMode.Password));
+                            })
+                            .FormData(data)
+                    )
+                    <br />
+
+                    <div class="row" style="padding:0px;margin:0px;padding-bottom:10px;">
+
+                        <div class="col-lg-6 col-md-6 col-xl-6 col-sm-6 no-padding">
+                            @(Html.DevExtreme().CheckBox()
+                                .Name("RememberMe")
+                                .Text("RememberMe")
+                                .Value(false)
+                            )
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-xl-6 col-sm-6 no-padding">
+                            <div id="login-container" class="button-div">
+                                @(Html.DevExtreme().Button()
+                                    .ID("btLogin")
+                                    .Type(ButtonType.Normal)
+                                    .Text("Login")
+                                    .Width("100%")
+                                    .Type(ButtonType.Success)
+                                    .UseSubmitBehavior(true)
+                                )
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="padding:0px;margin:0px;padding-bottom:10px;">
+                        <div class="col-lg-6 col-md-6 col-xl-6 col-sm-6 no-padding">
+                            <a asp-action="Register" style="font-size:14px">Registration</a>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-xl-6 col-sm-6 no-padding">
+                            <a asp-action="ForgotPassword" style="float:right; font-size:14px;">Forgot your password?</a>
+                        </div>
+                    </div>
+
+
+                }
+            }
+        </div>
+    </div>
+
+    <div class="card bg1" style="width:350px; max-width:100%; height:auto; margin:0 auto; display:block;">
+        <div class="card-body" style="padding-top:15px; padding-bottom:15px;">
+            <div id="loginFooterContainer" style="margin-top:20px;font-size:14px;">
+                2018 &copy; <a target="_blank"  href="#">Citizen serial info</a>
+                @await Html.PartialAsync("_SelectLanguagePartial")
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(function () {
+            $("[name='Login']").focus();
+            $("[name='Login']").select();
+        });
+
+        function isEmpty(e) {
+            if (!e.value)
+                return false;
+
+            return (e.value != "");
+        }
+
+        $(".login form").on("submit", function (e) {
+
+            var data = $(this).serialize();
+
+            $("#login-container").prepend("<span class=\"button-lock\"></span>");
+
+            var btnText = $("#login-container .dx-button-text").text();
+            $("#login-container .dx-button-text").html("&nbsp;");
+
+            $.ajax({
+                url: "/account/login",
+                type: "post",
+                data: data
+            })
+                .fail(function (obj, error, status) {
+                    toastr["error"]("Erorr.<br/> HTTP Статус: " + obj.status, { "timeOut": "5000" });
+                    console.log(obj, error, status);
+                })
+                .done(function (json) {
+
+                    if (json.error == "") {
+                        var redirect = (getParameterByName("ReturnUrl") == null) ? "/" : getParameterByName("ReturnUrl");
+                        location.href = redirect;
+                    } else {
+                        toastr["error"](json.error, { "timeOut": "5000" });
+                        $("[name=username]").focus().select();
+                    }
+                })
+
+                .always(function () {
+
+                    $("#login-container").children()[0].remove();
+                    $("#login-container .dx-button-text").text(btnText);
+                });
+
+            e.preventDefault();
+        });
+
+    </script>
+}
+

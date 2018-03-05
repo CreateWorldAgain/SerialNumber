@@ -1,0 +1,46 @@
+﻿@{
+    Layout = "_Layout";
+}
+@using  CitizenSerialInfo.Models.ViewModels
+
+<script>
+    function cellPrepared(options) {        
+        var fieldData = options.value,
+            fieldHtml = "";
+        if (fieldData && options.column.dataField =='Id') {
+            options.cellElement.html('<a href="/api/importedfilesapi/download?fileId=' + fieldData+'">Download</a>');
+        }
+    }
+</script>
+
+   
+@(Html.DevExtreme().DataGrid<ImportFileInfo>()
+
+    .ID("gridContainer")
+    .OnCellPrepared("cellPrepared")
+    .ColumnAutoWidth(true)
+    .AllowColumnResizing(true)
+    .Paging(paging => paging.Enabled(false))
+    .Columns(columns =>
+    {
+
+        columns.AddFor(m => m.UserId);
+
+        columns.AddFor(m => m.FileName);
+
+        columns.AddFor(m => m.ImportedRowCount).Caption("Row count");
+
+        columns.AddFor(m => m.DateFile).Format(Format.ShortDate);
+
+        columns.AddFor(m => m.ImportDate).Format(Format.ShortDateShortTime);
+
+        columns.AddFor(m => m.Id).Caption("");
+
+    })
+
+
+    .DataSource(s => s.WebApi().Controller("importedfilesapi").LoadAction("Get").Key("Id"))
+
+)
+
+
